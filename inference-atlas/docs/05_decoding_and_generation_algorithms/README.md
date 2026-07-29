@@ -1,7 +1,7 @@
 # 模块 05 — 解码、Speculative 与 Reasoning 推理
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**进行中**（2/10 篇）
 > 模块目标字数：**≥ 13,000 字**
 > 最后更新：2026-07-29
 
@@ -19,10 +19,10 @@
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
-| 01 | `01_decoding_basics.md` | 自回归解码循环与采样接口 | 待开始 |
+| 01 | [01_decoding_basics.md](01_decoding_basics.md) | 自回归解码循环与采样接口 | 已完成 |
 | 02 | `02_greedy_sampling_topk_topp_temperature.md` | 采样参数对质量、时延与可复现性的影响 | 待开始 |
 | 03 | `03_beam_search_and_constrained_decoding.md` | beam search 与约束解码的推理代价 | 待开始 |
-| 04 | `04_speculative_decoding.md` | draft/verify 机制、接受率与真实收益判定 | 待开始 |
+| 04 | [04_speculative_decoding.md](04_speculative_decoding.md) | draft/verify 机制、接受率与真实收益判定 | 已完成 |
 | 05 | `05_medusa_eagle_and_multi_token_prediction.md` | 多头/树形投机与多 token 预测 | 待开始 |
 | 06 | `06_draft_model_selection_and_acceptance_rate.md` | draft 模型选型与接受率工程 | 待开始 |
 | 07 | `07_reasoning_inference_and_test_time_scaling.md` | test-time compute 的质量-成本曲线 | 待开始 |

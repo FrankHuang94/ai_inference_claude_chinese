@@ -18,7 +18,7 @@
 | 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 已完成 | 30,961 | 110 | 10 | 2026-07-29 |
 | 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 已完成 | 38,095 | 133 | 11 | 2026-07-29 |
 | 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 已完成 | 37,186 | 138 | 11 | 2026-07-29 |
-| 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 待开始 | 0 | 0 | 0 | — |
+| 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 进行中 | 6,897 | 23 | 2 | 2026-07-29 |
 | 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 待开始 | 0 | 0 | 0 | — |
 | 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 待开始 | 0 | 0 | 0 | — |
 | 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 待开始 | 0 | 0 | 0 | — |
@@ -31,7 +31,7 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 待开始 | 0 | 0 | 0 | — |
-| — | **合计** | — | **154,597** | **536** | **43** | 2026-07-29 |
+| — | **合计** | — | **161,494** | **559** | **45** | 2026-07-29 |
 
 ---
 
@@ -111,14 +111,14 @@
 | [10_cuda_graphs_and_execution_overhead.md](docs/04_compilers_runtimes_and_kernels/10_cuda_graphs_and_execution_overhead.md) | launch overhead 与 CUDA Graphs |
 | [11_compiler_debugging_and_profiling.md](docs/04_compilers_runtimes_and_kernels/11_compiler_debugging_and_profiling.md) | 编译与 kernel 层的调试与 profiling |
 
-### [05 — 解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) `待开始`
+### [05 — 解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) `进行中`
 
 | 文档 | 一句话说明 |
 |---|---|
-| `01_decoding_basics.md` | 自回归解码循环与采样接口 |
+| [01_decoding_basics.md](docs/05_decoding_and_generation_algorithms/01_decoding_basics.md) | 自回归解码循环与采样接口 |
 | `02_greedy_sampling_topk_topp_temperature.md` | 采样参数对质量、时延与可复现性的影响 |
 | `03_beam_search_and_constrained_decoding.md` | beam search 与约束解码的推理代价 |
-| `04_speculative_decoding.md` | draft/verify 机制、接受率与真实收益判定 |
+| [04_speculative_decoding.md](docs/05_decoding_and_generation_algorithms/04_speculative_decoding.md) | draft/verify 机制、接受率与真实收益判定 |
 | `05_medusa_eagle_and_multi_token_prediction.md` | 多头/树形投机与多 token 预测 |
 | `06_draft_model_selection_and_acceptance_rate.md` | draft 模型选型与接受率工程 |
 | `07_reasoning_inference_and_test_time_scaling.md` | test-time compute 的质量-成本曲线 |
