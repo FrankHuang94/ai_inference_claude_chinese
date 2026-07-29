@@ -1,7 +1,7 @@
 # 模块 03 — Serving Engines、调度与 QoS
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**已完成**
 > 模块目标字数：**≥ 17,000 字**
 > 最后更新：2026-07-29
 
@@ -19,18 +19,18 @@
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
-| 01 | `01_serving_architecture_overview.md` | 从 gateway 到 worker 的 serving 架构全貌 | 待开始 |
-| 02 | `02_static_dynamic_and_continuous_batching.md` | 三种 batching 的机制、收益与 tail latency 代价 | 待开始 |
-| 03 | `03_pagedattention_and_kv_memory_management.md` | 分页式 KV 内存管理与碎片消除 | 待开始 |
-| 04 | `04_request_scheduling_and_admission_control.md` | 调度策略、准入控制与 backpressure | 待开始 |
-| 05 | `05_prefill_decode_scheduling.md` | chunked prefill 与 prefill/decode 干扰治理 | 待开始 |
-| 06 | `06_multi_tenant_isolation_and_qos.md` | 多租户隔离、公平性与 QoS 分层 | 待开始 |
-| 07 | `07_model_routing_and_cascade_systems.md` | 模型路由与级联：质量/成本自适应 | 待开始 |
-| 08 | `08_prompt_caching_and_prefix_caching.md` | 前缀缓存的命中率、收益与隐私边界 | 待开始 |
-| 09 | `09_session_memory_and_conversation_state.md` | 会话状态与多轮对话的缓存复用 | 待开始 |
-| 10 | `10_autoscaling_and_load_balancing.md` | 自动扩缩容、warm pool 与冷启动 | 待开始 |
-| 11 | `11_serverless_and_burst_inference.md` | serverless 与突发容量的适用边界 | 待开始 |
-| 12 | `12_serving_incident_playbook.md` | 线上事故分级、排查与降级手册 | 待开始 |
+| 01 | [01_serving_architecture_overview.md](01_serving_architecture_overview.md) | 从 gateway 到 worker 的 serving 架构全貌 | 已完成 |
+| 02 | [02_static_dynamic_and_continuous_batching.md](02_static_dynamic_and_continuous_batching.md) | 三种 batching 的机制、收益与 tail latency 代价 | 已完成 |
+| 03 | [03_pagedattention_and_kv_memory_management.md](03_pagedattention_and_kv_memory_management.md) | 分页式 KV 内存管理与碎片消除 | 已完成 |
+| 04 | [04_request_scheduling_and_admission_control.md](04_request_scheduling_and_admission_control.md) | 调度策略、准入控制与 backpressure | 已完成 |
+| 05 | [05_prefill_decode_scheduling.md](05_prefill_decode_scheduling.md) | chunked prefill 与 prefill/decode 干扰治理 | 已完成 |
+| 06 | [06_multi_tenant_isolation_and_qos.md](06_multi_tenant_isolation_and_qos.md) | 多租户隔离、公平性与 QoS 分层 | 已完成 |
+| 07 | [07_model_routing_and_cascade_systems.md](07_model_routing_and_cascade_systems.md) | 模型路由与级联：质量/成本自适应 | 已完成 |
+| 08 | [08_prompt_caching_and_prefix_caching.md](08_prompt_caching_and_prefix_caching.md) | 前缀缓存的命中率、收益与隐私边界 | 已完成 |
+| 09 | [09_session_memory_and_conversation_state.md](09_session_memory_and_conversation_state.md) | 会话状态与多轮对话的缓存复用 | 已完成 |
+| 10 | [10_autoscaling_and_load_balancing.md](10_autoscaling_and_load_balancing.md) | 自动扩缩容、warm pool 与冷启动 | 已完成 |
+| 11 | [11_serverless_and_burst_inference.md](11_serverless_and_burst_inference.md) | serverless 与突发容量的适用边界 | 已完成 |
+| 12 | [12_serving_incident_playbook.md](12_serving_incident_playbook.md) | 线上事故分级、排查与降级手册 | 已完成 |
 
 ## 写作要求
 
@@ -42,14 +42,14 @@
 
 ## 完成标准
 
-- [ ] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
-- [ ] 模块正文合计 ≥ 17,000 字
-- [ ] 上述"写作要求"逐条覆盖
-- [ ] 所有事实性数字带来源链接与披露标签
-- [ ] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
-- [ ] 相关 [`data/`](../../data/) CSV 已更新
-- [ ] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
-- [ ] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
+- [x] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
+- [x] 模块正文合计 ≥ 17,000 字
+- [x] 上述"写作要求"逐条覆盖
+- [x] 所有事实性数字带来源链接与披露标签
+- [x] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
+- [x] 相关 [`data/`](../../data/) CSV 已更新
+- [x] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
+- [x] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
 
 ## 工作节奏
 

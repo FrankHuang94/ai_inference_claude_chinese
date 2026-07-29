@@ -16,7 +16,7 @@
 | 00 | [入门与端到端总览](docs/00_start_here/) | 已完成 | 21,824 | 64 | 3 | 2026-07-29 |
 | 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 已完成 | 26,531 | 91 | 8 | 2026-07-29 |
 | 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 已完成 | 30,961 | 110 | 10 | 2026-07-29 |
-| 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 待开始 | 0 | 0 | 0 | — |
+| 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 已完成 | 38,095 | 133 | 11 | 2026-07-29 |
 | 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 待开始 | 0 | 0 | 0 | — |
 | 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 待开始 | 0 | 0 | 0 | — |
 | 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 待开始 | 0 | 0 | 0 | — |
@@ -31,7 +31,7 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 待开始 | 0 | 0 | 0 | — |
-| — | **合计** | — | **79,316** | **265** | **21** | 2026-07-29 |
+| — | **合计** | — | **117,411** | **398** | **32** | 2026-07-29 |
 
 ---
 
@@ -78,22 +78,22 @@
 | [09_multimodal_inference.md](docs/02_transformer_and_kv_cache/09_multimodal_inference.md) | 图像/视频/语音输入对 prefill 与 cache 的影响 |
 | [10_reasoning_workloads_and_test_time_compute.md](docs/02_transformer_and_kv_cache/10_reasoning_workloads_and_test_time_compute.md) | reasoning 模型的长输出与 test-time compute 特征 |
 
-### [03 — Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) `待开始`
+### [03 — Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) `已完成`
 
 | 文档 | 一句话说明 |
 |---|---|
-| `01_serving_architecture_overview.md` | 从 gateway 到 worker 的 serving 架构全貌 |
-| `02_static_dynamic_and_continuous_batching.md` | 三种 batching 的机制、收益与 tail latency 代价 |
-| `03_pagedattention_and_kv_memory_management.md` | 分页式 KV 内存管理与碎片消除 |
-| `04_request_scheduling_and_admission_control.md` | 调度策略、准入控制与 backpressure |
-| `05_prefill_decode_scheduling.md` | chunked prefill 与 prefill/decode 干扰治理 |
-| `06_multi_tenant_isolation_and_qos.md` | 多租户隔离、公平性与 QoS 分层 |
-| `07_model_routing_and_cascade_systems.md` | 模型路由与级联：质量/成本自适应 |
-| `08_prompt_caching_and_prefix_caching.md` | 前缀缓存的命中率、收益与隐私边界 |
-| `09_session_memory_and_conversation_state.md` | 会话状态与多轮对话的缓存复用 |
-| `10_autoscaling_and_load_balancing.md` | 自动扩缩容、warm pool 与冷启动 |
-| `11_serverless_and_burst_inference.md` | serverless 与突发容量的适用边界 |
-| `12_serving_incident_playbook.md` | 线上事故分级、排查与降级手册 |
+| [01_serving_architecture_overview.md](docs/03_serving_engines_and_scheduling/01_serving_architecture_overview.md) | 从 gateway 到 worker 的 serving 架构全貌 |
+| [02_static_dynamic_and_continuous_batching.md](docs/03_serving_engines_and_scheduling/02_static_dynamic_and_continuous_batching.md) | 三种 batching 的机制、收益与 tail latency 代价 |
+| [03_pagedattention_and_kv_memory_management.md](docs/03_serving_engines_and_scheduling/03_pagedattention_and_kv_memory_management.md) | 分页式 KV 内存管理与碎片消除 |
+| [04_request_scheduling_and_admission_control.md](docs/03_serving_engines_and_scheduling/04_request_scheduling_and_admission_control.md) | 调度策略、准入控制与 backpressure |
+| [05_prefill_decode_scheduling.md](docs/03_serving_engines_and_scheduling/05_prefill_decode_scheduling.md) | chunked prefill 与 prefill/decode 干扰治理 |
+| [06_multi_tenant_isolation_and_qos.md](docs/03_serving_engines_and_scheduling/06_multi_tenant_isolation_and_qos.md) | 多租户隔离、公平性与 QoS 分层 |
+| [07_model_routing_and_cascade_systems.md](docs/03_serving_engines_and_scheduling/07_model_routing_and_cascade_systems.md) | 模型路由与级联：质量/成本自适应 |
+| [08_prompt_caching_and_prefix_caching.md](docs/03_serving_engines_and_scheduling/08_prompt_caching_and_prefix_caching.md) | 前缀缓存的命中率、收益与隐私边界 |
+| [09_session_memory_and_conversation_state.md](docs/03_serving_engines_and_scheduling/09_session_memory_and_conversation_state.md) | 会话状态与多轮对话的缓存复用 |
+| [10_autoscaling_and_load_balancing.md](docs/03_serving_engines_and_scheduling/10_autoscaling_and_load_balancing.md) | 自动扩缩容、warm pool 与冷启动 |
+| [11_serverless_and_burst_inference.md](docs/03_serving_engines_and_scheduling/11_serverless_and_burst_inference.md) | serverless 与突发容量的适用边界 |
+| [12_serving_incident_playbook.md](docs/03_serving_engines_and_scheduling/12_serving_incident_playbook.md) | 线上事故分级、排查与降级手册 |
 
 ### [04 — Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) `待开始`
 

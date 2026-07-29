@@ -199,6 +199,39 @@
 | 质量-成本曲线 | quality-cost curve | test-time compute 投入与结果质量的边际递减关系 | — |
 | 三重压力 | triple pressure | 长上下文对时延、显存、质量的同时压力 | — |
 
+## 14. Serving、调度与 QoS
+
+> 本节随 [模块 03](docs/03_serving_engines_and_scheduling/) 完成新增。
+
+| 中文术语 | 英文 | 定义 | 单位/口径 |
+|---|---|---|---|
+| 控制面 / 数据面 | control plane / data plane | 秒级决策组件 / 毫秒级关键路径组件；职责错位是隐蔽的性能问题来源 | — |
+| 有效批大小 | effective batch size | 实际贡献吞吐的平均并发序列数；静态批处理下可远低于名义批大小 | 个 |
+| 吞吐峰值批大小 | throughput-peak batch size | 超过后因 cache thrashing 反而下降的批大小 | 个 |
+| 抢占率 | preemption rate | 单位时间被抢占的请求数；cache thrashing 的先行信号 | 次/s |
+| 块表 | block table | KV 逻辑块到物理块的映射 | — |
+| 安全水位 | safety watermark | 触发拒绝或抢占的 KV 利用率阈值 | % |
+| Token 预算 | token budget | 每次迭代处理的 token 总数上限 | token |
+| Decode 份额上限 | max decode share | decode 最多占用的预算比例，防 prefill 饥饿 | % |
+| Prefill 饥饿 | prefill starvation | decode 占满预算导致新请求无法开始 | — |
+| 老化 | aging | 有效优先级随等待时间提升，防止饥饿 | — |
+| 过载不可恢复 | non-self-recovering overload | 流量回落后系统仍停留在退化状态 | — |
+| 多维配额 | multi-dimensional quota | 覆盖 req/s、tokens/s、并发、KV 占用的配额体系 | — |
+| Token·秒 | token-seconds | 多租户统一资源计量，兼顾长度与占用时长 | token·s |
+| 借用可回收 | reclaimable borrowing | 允许超用闲置配额但需要时回收 | — |
+| 时序侧信道 | timing side channel | 通过 TTFT 差异推断他人是否发送过某前缀 | — |
+| 升级率 | escalation rate $p$ | 级联中需升级到更高档位的请求比例；划算条件 $p<1-C_s/C_l$ | % |
+| 保守偏置 | conservative bias | 路由不确定时上调档位，处理两类错误的非对称代价 | — |
+| 命中比例 | hit ratio | $S_{hit}/S_{in}$，前缀缓存收益的一阶指标 | % |
+| 缓存感知路由 | cache-aware routing | 依据实例缓存状态路由；缺失会使命中率稀释到约 $1/N$ | — |
+| 路由稀释 | routing dilution | 多实例随机路由造成的命中率损失 | — |
+| 思考时间 | think time $T_{think}$ | 用户读完回复到发下一条的间隔；决定 KV 驻留是否划算 | s |
+| 机会主义缓存 | opportunistic caching | 不承诺保留但命中即受益 | — |
+| 扩容滞后 | scaling lag $T_{lag}$ | 决策周期加冷启动时间；决定所需常备余量 | s |
+| 滞后阈值 | hysteresis | 扩容与缩容用不同阈值以防抖动 | — |
+| 成本交叉点 | cost crossover | $U=c_r/c_s$，serverless 与常驻成本相等的利用率 | % |
+| 冷启动概率 | cold start probability $p_{cold}$ | 请求到达时无热实例的概率 | % |
+
 ---
 
 ## 单位书写规范（强制）
