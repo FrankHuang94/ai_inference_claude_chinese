@@ -2,7 +2,67 @@
 
 本文件记录数据库的阶段性变更。遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/) 风格，版本号采用语义化版本。
 
-**当前阶段**：Phase 4 已完成（模块 00–03）｜ **下一阶段**：Phase 5（模块 04 Compiler、Runtime、Kernel 与量化）
+**当前阶段**：Phase 5 进行中（模块 04 完成 5/11 篇）｜ **阻塞**：七个 CSV 因网络出口策略无法录入，见 [AGENTS.md 第 11 节](AGENTS.md)
+
+---
+
+## [v0.6.0] — 2026-07-29
+
+### Phase 5（进行中）：模块 04 — Compiler、Runtime、Kernel 与量化
+
+**状态**：模块 04 `进行中`（5/11 篇，16,513 字）。全库正文 139,501 字。
+
+#### 重要：网络核验能力受阻
+
+按用户指示尝试开启一手来源核验（方案 A），探测结果为**组织级出口策略拒绝**：
+
+| 来源 | 状态 |
+|---|---|
+| `arxiv.org`、`export.arxiv.org` | 拒绝（`connect_rejected`，gateway 403 to CONNECT） |
+| `usenix.org`、`dl.acm.org`、`openreview.net`、`proceedings.mlr.press` | 拒绝 |
+| `huggingface.co`（模型卡唯一权威源） | 拒绝 |
+| `mlcommons.org`（MLPerf 官方结果） | 拒绝 |
+| `pytorch.org`、`docs.nvidia.com`、`onnxruntime.ai`、`jedec.org` | 拒绝 |
+| `github.com`、`raw.githubusercontent.com` | 可达 |
+| `api.github.com` | 可达但仅限本 session 已授权仓库；`add_repo` 不支持跨 owner |
+
+已验证 WebFetch 与 curl 走同一条策略代理，无第二路径。按
+`/root/.ccr/README.md` 规定，此类拒绝属组织策略，已上报而未绕行。
+
+**后果**：七个 CSV（`papers`、`models`、`accelerators`、`benchmarks`、
+`networking_technologies`、`companies`、`cloud_pricing`）无法按 AGENTS.md 第 5 节
+的来源纪律录入。约束已固化为 [AGENTS.md 第 11 节](AGENTS.md)，含探测方法、
+实测结果、受阻时的允许/禁止行为清单，以及解除阻塞所需的白名单清单。
+
+#### 新增文档（5 篇，16,513 字，63 表，5 图）
+
+| 文档 | 要点 |
+|---|---|
+| `01_inference_software_stack.md` | 七层结构、**编译器价值的三个机制**、固定开销模型 $\eta=T_c/(T_c+T_o)$、层与症状映射表 |
+| `02_graph_compilers_and_ir.md` | 多级 IR 的动机、**融合的四个边界条件**、动态形状三策略、**pass 顺序不可交换** |
+| `03_tensorrt_llm.md` | 深度编译路线：**五维绑定关系与产物组合爆炸**、10 项选型核实清单、适用边界 |
+| `04_torch_compile_inductor_and_triton.md` | 渐进式编译：**图中断**与**重编译**两大陷阱、按维度的动态/分桶策略、DSL 的价值与局限 |
+| `05_xla_jax_and_tpu_runtime.md` | 编译器优先栈：复杂度从硬件转移到编译器、**执行确定性改善 P99/P50**、覆盖度是选型核心 |
+
+**来源受限处理**：03–05 三篇涉及具体产品，官方文档站不可达，故只写
+**可从架构原理推导的分析框架与选型判据**，不给版本号、配置项、特性矩阵或性能数字，
+全部标注 `待核实`。章首均有明确的来源限制声明，提示读者勿当产品手册使用。
+
+#### 待完成（模块 04 剩余 6 篇）
+
+`06_onnx_runtime_openvino_and_portability.md`、`07_kernel_fusion_and_operator_optimization.md`、
+`08_flashattention_and_memory_efficient_attention.md`、`09_quantization_kernels.md`、
+`10_cuda_graphs_and_execution_overhead.md`、`11_compiler_debugging_and_profiling.md`
+
+其中 07–11 以原理为主，不依赖受阻来源，可正常撰写。
+
+#### QA 结果
+
+13 个脚本全部通过：1,127 条内部链接无死链；39 篇适用章节模板的文档无缺章；
+37 张 Mermaid 图语法正确且四要素解释齐备。
+
+本次 QA 暴露并修正：模块内 17 处指向**尚未撰写文档**的前向引用被判为死链，
+已按项目约定（只链接已存在文件）改为代码体，待对应文档写成后恢复为链接。
 
 ---
 

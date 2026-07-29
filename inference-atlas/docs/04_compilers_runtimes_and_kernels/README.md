@@ -1,7 +1,9 @@
 # 模块 04 — Compiler、Runtime、Kernel 与量化
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**进行中**（5/11 篇 ／ 16,513 字）
+>
+> **来源受限提示**：本模块涉及具体产品的版本、配置项与性能数字，因官方文档站在当前环境不可访问而标注 `待核实`，见 [AGENTS.md 第 11 节](../../AGENTS.md)。
 > 模块目标字数：**≥ 15,000 字**
 > 最后更新：2026-07-29
 
@@ -19,11 +21,11 @@
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
-| 01 | `01_inference_software_stack.md` | framework → IR → compiler → runtime → kernel → driver 全栈 | 待开始 |
-| 02 | `02_graph_compilers_and_ir.md` | 图捕获、IR 设计与图优化 | 待开始 |
-| 03 | `03_tensorrt_llm.md` | TensorRT-LLM 的架构、优化与适用边界 | 待开始 |
-| 04 | `04_torch_compile_inductor_and_triton.md` | TorchDynamo/Inductor/Triton 的推理路径 | 待开始 |
-| 05 | `05_xla_jax_and_tpu_runtime.md` | XLA/JAX 与 TPU runtime | 待开始 |
+| 01 | [01_inference_software_stack.md](01_inference_software_stack.md) | framework → IR → compiler → runtime → kernel → driver 全栈 | 已完成 |
+| 02 | [02_graph_compilers_and_ir.md](02_graph_compilers_and_ir.md) | 图捕获、IR 设计与图优化 | 已完成 |
+| 03 | [03_tensorrt_llm.md](03_tensorrt_llm.md) | TensorRT-LLM 的架构、优化与适用边界 | 已完成 |
+| 04 | [04_torch_compile_inductor_and_triton.md](04_torch_compile_inductor_and_triton.md) | TorchDynamo/Inductor/Triton 的推理路径 | 已完成 |
+| 05 | [05_xla_jax_and_tpu_runtime.md](05_xla_jax_and_tpu_runtime.md) | XLA/JAX 与 TPU runtime | 已完成 |
 | 06 | `06_onnx_runtime_openvino_and_portability.md` | 跨硬件可移植性与代价 | 待开始 |
 | 07 | `07_kernel_fusion_and_operator_optimization.md` | 算子融合与 kernel 优化基本功 | 待开始 |
 | 08 | `08_flashattention_and_memory_efficient_attention.md` | IO-aware attention 与显存/带宽优化 | 待开始 |
