@@ -1,7 +1,7 @@
 # 模块 05 — 解码、Speculative 与 Reasoning 推理
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中**（2/10 篇）
+> 状态：**已完成**（10/10 篇）
 > 模块目标字数：**≥ 13,000 字**
 > 最后更新：2026-07-29
 
@@ -20,15 +20,15 @@
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
 | 01 | [01_decoding_basics.md](01_decoding_basics.md) | 自回归解码循环与采样接口 | 已完成 |
-| 02 | `02_greedy_sampling_topk_topp_temperature.md` | 采样参数对质量、时延与可复现性的影响 | 待开始 |
-| 03 | `03_beam_search_and_constrained_decoding.md` | beam search 与约束解码的推理代价 | 待开始 |
+| 02 | [02_greedy_sampling_topk_topp_temperature.md](02_greedy_sampling_topk_topp_temperature.md) | 采样参数对质量、时延与可复现性的影响 | 已完成 |
+| 03 | [03_beam_search_and_constrained_decoding.md](03_beam_search_and_constrained_decoding.md) | beam search 与约束解码的推理代价 | 已完成 |
 | 04 | [04_speculative_decoding.md](04_speculative_decoding.md) | draft/verify 机制、接受率与真实收益判定 | 已完成 |
-| 05 | `05_medusa_eagle_and_multi_token_prediction.md` | 多头/树形投机与多 token 预测 | 待开始 |
-| 06 | `06_draft_model_selection_and_acceptance_rate.md` | draft 模型选型与接受率工程 | 待开始 |
-| 07 | `07_reasoning_inference_and_test_time_scaling.md` | test-time compute 的质量-成本曲线 | 待开始 |
-| 08 | `08_tool_use_and_agent_inference.md` | 工具调用与 agent 循环的推理特征 | 待开始 |
-| 09 | `09_structured_output_and_grammar_constrained_decoding.md` | JSON mode 与语法约束解码 | 待开始 |
-| 10 | `10_generation_quality_latency_tradeoffs.md` | 生成质量与时延的系统级权衡 | 待开始 |
+| 05 | [05_medusa_eagle_and_multi_token_prediction.md](05_medusa_eagle_and_multi_token_prediction.md) | 多头/树形投机与多 token 预测 | 已完成 |
+| 06 | [06_draft_model_selection_and_acceptance_rate.md](06_draft_model_selection_and_acceptance_rate.md) | draft 模型选型与接受率工程 | 已完成 |
+| 07 | [07_reasoning_inference_and_test_time_scaling.md](07_reasoning_inference_and_test_time_scaling.md) | test-time compute 的质量-成本曲线 | 已完成 |
+| 08 | [08_tool_use_and_agent_inference.md](08_tool_use_and_agent_inference.md) | 工具调用与 agent 循环的推理特征 | 已完成 |
+| 09 | [09_structured_output_and_grammar_constrained_decoding.md](09_structured_output_and_grammar_constrained_decoding.md) | JSON mode 与语法约束解码 | 已完成 |
+| 10 | [10_generation_quality_latency_tradeoffs.md](10_generation_quality_latency_tradeoffs.md) | 生成质量与时延的系统级权衡 | 已完成 |
 
 ## 写作要求
 
@@ -39,14 +39,14 @@
 
 ## 完成标准
 
-- [ ] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
-- [ ] 模块正文合计 ≥ 13,000 字
-- [ ] 上述"写作要求"逐条覆盖
-- [ ] 所有事实性数字带来源链接与披露标签
+- [x] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
+- [x] 模块正文合计 ≥ 13,000 字
+- [x] 上述"写作要求"逐条覆盖
+- [x] 所有事实性数字带来源链接与披露标签（无法核验者已标 `待核实` 或明确不引用）
 - [ ] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
 - [ ] 相关 [`data/`](../../data/) CSV 已更新
-- [ ] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
-- [ ] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
+- [x] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
+- [x] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
 
 ## 工作节奏
 
