@@ -91,10 +91,10 @@ InferenceAtlas 是一个**中文**的 AI 推理知识数据库，目标是在 Gi
 
 | 指标 | 当前 | 最终目标 | 最低验收线 |
 |---|---:|---:|---:|
-| 中文正文字数 | 21,824 | 120,000 | 100,000 |
-| 实质内容 Markdown 文档 | 7 | 120 | — |
-| Markdown 表格 | 64 | 110 | — |
-| Mermaid 图示 | 3 | 60 | — |
+| 中文正文字数 | 48,355 | 120,000 | 100,000 |
+| 实质内容 Markdown 文档 | 16 | 120 | — |
+| Markdown 表格 | 155 | 110 | — |
+| Mermaid 图示 | 11 | 60 | — |
 | 已核验来源条目 | 5 | 550 | — |
 | 模型记录 | 0 | 120 | — |
 | 推理引擎记录 | 2 | 40 | — |
@@ -106,7 +106,7 @@ InferenceAtlas 是一个**中文**的 AI 推理知识数据库，目标是在 Gi
 | 组织深度档案 | 0 | 30 | — |
 | 面试题 | 0 | **恰好 100** | — |
 
-**当前阶段**：Phase 1 已完成（模块 00）。模块 00 状态 `已完成`，其余 17 个模块 `待开始`。
+**当前阶段**：Phase 2 已完成（模块 00–01）。其余 16 个模块 `待开始`。
 
 ---
 
@@ -135,7 +135,7 @@ InferenceAtlas 是一个**中文**的 AI 推理知识数据库，目标是在 Gi
 | # | 模块 | 状态 |
 |---|---|---|
 | 00 | [入门与端到端总览](docs/00_start_here/) | **已完成** |
-| 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 待开始 |
+| 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | **已完成** |
 | 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 待开始 |
 | 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 待开始 |
 | 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 待开始 |

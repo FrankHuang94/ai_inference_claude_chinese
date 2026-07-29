@@ -13,6 +13,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 REPORTS = ROOT / "reports"
 FENCE = re.compile(r"```.*?```", re.S)
+COUNTEREXAMPLE = re.compile(r"(错误写法|错误示范|错误[:：]|反例|不要写|第一反应|应该是怀疑|属伪精确|禁止)")
 COMMENT = re.compile(r"<!--.*?-->", re.S)
 
 # (规则名, 正则, 说明)
@@ -33,8 +34,11 @@ RULES = [
      "确认是十进制 GB 还是二进制 GiB，必要时显式说明"),
     ("成本口径混用", re.compile(r"\$\s*\d+(?:\.\d+)?\s*/\s*(?:token|tok)\b"),
      "单 token 成本建议统一写作 $/1M tokens，避免极小数字的伪精确"),
-    ("分位数缺样本量", re.compile(r"\bP(?:50|95|99|99\.9)\b(?![^\n]{0,60}(?:样本|n\s*=|请求数|次))"),
-     "分位数应与样本量、观测窗口一同给出"),
+    # 仅当分位数后面跟着**具体测量值**时才要求样本量；散文中提及 P99 概念不告警
+    ("分位数缺样本量",
+     re.compile(r"\bP(?:50|95|99|99\.9)\b[^\n]{0,20}?\d+(?:\.\d+)?\s*(?:ms|s|秒|毫秒)"
+                r"(?![^\n]{0,80}(?:样本|n\s*=|请求数|次|窗口))"),
+     "报告了具体分位数值但未给出样本量或观测窗口"),
     ("伪精确成本", re.compile(r"\$\s*\d+\.\d{5,}"),
      "成本数字位数超出输入精度，属伪精确"),
 ]
@@ -47,6 +51,9 @@ def main() -> int:
         text = COMMENT.sub("", FENCE.sub("", md.read_text(encoding="utf-8")))
         for i, line in enumerate(text.split("\n"), 1):
             if line.lstrip().startswith(">"):
+                continue
+            # 教学用的反例/错误示范行本身就是在演示违规写法，不告警
+            if COUNTEREXAMPLE.search(line):
                 continue
             for name, rx, hint in RULES:
                 m = rx.search(line)

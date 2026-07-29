@@ -14,7 +14,7 @@
 | # | 模块 | 状态 | 字数 | 表格 | 图示 | 最后更新 |
 |---|---|---|---:|---:|---:|---|
 | 00 | [入门与端到端总览](docs/00_start_here/) | 已完成 | 21,824 | 64 | 3 | 2026-07-29 |
-| 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 待开始 | 0 | 0 | 0 | — |
+| 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 已完成 | 26,531 | 91 | 8 | 2026-07-29 |
 | 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 待开始 | 0 | 0 | 0 | — |
 | 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 待开始 | 0 | 0 | 0 | — |
 | 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 待开始 | 0 | 0 | 0 | — |
@@ -31,7 +31,7 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 待开始 | 0 | 0 | 0 | — |
-| — | **合计** | — | **21,824** | **64** | **3** | 2026-07-29 |
+| — | **合计** | — | **48,355** | **155** | **11** | 2026-07-29 |
 
 ---
 
@@ -49,19 +49,19 @@
 | [05_how_to_prepare_for_inference_interviews.md](docs/00_start_here/05_how_to_prepare_for_inference_interviews.md) | 推理相关岗位的能力地图与准备策略 |
 | [06_metrics_units_and_quick_reference.md](docs/00_start_here/06_metrics_units_and_quick_reference.md) | 全库指标、单位与口径速查表 |
 
-### [01 — 基础、指标、排队论与成本](docs/01_foundations_and_metrics/) `待开始`
+### [01 — 基础、指标、排队论与成本](docs/01_foundations_and_metrics/) `已完成`
 
 | 文档 | 一句话说明 |
 |---|---|
-| `01_inference_workload_taxonomy.md` | 交互式、长上下文、RAG、reasoning、批量与 agent workload 的分类与特征 |
-| `02_latency_throughput_and_slo.md` | TTFT/TPOT/ITL/端到端时延、吞吐与 SLO 的定义与测量口径 |
-| `03_queueing_theory_for_inference.md` | Little's Law、M/M/1、M/M/c 与 tail latency 放大 |
-| `04_roofline_and_performance_modeling.md` | Roofline 模型与推理阶段的 compute/memory bound 判定 |
-| `05_memory_bandwidth_and_arithmetic_intensity.md` | 算术强度、带宽墙与 decode 阶段的内存受限本质 |
-| `06_cost_modeling_and_unit_economics.md` | cost/token 模型、假设边界与避免伪精确 |
-| `07_energy_efficiency_and_joules_per_token.md` | J/token、功耗测量口径与能效优化路径 |
-| `08_capacity_planning.md` | 容量规划：负载预测、余量、突发与预留 |
-| `09_inference_metrics_cheat_sheet.md` | 指标速查卡 |
+| [01_inference_workload_taxonomy.md](docs/01_foundations_and_metrics/01_inference_workload_taxonomy.md) | 交互式、长上下文、RAG、reasoning、批量与 agent workload 的分类与特征 |
+| [02_latency_throughput_and_slo.md](docs/01_foundations_and_metrics/02_latency_throughput_and_slo.md) | TTFT/TPOT/ITL/端到端时延、吞吐与 SLO 的定义与测量口径 |
+| [03_queueing_theory_for_inference.md](docs/01_foundations_and_metrics/03_queueing_theory_for_inference.md) | Little's Law、M/M/1、M/M/c 与 tail latency 放大 |
+| [04_roofline_and_performance_modeling.md](docs/01_foundations_and_metrics/04_roofline_and_performance_modeling.md) | Roofline 模型与推理阶段的 compute/memory bound 判定 |
+| [05_memory_bandwidth_and_arithmetic_intensity.md](docs/01_foundations_and_metrics/05_memory_bandwidth_and_arithmetic_intensity.md) | 算术强度、带宽墙与 decode 阶段的内存受限本质 |
+| [06_cost_modeling_and_unit_economics.md](docs/01_foundations_and_metrics/06_cost_modeling_and_unit_economics.md) | cost/token 模型、假设边界与避免伪精确 |
+| [07_energy_efficiency_and_joules_per_token.md](docs/01_foundations_and_metrics/07_energy_efficiency_and_joules_per_token.md) | J/token、功耗测量口径与能效优化路径 |
+| [08_capacity_planning.md](docs/01_foundations_and_metrics/08_capacity_planning.md) | 容量规划：负载预测、余量、突发与预留 |
+| [09_inference_metrics_cheat_sheet.md](docs/01_foundations_and_metrics/09_inference_metrics_cheat_sheet.md) | 指标速查卡 |
 
 ### [02 — Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) `待开始`
 

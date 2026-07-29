@@ -150,6 +150,31 @@
 | 队头阻塞 | head-of-line blocking | 队首长请求阻塞其后短请求，tail latency 的常见来源 | — |
 | 选择性配置 | selective configuration | benchmark 中只报告对自身最有利配置点的做法 | — |
 
+## 12. 排队、容量与成本建模
+
+> 本节随 [模块 01](docs/01_foundations_and_metrics/) 完成新增。
+
+| 中文术语 | 英文 | 定义 | 单位/口径 |
+|---|---|---|---|
+| 计算画像比 | prefill/decode ratio $R$ | $S_{in}/S_{out}$，判断系统偏 compute- 还是 memory-bound | 无量纲 |
+| 变异系数 | coefficient of variation $C_S$ | $\sigma_S/E[S]$，服务时间相对离散度；通过 $(1+C_S^2)$ 放大排队时延 | 无量纲 |
+| 脊点 | ridge point $I^*$ | $P/BW$，Roofline 上 memory/compute-bound 的分界，纯硬件属性 | FLOP/byte |
+| 可达性能 | attainable performance | $\min(P, I\times BW)$，**上界而非预测值** | FLOP/s |
+| 分层 Roofline | hierarchical roofline | 为每级内存（SRAM/L2/HBM）各画一条斜屋顶 | — |
+| 权重字节数 | weight bytes $W_{bytes}$ | $P_{params}\times b_w$，decode 每步至少读一遍 | byte |
+| 临界并发 | critical batch size $B^*$ | 权重与 KV 带宽消耗相等时的并发数；与上下文长度成反比 | 个 |
+| 权重主导区 | weight-dominated regime | $B<B^*$，优化重点为批处理与权重量化 | — |
+| KV 主导区 | KV-dominated regime | $B>B^*$，优化重点为 KV 量化、GQA/MLA、驱逐 | — |
+| 带宽墙 | bandwidth wall | 算力增速持续快于带宽增速，使 $I^*$ 上升 | — |
+| 有效利用率 | effective utilization $U$ | 实际交付量 ÷ 理论产能；直接进入成本分母 | % |
+| 伪精确 | false precision | 输出有效位数超出输入精度所能支持的范围 | — |
+| 运行时开销 | runtime overhead $M_{rt}$ | 激活、缓冲、碎片等显存占用，需实测标定 | GB |
+| 余量因子 | headroom factors | 冗余×增长×区域，三者**相乘**而非相加 | 无量纲 |
+| 测量边界 | measurement boundary | J/token 与功耗的四级口径：chip/node/rack/facility | — |
+| 功率封顶 | power cap | 功耗达上限触发的频率限制；高负载时立即出现 | W |
+| 热降频 | thermal throttling | 温度达阈值触发的频率下降；**运行一段时间后**逐渐出现 | — |
+| 空载功耗 | idle power | 通电但无有效负载时的功耗；低利用率下占比高 | W |
+
 ---
 
 ## 单位书写规范（强制）

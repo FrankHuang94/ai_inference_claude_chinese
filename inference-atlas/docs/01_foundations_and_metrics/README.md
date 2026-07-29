@@ -1,7 +1,7 @@
 # 模块 01 — 基础、指标、排队论与成本
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**已完成**（26,531 字 ／ 9 篇 ／ 91 表 ／ 8 图）
 > 模块目标字数：**≥ 14,000 字**
 > 最后更新：2026-07-29
 
@@ -19,15 +19,15 @@
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
-| 01 | `01_inference_workload_taxonomy.md` | 交互式、长上下文、RAG、reasoning、批量与 agent workload 的分类与特征 | 待开始 |
-| 02 | `02_latency_throughput_and_slo.md` | TTFT/TPOT/ITL/端到端时延、吞吐与 SLO 的定义与测量口径 | 待开始 |
-| 03 | `03_queueing_theory_for_inference.md` | Little's Law、M/M/1、M/M/c 与 tail latency 放大 | 待开始 |
-| 04 | `04_roofline_and_performance_modeling.md` | Roofline 模型与推理阶段的 compute/memory bound 判定 | 待开始 |
-| 05 | `05_memory_bandwidth_and_arithmetic_intensity.md` | 算术强度、带宽墙与 decode 阶段的内存受限本质 | 待开始 |
-| 06 | `06_cost_modeling_and_unit_economics.md` | cost/token 模型、假设边界与避免伪精确 | 待开始 |
-| 07 | `07_energy_efficiency_and_joules_per_token.md` | J/token、功耗测量口径与能效优化路径 | 待开始 |
-| 08 | `08_capacity_planning.md` | 容量规划：负载预测、余量、突发与预留 | 待开始 |
-| 09 | `09_inference_metrics_cheat_sheet.md` | 指标速查卡 | 待开始 |
+| 01 | [01_inference_workload_taxonomy.md](01_inference_workload_taxonomy.md) | 交互式、长上下文、RAG、reasoning、批量与 agent workload 的分类与特征 | 已完成 |
+| 02 | [02_latency_throughput_and_slo.md](02_latency_throughput_and_slo.md) | TTFT/TPOT/ITL/端到端时延、吞吐与 SLO 的定义与测量口径 | 已完成 |
+| 03 | [03_queueing_theory_for_inference.md](03_queueing_theory_for_inference.md) | Little's Law、M/M/1、M/M/c 与 tail latency 放大 | 已完成 |
+| 04 | [04_roofline_and_performance_modeling.md](04_roofline_and_performance_modeling.md) | Roofline 模型与推理阶段的 compute/memory bound 判定 | 已完成 |
+| 05 | [05_memory_bandwidth_and_arithmetic_intensity.md](05_memory_bandwidth_and_arithmetic_intensity.md) | 算术强度、带宽墙与 decode 阶段的内存受限本质 | 已完成 |
+| 06 | [06_cost_modeling_and_unit_economics.md](06_cost_modeling_and_unit_economics.md) | cost/token 模型、假设边界与避免伪精确 | 已完成 |
+| 07 | [07_energy_efficiency_and_joules_per_token.md](07_energy_efficiency_and_joules_per_token.md) | J/token、功耗测量口径与能效优化路径 | 已完成 |
+| 08 | [08_capacity_planning.md](08_capacity_planning.md) | 容量规划：负载预测、余量、突发与预留 | 已完成 |
+| 09 | [09_inference_metrics_cheat_sheet.md](09_inference_metrics_cheat_sheet.md) | 指标速查卡 | 已完成 |
 
 ## 写作要求
 
@@ -40,14 +40,14 @@
 
 ## 完成标准
 
-- [ ] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
-- [ ] 模块正文合计 ≥ 14,000 字
-- [ ] 上述"写作要求"逐条覆盖
-- [ ] 所有事实性数字带来源链接与披露标签
-- [ ] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
-- [ ] 相关 [`data/`](../../data/) CSV 已更新
-- [ ] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
-- [ ] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
+- [x] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
+- [x] 模块正文合计 ≥ 14,000 字
+- [x] 上述"写作要求"逐条覆盖
+- [x] 所有事实性数字带来源链接与披露标签
+- [x] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
+- [x] 相关 [`data/`](../../data/) CSV 已更新
+- [x] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
+- [x] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
 
 ## 工作节奏
 

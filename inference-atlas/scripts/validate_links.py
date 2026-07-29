@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 """校验仓库内所有 Markdown 的相对链接与同文件锚点。
 
+剥离：fenced code、行内代码、HTML 注释、LaTeX 数学区（$...$ 与 $$...$$）。
+这些区域中的 `E[S](1+x)` 等写法在语法上酷似 Markdown 链接，但并非链接。
+
 排除目录：
   - templates/ —— 模板中的链接是**给复制到目标位置后使用**的占位路径
     （如 `../../INDEX.md` 相对 docs/<module>/ 才成立），在原位不可解析，属预期行为。
@@ -22,6 +25,11 @@ LINK = re.compile(r"(?<!\!)\[([^\]]*)\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 HEADING = re.compile(r"^(#{1,6})\s+(.*?)\s*$", re.M)
 FENCE = re.compile(r"```.*?```", re.S)
 COMMENT = re.compile(r"<!--.*?-->", re.S)
+# LaTeX 数学区：其中的 E[S](1+x) 等写法在语法上酷似 Markdown 链接，必须先剥离
+MATH_BLOCK = re.compile(r"\$\$.*?\$\$", re.S)
+MATH_INLINE = re.compile(r"(?<!\$)\$[^$\n]+\$(?!\$)")
+# 行内代码：`E[S](1+x)` 同样酷似链接语法，且代码里的路径不应被当作真实链接校验
+INLINE_CODE = re.compile(r"`[^`\n]*`")
 
 
 def slugify(text: str) -> str:
@@ -35,6 +43,7 @@ def slugify(text: str) -> str:
 def anchors_of(path: pathlib.Path) -> set:
     try:
         txt = FENCE.sub("", path.read_text(encoding="utf-8"))
+        txt = MATH_INLINE.sub(" ", MATH_BLOCK.sub(" ", txt))
     except (OSError, UnicodeDecodeError):
         return set()
     return {slugify(m.group(2)) for m in HEADING.finditer(txt)}
@@ -48,6 +57,8 @@ def main() -> int:
     for md in md_files:
         raw = md.read_text(encoding="utf-8")
         body = COMMENT.sub("", FENCE.sub("", raw))
+        body = MATH_INLINE.sub(" ", MATH_BLOCK.sub(" ", body))
+        body = INLINE_CODE.sub(" ", body)
         for m in LINK.finditer(body):
             target = m.group(2).strip()
             if target.startswith(("http://", "https://", "mailto:", "#")):

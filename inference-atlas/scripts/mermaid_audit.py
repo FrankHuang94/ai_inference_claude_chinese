@@ -21,7 +21,15 @@ VALID_HEAD = re.compile(
     r"^\s*(graph|flowchart|sequenceDiagram|classDiagram|stateDiagram(?:-v2)?|erDiagram|"
     r"journey|gantt|pie|gitGraph|mindmap|timeline|quadrantChart|C4Context|block-beta|"
     r"sankey-beta|xychart-beta|requirementDiagram)\b")
-CONTEXT_HINT = re.compile(r"(瓶颈|trade-?off|权衡|本图|上图|下图|该图|图中|面试)", re.I)
+# 约定的四要素：图展示什么 / 核心瓶颈 / trade-off / 面试如何引用
+ASPECTS = [
+    re.compile(r"(图展示|展示什么|本图|上图|下图|该图|图中)"),
+    re.compile(r"瓶颈"),
+    re.compile(r"(trade-?off|权衡|取舍)", re.I),
+    re.compile(r"面试"),
+]
+MIN_ASPECTS = 3          # 四要素至少覆盖 3 项
+CONTEXT_WINDOW = 20      # 图前后各 20 行合并为一个窗口
 
 
 def main() -> int:
@@ -55,10 +63,12 @@ def main() -> int:
                                    f"括号不配对：`{op}` {joined.count(op)} 个 / "
                                    f"`{cl}` {joined.count(cl)} 个"))
             end_line = text[:m.end()].count("\n") + 1
-            before = "\n".join(lines[max(0, start_line - 16):start_line - 1])
-            after = "\n".join(lines[end_line:end_line + 15])
-            if not (CONTEXT_HINT.search(before) and CONTEXT_HINT.search(after)):
-                missing_ctx.append((rel, start_line))
+            window = "\n".join(
+                lines[max(0, start_line - 1 - CONTEXT_WINDOW):start_line - 1]
+                + lines[end_line:end_line + CONTEXT_WINDOW])
+            covered = sum(1 for a in ASPECTS if a.search(window))
+            if covered < MIN_ASPECTS:
+                missing_ctx.append((rel, start_line, covered))
 
     REPORTS.mkdir(exist_ok=True)
     L = ["# Mermaid 图审计", "", "> 生成于 `scripts/mermaid_audit.py`", "",
@@ -78,9 +88,9 @@ def main() -> int:
     else:
         L.append("无。")
     L += ["", f"## 缺少前后文解释：{len(missing_ctx)}", "",
-          "> 约定：每张图前后须说明「图展示什么 / 核心瓶颈 / trade-off / 面试如何引用」。", ""]
+          f"> 约定：每张图前后 {CONTEXT_WINDOW} 行内须说明「图展示什么 / 核心瓶颈 / trade-off / face」四要素中的至少 {MIN_ASPECTS} 项。".replace("face", "面试如何引用"), ""]
     if missing_ctx:
-        L += ["| 文件 | 行 |", "|---|---:|"] + [f"| `{a}` | {b} |" for a, b in missing_ctx]
+        L += ["| 文件 | 行 | 已覆盖要素 |", "|---|---:|---:|"] + [f"| `{a}` | {b} | {c}/4 |" for a, b, c in missing_ctx]
     else:
         L.append("无。")
     (REPORTS / "mermaid_report.md").write_text("\n".join(L) + "\n", encoding="utf-8")

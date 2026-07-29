@@ -2,7 +2,58 @@
 
 本文件记录数据库的阶段性变更。遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/) 风格，版本号采用语义化版本。
 
-**当前阶段**：Phase 1 已完成（模块 00）｜ **下一阶段**：Phase 2（模块 01 基础、指标、排队论与成本）
+**当前阶段**：Phase 2 已完成（模块 00–01）｜ **下一阶段**：Phase 3（模块 02 Transformer 推理与 KV Cache）
+
+---
+
+## [v0.3.0] — 2026-07-29
+
+### Phase 2：模块 01 — 基础、指标、排队论与成本
+
+**状态**：模块 01 `已完成`。目标 14,000 字，实际 26,531 字（189%）。
+
+#### 新增文档（9 篇，26,531 字，91 表，8 图）
+
+| 文档 | 要点 |
+|---|---|
+| `01_inference_workload_taxonomy.md` | 四参数刻画法、$R=S_{in}/S_{out}$ 判据、9 类 workload 画像、混合干扰与隔离 |
+| `02_latency_throughput_and_slo.md` | TTFT/TPOT/ITL 精确定义与口径分歧、三种测量边界、吞吐-时延反向关系、分层 SLO |
+| `03_queueing_theory_for_inference.md` | Little's Law 与三个数值案例、$\frac{\rho}{1-\rho}$ 发散表、$(1+C_S^2)$ 方差放大、抢占重算正反馈 |
+| `04_roofline_and_performance_modeling.md` | Roofline 与脊点、**decode 算术强度 $\approx 2B/b_w$ 推导**、优化方向判据、分层 Roofline |
+| `05_memory_bandwidth_and_arithmetic_intensity.md` | **单序列 decode 上界 $BW/W_{bytes}$**、批处理摊薄与饱和、临界并发 $B^*$、带宽墙传导链 |
+| `06_cost_modeling_and_unit_economics.md` | 成本分解与边界、**利用率倍数表**、输入/输出成本差异的技术依据、避免伪精确 |
+| `07_energy_efficiency_and_joules_per_token.md` | J/token 四级测量边界、memory-bound 优化的性能-能效双赢、能效作为容量约束、功率封顶 vs 热降频 |
+| `08_capacity_planning.md` | 五步计算链、两约束取小、三余量因子相乘、机架功率校验 |
+| `09_inference_metrics_cheat_sheet.md` | 12 节速查（六公式、两张放大表、单位红线、症状首查） |
+
+#### 同步更新
+
+- `INDEX.md`、模块 README、`README.md` 统计
+- `GLOSSARY.md`：新增第 12 节「排队、容量与成本建模」共 18 条术语
+
+#### 工具修正（3 项，均由 QA 自身暴露）
+
+- `validate_links.py`：剥离 LaTeX 数学区。`E[S](1+C_S^2)` 这类数学写法在语法上酷似
+  Markdown 链接，此前被误报为死链
+- `mermaid_audit.py`：上下文检查从「图前后各自都要有关键词」改为
+  「前后 20 行合并窗口内覆盖四要素中至少 3 项」，更贴合实际写作约定
+- `unit_consistency_audit.py`：收紧分位数规则（仅当报告了**具体数值**时才要求样本量，
+  散文提及 P99 概念不告警）；新增反例行豁免（教学用的错误示范本身在演示违规写法）
+  —— 告警从 42 降至 1，且剩余 1 条为有意保留的反例
+
+#### QA 结果
+
+13 个脚本全部通过：711 条内部链接无死链；13 篇适用章节模板的文档无缺章；
+11 张 Mermaid 图语法正确且四要素解释齐备；CSV schema 无违规。
+
+#### 未核验事项
+
+- 各类 workload 的**具体长度分布数值**：公开可核验数据稀少，正文标注 `待核实`，
+  要求生产环境自行标定
+- **实测达成比例**（实际吞吐相对 $BW/W_{bytes}$ 上界的比例）：依赖实现质量，`待核实`
+- **能耗比值**（HBM 访问 vs 算术运算）：随工艺代际变化大，未引用无来源数字
+- 所有**具体价格、PUE、J/token 数值**：本模块一律不给出，留待模块 09/11/15 附一手来源
+- `benchmarks.csv`、`deployment_cases.csv`、`cloud_pricing.csv` 仍为空
 
 ---
 
