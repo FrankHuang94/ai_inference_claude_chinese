@@ -1,0 +1,2 @@
+term_id,term_zh,term_en,abbreviation,category,definition,unit_or_convention,common_confusions,related_terms,related_docs,last_verified_date
+G-001,首 token 时延,time to first token,TTFT,时延与吞吐指标,从请求到达系统到首个输出 token 返回给客户端所经历的时间。,ms；本库口径包含排队时延与 tokenization 时间，报告时须给出分位数（P50/P95/P99）与样本量,部分 benchmark 的 TTFT 从「开始 prefill」而非「请求到达」计时，因而不含排队时延，两者不可直接比较；亦不可与端到端时延混用,TPOT; ITL; end-to-end latency; queue delay,docs/01_foundations_and_metrics/02_latency_throughput_and_slo.md（待创建）,2026-07-29

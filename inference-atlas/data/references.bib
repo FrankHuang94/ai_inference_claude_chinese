@@ -1,0 +1,78 @@
+% InferenceAtlas — BibTeX 引用库
+% 最后更新：2026-07-29
+%
+% 规范：
+%   1. key 采用 <首作者姓氏小写><年份><主题词> 形式，全库唯一
+%   2. 每条目必须与 papers.csv 中的 paper_id 一一对应（见 note 字段）
+%   3. 优先使用会议/期刊正式出版信息；预印本额外保留 eprint
+%   4. 新增论文卡片时必须同步在此追加条目
+
+@inproceedings{vaswani2017attention,
+  title     = {Attention Is All You Need},
+  author    = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and
+               Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and
+               Kaiser, Lukasz and Polosukhin, Illia},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2017},
+  eprint    = {1706.03762},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url       = {https://arxiv.org/abs/1706.03762},
+  note      = {InferenceAtlas paper_id: P-001}
+}
+
+@inproceedings{dao2022flashattention,
+  title     = {{FlashAttention}: Fast and Memory-Efficient Exact Attention with
+               {IO}-Awareness},
+  author    = {Dao, Tri and Fu, Daniel Y. and Ermon, Stefano and Rudra, Atri and
+               R{\'e}, Christopher},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2022},
+  eprint    = {2205.14135},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/2205.14135},
+  note      = {InferenceAtlas paper_id: P-002}
+}
+
+@inproceedings{yu2022orca,
+  title     = {{Orca}: A Distributed Serving System for Transformer-Based
+               Generative Models},
+  author    = {Yu, Gyeong-In and Jeong, Joo Seong and Kim, Geon-Woo and
+               Kim, Soojeong and Chun, Byung-Gon},
+  booktitle = {16th USENIX Symposium on Operating Systems Design and
+               Implementation (OSDI 22)},
+  year      = {2022},
+  publisher = {USENIX Association},
+  url       = {https://www.usenix.org/conference/osdi22/presentation/yu},
+  note      = {InferenceAtlas paper_id: P-003}
+}
+
+@inproceedings{kwon2023pagedattention,
+  title     = {Efficient Memory Management for Large Language Model Serving with
+               {PagedAttention}},
+  author    = {Kwon, Woosuk and Li, Zhuohan and Zhuang, Siyuan and Sheng, Ying and
+               Zheng, Lianmin and Yu, Cody Hao and Gonzalez, Joseph E. and
+               Zhang, Hao and Stoica, Ion},
+  booktitle = {Proceedings of the 29th Symposium on Operating Systems Principles
+               (SOSP '23)},
+  year      = {2023},
+  eprint    = {2309.06180},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/2309.06180},
+  note      = {InferenceAtlas paper_id: P-004}
+}
+
+@inproceedings{leviathan2023speculative,
+  title     = {Fast Inference from Transformers via Speculative Decoding},
+  author    = {Leviathan, Yaniv and Kalman, Matan and Matias, Yossi},
+  booktitle = {Proceedings of the 40th International Conference on Machine
+               Learning (ICML)},
+  year      = {2023},
+  eprint    = {2211.17192},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/2211.17192},
+  note      = {InferenceAtlas paper_id: P-005}
+}

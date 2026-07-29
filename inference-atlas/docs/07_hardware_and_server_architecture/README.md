@@ -1,0 +1,59 @@
+# 模块 07 — 硬件、HBM、封装与服务器
+
+> 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
+> 状态：**待开始**
+> 模块目标字数：**≥ 18,000 字**
+> 最后更新：2026-07-29
+
+## 模块定位
+
+本模块把上层的所有优化落到物理约束上。LLM decode 的本质是**把权重从 HBM 搬到计算单元**，因此显存带宽与容量往往比峰值算力更能预测实际吞吐。本模块要求严格区分理论峰值与实测、训练性能与推理性能，以及 chip / board / server / rack 四级功耗口径。
+
+## 前置阅读
+
+[模块 01](../01_foundations_and_metrics/)、[模块 02](../02_transformer_and_kv_cache/)
+
+## 规划文档
+
+> 尚未创建的文档以 `代码体` 列出，避免死链。完成后改为链接并更新状态。
+
+| # | 文档 | 一句话说明 | 状态 |
+|---:|---|---|---|
+| 01 | `01_ai_inference_hardware_overview.md` | 推理硬件全景与分类 | 待开始 |
+| 02 | `02_gpu_architecture_for_inference.md` | GPU 微架构中与推理相关的部分 | 待开始 |
+| 03 | `03_tensor_cores_matrix_engines_and_low_precision.md` | 矩阵引擎与低精度算力 | 待开始 |
+| 04 | `04_hbm_dram_and_memory_hierarchy.md` | HBM/DRAM/SRAM 层次与带宽 | 待开始 |
+| 05 | `05_memory_capacity_bandwidth_and_kv_cache.md` | 显存容量/带宽如何约束 KV cache 与并发 | 待开始 |
+| 06 | `06_gpu_server_node_architecture.md` | 服务器节点：CPU、PCIe、NVLink、NIC、存储 | 待开始 |
+| 07 | `07_inference_asic_architectures.md` | 推理 ASIC 的架构取舍 | 待开始 |
+| 08 | `08_nvidia_amd_intel_and_custom_accelerators.md` | 主流商用加速器对比 | 待开始 |
+| 09 | `09_google_tpu_aws_inferentia_trainium_and_maia.md` | 超大规模厂商自研芯片 | 待开始 |
+| 10 | `10_groq_cerebras_sambanova_dmatrix_etched_tenstorrent.md` | 推理初创公司的架构路线 | 待开始 |
+| 11 | `11_advanced_packaging_chiplets_and_ucie.md` | 先进封装、chiplet 与 UCIe | 待开始 |
+| 12 | `12_hbm_supply_chain_and_memory_roadmaps.md` | HBM 供应链与内存路线图 | 待开始 |
+| 13 | `13_hardware_selection_framework.md` | 面向 workload 的硬件选型框架 | 待开始 |
+
+## 写作要求
+
+1. **器件**：GPU、NPU、TPU、custom ASIC、dataflow、systolic array、tensor core、matrix engine、SIMD/SIMT、vector、SRAM、HBM、DRAM、cache、memory controller、interconnect、NIC、DPU、host CPU
+2. **必须解释**：compute、HBM capacity、HBM bandwidth、memory wall、low precision、GPU partitioning、server node、scale-up domain、power、cooling、software ecosystem、supply constraints
+3. **必须覆盖**：hyperscaler custom silicon、low-latency accelerator、wafer-scale、reconfigurable、memory-centric、edge NPU；analog/photonic **仅基于可靠资料**
+4. **Memory**：HBM、DDR、GDDR、SRAM、cache hierarchy、KV cache 占用、weight streaming、paging、offload、HBM supply、CoWoS/2.5D/3D packaging、chiplet、UCIe、memory bandwidth bottleneck
+5. **Server**：1/2/4/8 加速器节点、CPU、PCIe、NVLink/NVSwitch、NIC、storage、rack、power shelf、liquid cooling、BMC、RAS、serviceability
+6. **口径纪律**：所有规格必须标注来源与披露等级；峰值与实测分列；训练与推理分列；功耗必须注明 chip/board/server/rack 级别；精度必须显式标注
+
+## 完成标准
+
+- [ ] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
+- [ ] 模块正文合计 ≥ 18,000 字
+- [ ] 上述"写作要求"逐条覆盖
+- [ ] 所有事实性数字带来源链接与披露标签
+- [ ] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
+- [ ] 相关 [`data/`](../../data/) CSV 已更新
+- [ ] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
+- [ ] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
+
+## 工作节奏
+
+按 [AGENTS.md](../../AGENTS.md) 规定，本模块须分多次 session 完成，
+**每次 session 只推进 2–4 篇紧密相关的文档**，完成后提交 commit 并停止。
