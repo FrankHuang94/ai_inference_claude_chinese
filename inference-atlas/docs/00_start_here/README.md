@@ -1,7 +1,7 @@
 # 模块 00 — 入门与端到端总览
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**已完成**（21,824 字 ／ 7 篇 ／ 64 表 ／ 3 图）
 > 模块目标字数：**≥ 8,000 字**
 > 最后更新：2026-07-29
 
@@ -19,13 +19,13 @@
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
-| 01 | `00_database_guide.md` | 如何使用本数据库：结构、约定、披露等级与检索路径 | 待开始 |
-| 02 | `01_executive_summary.md` | AI 推理全景的一页式摘要：技术栈、瓶颈与产业格局 | 待开始 |
-| 03 | `02_end_to_end_inference_lifecycle.md` | 从用户请求到 token 返回的完整路径与各层责任 | 待开始 |
-| 04 | `03_how_to_read_inference_benchmarks.md` | 如何判断一份推理 benchmark 是否可比、可复现、可采信 | 待开始 |
-| 05 | `04_how_to_design_an_inference_system.md` | 推理系统设计的通用方法论与决策顺序 | 待开始 |
-| 06 | `05_how_to_prepare_for_inference_interviews.md` | 推理相关岗位的能力地图与准备策略 | 待开始 |
-| 07 | `06_metrics_units_and_quick_reference.md` | 全库指标、单位与口径速查表 | 待开始 |
+| 01 | [00_database_guide.md](00_database_guide.md) | 如何使用本数据库：结构、约定、披露等级与检索路径 | 已完成 |
+| 02 | [01_executive_summary.md](01_executive_summary.md) | AI 推理全景的一页式摘要：技术栈、瓶颈与产业格局 | 已完成 |
+| 03 | [02_end_to_end_inference_lifecycle.md](02_end_to_end_inference_lifecycle.md) | 从用户请求到 token 返回的完整路径与各层责任 | 已完成 |
+| 04 | [03_how_to_read_inference_benchmarks.md](03_how_to_read_inference_benchmarks.md) | 如何判断一份推理 benchmark 是否可比、可复现、可采信 | 已完成 |
+| 05 | [04_how_to_design_an_inference_system.md](04_how_to_design_an_inference_system.md) | 推理系统设计的通用方法论与决策顺序 | 已完成 |
+| 06 | [05_how_to_prepare_for_inference_interviews.md](05_how_to_prepare_for_inference_interviews.md) | 推理相关岗位的能力地图与准备策略 | 已完成 |
+| 07 | [06_metrics_units_and_quick_reference.md](06_metrics_units_and_quick_reference.md) | 全库指标、单位与口径速查表 | 已完成 |
 
 ## 写作要求
 
@@ -39,14 +39,14 @@
 
 ## 完成标准
 
-- [ ] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
-- [ ] 模块正文合计 ≥ 8,000 字
-- [ ] 上述"写作要求"逐条覆盖
-- [ ] 所有事实性数字带来源链接与披露标签
-- [ ] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
-- [ ] 相关 [`data/`](../../data/) CSV 已更新
-- [ ] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
-- [ ] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
+- [x] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
+- [x] 模块正文合计 ≥ 8,000 字
+- [x] 上述"写作要求"逐条覆盖
+- [x] 所有事实性数字带来源链接与披露标签
+- [x] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
+- [x] 相关 [`data/`](../../data/) CSV 已更新
+- [x] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
+- [x] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
 
 ## 工作节奏
 

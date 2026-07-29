@@ -13,7 +13,7 @@
 
 | # | 模块 | 状态 | 字数 | 表格 | 图示 | 最后更新 |
 |---|---|---|---:|---:|---:|---|
-| 00 | [入门与端到端总览](docs/00_start_here/) | 待开始 | 0 | 0 | 0 | — |
+| 00 | [入门与端到端总览](docs/00_start_here/) | 已完成 | 21,824 | 64 | 3 | 2026-07-29 |
 | 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 待开始 | 0 | 0 | 0 | — |
 | 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 待开始 | 0 | 0 | 0 | — |
 | 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 待开始 | 0 | 0 | 0 | — |
@@ -31,23 +31,23 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 待开始 | 0 | 0 | 0 | — |
-| — | **合计** | — | **0** | **0** | **0** | — |
+| — | **合计** | — | **21,824** | **64** | **3** | 2026-07-29 |
 
 ---
 
 ## 1. 完整目录
 
-### [00 — 入门与端到端总览](docs/00_start_here/) `待开始`
+### [00 — 入门与端到端总览](docs/00_start_here/) `已完成`
 
 | 文档 | 一句话说明 |
 |---|---|
-| `00_database_guide.md` | 如何使用本数据库：结构、约定、披露等级与检索路径 |
-| `01_executive_summary.md` | AI 推理全景的一页式摘要：技术栈、瓶颈与产业格局 |
-| `02_end_to_end_inference_lifecycle.md` | 从用户请求到 token 返回的完整路径与各层责任 |
-| `03_how_to_read_inference_benchmarks.md` | 如何判断一份推理 benchmark 是否可比、可复现、可采信 |
-| `04_how_to_design_an_inference_system.md` | 推理系统设计的通用方法论与决策顺序 |
-| `05_how_to_prepare_for_inference_interviews.md` | 推理相关岗位的能力地图与准备策略 |
-| `06_metrics_units_and_quick_reference.md` | 全库指标、单位与口径速查表 |
+| [00_database_guide.md](docs/00_start_here/00_database_guide.md) | 如何使用本数据库：结构、约定、披露等级与检索路径 |
+| [01_executive_summary.md](docs/00_start_here/01_executive_summary.md) | AI 推理全景的一页式摘要：技术栈、瓶颈与产业格局 |
+| [02_end_to_end_inference_lifecycle.md](docs/00_start_here/02_end_to_end_inference_lifecycle.md) | 从用户请求到 token 返回的完整路径与各层责任 |
+| [03_how_to_read_inference_benchmarks.md](docs/00_start_here/03_how_to_read_inference_benchmarks.md) | 如何判断一份推理 benchmark 是否可比、可复现、可采信 |
+| [04_how_to_design_an_inference_system.md](docs/00_start_here/04_how_to_design_an_inference_system.md) | 推理系统设计的通用方法论与决策顺序 |
+| [05_how_to_prepare_for_inference_interviews.md](docs/00_start_here/05_how_to_prepare_for_inference_interviews.md) | 推理相关岗位的能力地图与准备策略 |
+| [06_metrics_units_and_quick_reference.md](docs/00_start_here/06_metrics_units_and_quick_reference.md) | 全库指标、单位与口径速查表 |
 
 ### [01 — 基础、指标、排队论与成本](docs/01_foundations_and_metrics/) `待开始`
 

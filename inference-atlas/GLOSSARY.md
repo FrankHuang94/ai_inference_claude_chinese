@@ -133,6 +133,23 @@
 | 未公开 | not disclosed | 厂商未公开该项信息；**不得猜测填充** | — |
 | 可复现性等级 | reproducibility level | benchmark 是否提供足以复现的完整配置 | 枚举 |
 
+## 11. 性能建模与设计方法
+
+> 本节随 [模块 00](docs/00_start_here/) 完成新增。
+
+| 中文术语 | 英文 | 定义 | 单位/口径 |
+|---|---|---|---|
+| 硬件平衡点 | machine balance point | 峰值算力与显存带宽之比 $I^*=\text{Peak}/BW$；workload 算术强度低于此值即为 memory-bound | FLOP/byte |
+| 可行边界 | feasible frontier | 显存约束下并发数与上下文长度的可行组合曲线 | — |
+| 突发比 | burst ratio | 峰值负载与平均负载之比，容量规划的关键输入 | 无量纲 |
+| 抢占重算 | preemption and recompute | KV 显存不足时驱逐序列并在恢复时重算其 cache | 次/s |
+| 缓存颠簸 | cache thrashing | 并发超出 KV 容量后陷入反复驱逐与重算的退化状态 | — |
+| 冷启动 | cold start | 新实例从调度到可服务所需时间，含权重加载与预热 | s |
+| 降级模式 | degraded mode | 过载时主动降低服务等级（并发、上下文、模型档位）以维持可用性 | — |
+| 端到端时延分解 | E2E latency decomposition | $T_{E2E}=T_{queue}+T_{tokenize}+T_{prefill}+T_{decode}+T_{network}+T_{post}$ | ms |
+| 队头阻塞 | head-of-line blocking | 队首长请求阻塞其后短请求，tail latency 的常见来源 | — |
+| 选择性配置 | selective configuration | benchmark 中只报告对自身最有利配置点的做法 | — |
+
 ---
 
 ## 单位书写规范（强制）

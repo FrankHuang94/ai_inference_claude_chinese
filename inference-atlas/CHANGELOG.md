@@ -2,7 +2,54 @@
 
 本文件记录数据库的阶段性变更。遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/) 风格，版本号采用语义化版本。
 
-**当前阶段**：Phase 0 已完成 ｜ **下一阶段**：Phase 1（模块 00 正文，需用户确认后启动）
+**当前阶段**：Phase 1 已完成（模块 00）｜ **下一阶段**：Phase 2（模块 01 基础、指标、排队论与成本）
+
+---
+
+## [v0.2.0] — 2026-07-29
+
+### Phase 1：模块 00 — 入门与端到端总览
+
+**状态**：模块 00 `已完成`。
+
+#### 新增文档（7 篇，21,824 字）
+
+| 文档 | 字数量级 | 要点 |
+|---|---|---|
+| `00_database_guide.md` | 中 | 三种读法、三个约定（披露等级/口径/近似模型）、已知局限 |
+| `01_executive_summary.md` | 中 | 六层栈划分、**三个物理级约束**、技术按约束归类、价值链结构 |
+| `02_end_to_end_inference_lifecycle.md` | 大 | 端到端 Mermaid 图、六段时延分解、prefill/decode 资源画像对比、12 层职责与失效表、9 类失败模式排查表 |
+| `03_how_to_read_inference_benchmarks.md` | 大 | **20 项审读清单**、六类常见失真、MLPerf 能与不能回答的问题 |
+| `04_how_to_design_an_inference_system.md` | 大 | **九步设计流程 Mermaid 图**、KV 显存反推法、并行级别判据、何时不做 disaggregation |
+| `05_how_to_prepare_for_inference_interviews.md` | 中 | 岗位能力权重表、四类必算计算、六段回答结构 |
+| `06_metrics_units_and_quick_reference.md` | 中 | 12 节速查表（指标/单位/排查/清单/流程） |
+
+- 新增表格：64 ｜ 新增 Mermaid 图：3
+- 模块目标 8,000 字，实际 21,824 字（273%）
+
+#### 同步更新
+
+- `INDEX.md`：模块 00 状态改为 `已完成`，7 篇文档改为可点击链接，统计与合计行更新
+- `docs/00_start_here/README.md`：状态、文档链接、完成标准勾选
+- `GLOSSARY.md`：新增第 11 节「性能建模与设计方法」共 10 条术语
+- `README.md`：内容统计与模块状态表
+
+#### 工具修正
+
+- `scripts/check_required_sections.py`：新增元文档/速查/手册类的体裁豁免
+  （`*_guide.md`、`*_quick_reference.md`、`*_cheat_sheet.md`、`*_playbook.md` 等），
+  这类文档不适用「问题定义→原理→实现→trade-off」章节骨架
+
+#### QA 结果
+
+全部 13 个脚本通过：链接 563 条无死链；5 篇适用章节模板的文档无缺章；
+3 张 Mermaid 图语法正确且均有前后文解释；CSV schema 无违规。
+
+#### 未核验事项
+
+- 面试题型占比为本库推论，已在正文标注 `待核实`
+- MLPerf 规则细节待模块 11 撰写时逐条核验官方来源
+- `benchmarks.csv` 与 `deployment_cases.csv` 仍为空，模块 00 中引用的案例均指向论文而非生产部署
 
 ---
 

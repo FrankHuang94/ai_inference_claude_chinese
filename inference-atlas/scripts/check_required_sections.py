@@ -35,6 +35,16 @@ REQUIRED = [
 CARD_MODULES = {"13_research_papers_and_technical_reports",
                 "14_company_and_ecosystem_landscape", "17_interview_prep"}
 
+# 元文档 / 速查 / 手册类，其体裁不适用「问题定义→原理→实现→trade-off」章节骨架。
+# 它们另有专属结构要求，由所在模块 README 约定。
+EXEMPT_SUFFIXES = ("_guide.md", "_quick_reference.md", "_cheat_sheet.md",
+                   "_playbook.md", "_study_plan.md", "_tracker.md", "_map.md",
+                   "_reference.md", "_exercises.md", "_cases.md")
+
+
+def exempt(name: str) -> bool:
+    return name == "README.md" or name.endswith(EXEMPT_SUFFIXES)
+
 
 def main() -> int:
     results, bad = [], 0
@@ -42,7 +52,7 @@ def main() -> int:
         if mod.name in CARD_MODULES:
             continue
         for f in sorted(mod.glob("*.md")):
-            if f.name == "README.md":
+            if exempt(f.name):
                 continue
             txt = f.read_text(encoding="utf-8")
             missing = [n for n, pat in REQUIRED
