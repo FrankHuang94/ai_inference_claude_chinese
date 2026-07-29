@@ -160,3 +160,70 @@ python3 scripts/word_count.py
 ## 10. 当前阶段
 
 见 `CHANGELOG.md` 顶部与 `INDEX.md` 的模块状态表。
+
+---
+
+## 11. 网络核验能力约束（环境相关，必读）
+
+本项目的数据录入纪律要求**打开一手来源确认**（第 5 节）。但构建环境可能施加**出口白名单**，
+使一手来源不可达。启动任何数据录入工作前，**必须先探测实际可达性**，不得假设。
+
+### 探测方法
+
+```bash
+for h in arxiv.org export.arxiv.org www.usenix.org openreview.net proceedings.mlr.press \
+         dl.acm.org huggingface.co mlcommons.org api.github.com raw.githubusercontent.com; do
+  printf "%-32s %s\n" "$h" "$(curl -sS --max-time 12 -o /dev/null -w '%{http_code}' https://$h/ 2>/dev/null)"
+done
+```
+
+`000` 或代理返回 `Host not in allowlist` 表示该域被组织级出口策略拒绝。
+
+### 2026-07-29 实测结果（本仓库当前环境）
+
+| 来源类型 | 代表域名 | 状态 | 影响的 CSV |
+|---|---|---|---|
+| 论文预印本 | `arxiv.org`、`export.arxiv.org` | **拒绝** | `papers.csv` |
+| 会议论文 | `www.usenix.org`、`dl.acm.org`、`proceedings.mlr.press`、`openreview.net` | **拒绝** | `papers.csv` |
+| 模型卡 | `huggingface.co` | **拒绝** | `models.csv` |
+| 基准官方 | `mlcommons.org` | **拒绝** | `benchmarks.csv` |
+| 芯片厂商 | `www.nvidia.com` 等 | **拒绝** | `accelerators.csv`、`server_platforms.csv` |
+| 学术索引 | `semanticscholar.org` | **拒绝** | `papers.csv` |
+| GitHub 网页/raw | `github.com`、`raw.githubusercontent.com` | 可达 | — |
+| GitHub API | `api.github.com` | 可达但**仅限本 session 已授权仓库**；`add_repo` 不支持跨 owner 添加 | `inference_engines.csv` |
+
+**结论**：在此环境下，`papers`、`models`、`accelerators`、`benchmarks`、
+`networking_technologies`、`companies`、`cloud_pricing` 七个 CSV **无法按第 5 节纪律录入**。
+
+### 受阻时的强制行为
+
+**允许**：
+
+1. 继续撰写以**可推导内容**为主的模块正文（原理、公式、框架、判据、失败模式）；
+2. 在正文中把需要一手来源的具体数值标注为 `待核实`，并说明所需来源类型；
+3. 使用 WebSearch 建立**方向性认识**，用于组织内容结构。
+
+**禁止**：
+
+1. **禁止**用搜索结果摘要、Medium/Wikipedia/ResearchGate/课程站镜像等二级来源，
+   作为 `papers.csv` 等 CSV 的录入依据；
+2. **禁止**在未打开一手来源的情况下把 `citation_status` 填为 `已核验`；
+3. **禁止**凭记忆填写芯片规格、模型参数、benchmark 数字、公司财务或客户关系；
+4. **禁止**为绕过出口策略而更换 UA、改用镜像站或其他规避手段
+   （见 `/root/.ccr/README.md`：403/407 属组织策略拒绝，应上报而非绕行）。
+
+### 解除阻塞的条件
+
+需要环境所有者把以下域加入出口白名单，之后方可开展数据录入：
+
+```text
+arxiv.org, export.arxiv.org        # 论文元数据（API 形式最稳定）
+www.usenix.org, dl.acm.org         # OSDI/SOSP/NSDI/ATC 会议论文
+openreview.net, proceedings.mlr.press  # ICLR / ICML
+huggingface.co                     # 模型卡（models.csv 的唯一权威来源）
+mlcommons.org                      # MLPerf Inference 官方结果
+各芯片与云厂商官网 + 投资者关系页    # accelerators / companies / cloud_pricing
+JEDEC / OIF / UEC / PCI-SIG / OCP  # networking_technologies
+```
+
+在此之前，`INDEX.md` 与 `README.md` 的内容统计表中，上述 CSV 的目标值应视为**受阻**而非未开始。
