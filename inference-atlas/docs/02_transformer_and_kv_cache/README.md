@@ -1,7 +1,7 @@
 # 模块 02 — Transformer 推理与 KV Cache
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**已完成**
 > 模块目标字数：**≥ 15,000 字**
 > 最后更新：2026-07-29
 
@@ -19,16 +19,16 @@
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
-| 01 | `01_transformer_inference_from_first_principles.md` | 从 tensor shape 出发重建一次 forward pass | 待开始 |
-| 02 | `02_prefill_vs_decode.md` | 两个阶段的计算特征、资源画像与调度含义 | 待开始 |
-| 03 | `03_attention_complexity_during_inference.md` | 推理期 attention 的复杂度与长序列代价 | 待开始 |
-| 04 | `04_kv_cache_fundamentals.md` | KV cache 的必要性、结构与生命周期 | 待开始 |
-| 05 | `05_kv_cache_capacity_and_memory_models.md` | KV 容量公式、教学案例与真实实现的偏差来源 | 待开始 |
-| 06 | `06_gqa_mqa_mla_and_kv_reduction.md` | MHA/MQA/GQA/MLA 对 KV 体积与质量的影响 | 待开始 |
-| 07 | `07_long_context_inference.md` | 长上下文的时延、显存与质量三重压力 | 待开始 |
-| 08 | `08_kv_cache_compression_quantization_and_eviction.md` | KV 压缩、量化、驱逐与 offload 策略 | 待开始 |
-| 09 | `09_multimodal_inference.md` | 图像/视频/语音输入对 prefill 与 cache 的影响 | 待开始 |
-| 10 | `10_reasoning_workloads_and_test_time_compute.md` | reasoning 模型的长输出与 test-time compute 特征 | 待开始 |
+| 01 | [01_transformer_inference_from_first_principles.md](01_transformer_inference_from_first_principles.md) | 从 tensor shape 出发重建一次 forward pass | 已完成 |
+| 02 | [02_prefill_vs_decode.md](02_prefill_vs_decode.md) | 两个阶段的计算特征、资源画像与调度含义 | 已完成 |
+| 03 | [03_attention_complexity_during_inference.md](03_attention_complexity_during_inference.md) | 推理期 attention 的复杂度与长序列代价 | 已完成 |
+| 04 | [04_kv_cache_fundamentals.md](04_kv_cache_fundamentals.md) | KV cache 的必要性、结构与生命周期 | 已完成 |
+| 05 | [05_kv_cache_capacity_and_memory_models.md](05_kv_cache_capacity_and_memory_models.md) | KV 容量公式、教学案例与真实实现的偏差来源 | 已完成 |
+| 06 | [06_gqa_mqa_mla_and_kv_reduction.md](06_gqa_mqa_mla_and_kv_reduction.md) | MHA/MQA/GQA/MLA 对 KV 体积与质量的影响 | 已完成 |
+| 07 | [07_long_context_inference.md](07_long_context_inference.md) | 长上下文的时延、显存与质量三重压力 | 已完成 |
+| 08 | [08_kv_cache_compression_quantization_and_eviction.md](08_kv_cache_compression_quantization_and_eviction.md) | KV 压缩、量化、驱逐与 offload 策略 | 已完成 |
+| 09 | [09_multimodal_inference.md](09_multimodal_inference.md) | 图像/视频/语音输入对 prefill 与 cache 的影响 | 已完成 |
+| 10 | [10_reasoning_workloads_and_test_time_compute.md](10_reasoning_workloads_and_test_time_compute.md) | reasoning 模型的长输出与 test-time compute 特征 | 已完成 |
 
 ## 写作要求
 
@@ -41,14 +41,14 @@
 
 ## 完成标准
 
-- [ ] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
-- [ ] 模块正文合计 ≥ 15,000 字
-- [ ] 上述"写作要求"逐条覆盖
-- [ ] 所有事实性数字带来源链接与披露标签
-- [ ] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
-- [ ] 相关 [`data/`](../../data/) CSV 已更新
-- [ ] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
-- [ ] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
+- [x] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
+- [x] 模块正文合计 ≥ 15,000 字
+- [x] 上述"写作要求"逐条覆盖
+- [x] 所有事实性数字带来源链接与披露标签
+- [x] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
+- [x] 相关 [`data/`](../../data/) CSV 已更新
+- [x] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
+- [x] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
 
 ## 工作节奏
 

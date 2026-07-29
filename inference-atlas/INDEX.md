@@ -15,7 +15,7 @@
 |---|---|---|---:|---:|---:|---|
 | 00 | [入门与端到端总览](docs/00_start_here/) | 已完成 | 21,824 | 64 | 3 | 2026-07-29 |
 | 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 已完成 | 26,531 | 91 | 8 | 2026-07-29 |
-| 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 待开始 | 0 | 0 | 0 | — |
+| 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 已完成 | 30,961 | 110 | 10 | 2026-07-29 |
 | 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 待开始 | 0 | 0 | 0 | — |
 | 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 待开始 | 0 | 0 | 0 | — |
 | 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 待开始 | 0 | 0 | 0 | — |
@@ -31,7 +31,7 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 待开始 | 0 | 0 | 0 | — |
-| — | **合计** | — | **48,355** | **155** | **11** | 2026-07-29 |
+| — | **合计** | — | **79,316** | **265** | **21** | 2026-07-29 |
 
 ---
 
@@ -63,20 +63,20 @@
 | [08_capacity_planning.md](docs/01_foundations_and_metrics/08_capacity_planning.md) | 容量规划：负载预测、余量、突发与预留 |
 | [09_inference_metrics_cheat_sheet.md](docs/01_foundations_and_metrics/09_inference_metrics_cheat_sheet.md) | 指标速查卡 |
 
-### [02 — Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) `待开始`
+### [02 — Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) `已完成`
 
 | 文档 | 一句话说明 |
 |---|---|
-| `01_transformer_inference_from_first_principles.md` | 从 tensor shape 出发重建一次 forward pass |
-| `02_prefill_vs_decode.md` | 两个阶段的计算特征、资源画像与调度含义 |
-| `03_attention_complexity_during_inference.md` | 推理期 attention 的复杂度与长序列代价 |
-| `04_kv_cache_fundamentals.md` | KV cache 的必要性、结构与生命周期 |
-| `05_kv_cache_capacity_and_memory_models.md` | KV 容量公式、教学案例与真实实现的偏差来源 |
-| `06_gqa_mqa_mla_and_kv_reduction.md` | MHA/MQA/GQA/MLA 对 KV 体积与质量的影响 |
-| `07_long_context_inference.md` | 长上下文的时延、显存与质量三重压力 |
-| `08_kv_cache_compression_quantization_and_eviction.md` | KV 压缩、量化、驱逐与 offload 策略 |
-| `09_multimodal_inference.md` | 图像/视频/语音输入对 prefill 与 cache 的影响 |
-| `10_reasoning_workloads_and_test_time_compute.md` | reasoning 模型的长输出与 test-time compute 特征 |
+| [01_transformer_inference_from_first_principles.md](docs/02_transformer_and_kv_cache/01_transformer_inference_from_first_principles.md) | 从 tensor shape 出发重建一次 forward pass |
+| [02_prefill_vs_decode.md](docs/02_transformer_and_kv_cache/02_prefill_vs_decode.md) | 两个阶段的计算特征、资源画像与调度含义 |
+| [03_attention_complexity_during_inference.md](docs/02_transformer_and_kv_cache/03_attention_complexity_during_inference.md) | 推理期 attention 的复杂度与长序列代价 |
+| [04_kv_cache_fundamentals.md](docs/02_transformer_and_kv_cache/04_kv_cache_fundamentals.md) | KV cache 的必要性、结构与生命周期 |
+| [05_kv_cache_capacity_and_memory_models.md](docs/02_transformer_and_kv_cache/05_kv_cache_capacity_and_memory_models.md) | KV 容量公式、教学案例与真实实现的偏差来源 |
+| [06_gqa_mqa_mla_and_kv_reduction.md](docs/02_transformer_and_kv_cache/06_gqa_mqa_mla_and_kv_reduction.md) | MHA/MQA/GQA/MLA 对 KV 体积与质量的影响 |
+| [07_long_context_inference.md](docs/02_transformer_and_kv_cache/07_long_context_inference.md) | 长上下文的时延、显存与质量三重压力 |
+| [08_kv_cache_compression_quantization_and_eviction.md](docs/02_transformer_and_kv_cache/08_kv_cache_compression_quantization_and_eviction.md) | KV 压缩、量化、驱逐与 offload 策略 |
+| [09_multimodal_inference.md](docs/02_transformer_and_kv_cache/09_multimodal_inference.md) | 图像/视频/语音输入对 prefill 与 cache 的影响 |
+| [10_reasoning_workloads_and_test_time_compute.md](docs/02_transformer_and_kv_cache/10_reasoning_workloads_and_test_time_compute.md) | reasoning 模型的长输出与 test-time compute 特征 |
 
 ### [03 — Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) `待开始`
 

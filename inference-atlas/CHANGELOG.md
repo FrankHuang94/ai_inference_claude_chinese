@@ -2,7 +2,49 @@
 
 本文件记录数据库的阶段性变更。遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/) 风格，版本号采用语义化版本。
 
-**当前阶段**：Phase 2 已完成（模块 00–01）｜ **下一阶段**：Phase 3（模块 02 Transformer 推理与 KV Cache）
+**当前阶段**：Phase 3 已完成（模块 00–02）｜ **下一阶段**：Phase 4（模块 03 Serving Engines、调度与 QoS）
+
+---
+
+## [v0.4.0] — 2026-07-29
+
+### Phase 3：模块 02 — Transformer 推理与 KV Cache
+
+**状态**：模块 02 `已完成`。目标 15,000 字，实际 30,961 字（206%）。全库累计 79,316 字（66%）。
+
+#### 新增文档（10 篇，30,961 字，110 表，10 图）
+
+| 文档 | 要点 |
+|---|---|
+| `01_transformer_inference_from_first_principles.md` | 逐层张量形状表、计算量分解、**算术强度统一形式 $I\approx 2\times(\text{同时处理 token 数})/b_w$**、自回归为何必然导出 KV cache |
+| `02_prefill_vs_decode.md` | 13 维资源画像对比表、$I_{prefill}/I_{decode}\approx S_{in}$、批处理收益不对称的成因、三种共存方案对比 |
+| `03_attention_complexity_during_inference.md` | prefill 平方 / decode 线性、**decode 注意力算术强度 $2H/(H_{KV}b_{kv})$ 与 $S$、$B$ 无关**、$B\times S$ 乘积判据 |
+| `04_kv_cache_fundamentals.md` | 生命周期状态机、五个管理维度、碎片三来源、**共享作用域应默认限于租户内** |
+| `05_kv_cache_capacity_and_memory_models.md` | 容量公式与 $m_{tok}$、**反解可行边界**、四方案对比表、七项偏差来源 |
+| `06_gqa_mqa_mla_and_kv_reduction.md` | 四结构对比、压缩比与算术强度、**为何必须预训练时决定**、MQA 与大 TP 度的整除性冲突 |
+| `07_long_context_inference.md` | 三重压力、TTFT 增长 2–4 倍、并发反比、**标称窗口≠有效能力**、RAG 与长上下文的互补关系 |
+| `08_kv_cache_compression_quantization_and_eviction.md` | 三类手段的代价性质、K/V 敏感度不对称、**offload 判据是带宽非容量**、针对性评测设计 |
+| `09_multimodal_inference.md` | 多模态是 prefill 主导、编码器作为额外流水线级、特征缓存的适用条件 |
+| `10_reasoning_workloads_and_test_time_compute.md` | 输出长度由模型决定、$C_S$ 放大排队、**思考预算兼作成本控制与过载降级旋钮** |
+
+#### 同步更新
+
+- `INDEX.md`、模块 README、`README.md` 统计
+- `GLOSSARY.md`：新增第 13 节共 17 条术语
+
+#### QA 结果
+
+13 个脚本全部通过：871 条内部链接无死链；23 篇适用章节模板的文档无缺章；
+21 张 Mermaid 图语法正确且四要素解释齐备；单位一致性告警 1 条（有意保留的教学反例）。
+
+#### 未核验事项（本阶段刻意留白，不猜测）
+
+- **MQA / GQA / MLA 的原始论文编号、作者与实验数字**：留待模块 13 逐篇打开原文核验后录入 `papers.csv`
+- **各模型的 $L$、$H_{KV}$、$D_h$、上下文窗口实际值**：须引用官方模型卡，`models.csv` 仍为空
+- **KV 量化的质量损失幅度、驱逐策略效果、长上下文质量评测**：依赖模型与任务，要求实测
+- **多模态模型的每图像/每秒视频 token 数**：须引用官方模型卡
+- **test-time compute 的质量-成本曲线形状与拐点**：留待模块 05/13 核验
+- 第 5 章数值案例使用**演示用假设参数**（$L=32$、$H_{KV}=8$、$D_h=128$、40 GiB），已在文中声明不对应任何真实产品
 
 ---
 

@@ -175,6 +175,30 @@
 | 热降频 | thermal throttling | 温度达阈值触发的频率下降；**运行一段时间后**逐渐出现 | — |
 | 空载功耗 | idle power | 通电但无有效负载时的功耗；低利用率下占比高 | W |
 
+## 13. Transformer 推理与 KV Cache
+
+> 本节随 [模块 02](docs/02_transformer_and_kv_cache/) 完成新增。
+
+| 中文术语 | 英文 | 定义 | 单位/口径 |
+|---|---|---|---|
+| 单 token KV 占用 | per-token KV footprint $m_{tok}$ | $2LH_{KV}D_h b_{kv}$；只依赖模型结构与精度，是长上下文服务成本的代理指标 | byte/token |
+| 可行边界 | feasible frontier | $B\times S\le$ KV 预算 $/m_{tok}$；并发与上下文长度是竞争关系 | — |
+| KV 预算 | KV budget | 总显存 − 权重 − 运行时开销 | GB |
+| 打分矩阵 | attention score matrix | $[B,H,T,S{+}T]$；长序列 prefill 的显存瓶颈 | — |
+| 分组比 | group ratio | $H/H_{KV}$；决定 KV 压缩比与注意力算术强度 $2H/(H_{KV}b_{kv})$ | 无量纲 |
+| 预留浪费 | reservation waste | 按最大可能长度预留而实际未用的显存 | GB |
+| 写时复制 | copy-on-write | 共享 KV 块在被修改时才复制 | — |
+| 共享作用域 | sharing scope | 前缀缓存的可见范围；**默认应限于租户内** | — |
+| 混合精度 KV | mixed-precision KV | K 与 V 采用不同量化精度（K 经 softmax 对误差更敏感） | — |
+| 针对性评测 | targeted evaluation | 专门包含依赖被牺牲信息样本的评测；通用评测检不出滑窗/驱逐的损失 | — |
+| 标称上下文窗口 | nominal context window | 模型配置允许的最大 token 数 | token |
+| 有效上下文能力 | effective context capability | 模型实际能可靠利用信息的长度范围；**未必等于标称窗口** | token |
+| 视觉 token | visual token | 图像/视频经编码与投影后进入语言模型的 token | 个 |
+| 特征缓存 | feature cache | 缓存多模态编码器输出以复用 | — |
+| 思考预算 | thinking budget | 单请求允许消耗的推理 token 上限；兼作成本控制与过载降级旋钮 | token |
+| 质量-成本曲线 | quality-cost curve | test-time compute 投入与结果质量的边际递减关系 | — |
+| 三重压力 | triple pressure | 长上下文对时延、显存、质量的同时压力 | — |
+
 ---
 
 ## 单位书写规范（强制）
