@@ -60,7 +60,7 @@
 **最重要的两条**：
 
 1. **动态形状**：推理的序列长度和批大小随请求变化。全静态编译需要为每个形状组合编译一份，导致编译爆炸；因此推理编译普遍采用分桶（bucketing）或动态形状支持；
-2. **启动开销敏感**：decode 每步的计算量很小，kernel launch 与 runtime 调度的固定开销占比可能很高——这是 CUDA Graphs 等技术的动机（见 `10_cuda_graphs_and_execution_overhead.md`）。
+2. **启动开销敏感**：decode 每步的计算量很小，kernel launch 与 runtime 调度的固定开销占比可能很高——这是 CUDA Graphs 等技术的动机（见 [10 CUDA Graphs](10_cuda_graphs_and_execution_overhead.md)）。
 
 ## 2. 原理、数学与性能模型
 
@@ -203,7 +203,7 @@ flowchart TD
 | Autotuning | 找到最优 kernel | 调优时间长 |
 | 使用厂商闭源库 | 性能好、省事 | 可移植性差、黑盒 |
 
-**普遍取舍**：**性能与灵活性/可调试性对立**。深度优化的栈在出问题时更难定位——因此可观测性（见 `11_compiler_debugging_and_profiling.md`）必须与优化同步建设，而非事后补。
+**普遍取舍**：**性能与灵活性/可调试性对立**。深度优化的栈在出问题时更难定位——因此可观测性（见 [11 编译调试与 profiling](11_compiler_debugging_and_profiling.md)）必须与优化同步建设，而非事后补。
 
 ## 5. benchmark、真实案例或公开部署案例
 
@@ -264,8 +264,8 @@ flowchart TD
 ## 延伸阅读
 
 - [02 图编译器与 IR](02_graph_compilers_and_ir.md) —— 第 3 层与第 4 层的展开
-- `07_kernel_fusion_and_operator_optimization.md` —— 机制一的完整分析
-- `10_cuda_graphs_and_execution_overhead.md` —— 固定开销的处理
+- [07 算子融合与 kernel 优化](07_kernel_fusion_and_operator_optimization.md) —— 机制一的完整分析
+- [10 CUDA Graphs](10_cuda_graphs_and_execution_overhead.md) —— 固定开销的处理
 
 ## 主要来源
 

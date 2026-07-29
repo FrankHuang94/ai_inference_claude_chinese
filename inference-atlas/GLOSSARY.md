@@ -232,6 +232,43 @@
 | 成本交叉点 | cost crossover | $U=c_r/c_s$，serverless 与常驻成本相等的利用率 | % |
 | 冷启动概率 | cold start probability $p_{cold}$ | 请求到达时无热实例的概率 | % |
 
+## 15. 编译器、Runtime 与 Kernel
+
+> 本节随 [模块 04](docs/04_compilers_runtimes_and_kernels/) 完成新增。
+
+| 中文术语 | 英文 | 定义 | 单位/口径 |
+|---|---|---|---|
+| 图捕获 | graph capture | 把动态执行转为静态计算图 | — |
+| 优化 pass | optimization pass | 对 IR 施加的一次变换；**顺序不可交换** | — |
+| Pass 顺序 | pass ordering | 融合须在布局变换之后、量化插入之前 | — |
+| 分桶 | bucketing | 为若干离散形状分别编译，应对动态形状 | 桶数 |
+| 填充浪费 | padding waste | $1-S/S_{bucket}$，补齐固定形状产生的无效工作 | % |
+| 编译产物 | compiled artifact | 与硬件、模型、形状、量化、并行度**五维绑定**的二进制 | — |
+| 图中断 | graph break | 编译器无法处理的构造使图被切成多段，跨段融合机会丢失 | 段数 |
+| 重编译 | recompilation | 形状/类型不匹配缓存时重新编译；推理中因序列长度每步变化而高频触发 | 次 |
+| 动态维度 | dynamic dimension | 不参与特化的张量维度；推荐序列长度设为动态、batch 分桶 | — |
+| 覆盖度 | coverage | 编译器支持的算子与架构范围；编译器优先栈的选型核心 | — |
+| 线程束 | warp | 一组同步执行的线程；束内分支发散会串行化 | — |
+| 占用率 | occupancy | 活跃线程束数与硬件上限之比；**并非越高越好** | % |
+| 访存合并 | memory coalescing | 束内线程访问连续地址；非合并的带宽损失是数量级的 | — |
+| 分块 | tiling | 把问题切成可驻留片上的块以复用数据；**改常数不改复杂度阶** | — |
+| 在线归约 | online reduction | 可增量更新的归约形式，避免全局同步，使分块成为可能 | — |
+| 在线 softmax | online softmax | 用 $e^{m_{old}-m_{new}}$ 缩放修正已累积量；**数学精确等价** | — |
+| 中间矩阵物化 | materialisation | 把注意力打分矩阵写入 HBM；朴素注意力的主要瓶颈 | — |
+| 精确等价优化 | exact-equivalence optimisation | 代数恒等变换，无质量影响，**可无条件采用** | — |
+| 仅权重量化 | weight-only quantisation | 只量化权重；在 memory-bound decode 中已取得主要收益 | — |
+| 量化粒度 | quantisation granularity | 缩放因子共享范围（tensor / channel / group） | — |
+| 缩放因子开销 | scale overhead | $2/(g\cdot b_w)$；group 过小会侵蚀量化收益 | % |
+| 融合反量化 | fused dequantisation | 反量化在 kernel 内完成、不写回 HBM；**量化生效的前提** | — |
+| 校准分布匹配 | calibration distribution match | 校准集须与生产流量分布一致，否则通用评测发现不了问题 | — |
+| 固定开销 | fixed overhead $T_o$ | 与计算量无关的每次调用成本 | ms |
+| 有效效率 | effective efficiency $\eta$ | $T_c/(T_c+T_o)$；消除开销的吞吐收益倍数为 $1/\eta$ | 无量纲 |
+| Batch 扫描法 | batch sweep | 增大 batch 看每步时间是否不变，判断开销是否主导 | — |
+| 验证证据 | verification evidence | 证明优化真的生效的可观测数字，而非配置项 | — |
+| 静默失效 | silent failure | 配置正确、不报错，但优化实际未生效 | — |
+| 支持的三个层次 | L1/L2/L3 support | 能跑通 / 性能可接受 / 接近最优；厂商矩阵通常只保证 L1 | — |
+| 算子拆解 | operator decomposition | 用旧算子组合表达新算子；能跑但慢的隐蔽损失 | — |
+
 ---
 
 ## 单位书写规范（强制）

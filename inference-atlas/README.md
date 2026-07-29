@@ -91,10 +91,10 @@ InferenceAtlas 是一个**中文**的 AI 推理知识数据库，目标是在 Gi
 
 | 指标 | 当前 | 最终目标 | 最低验收线 |
 |---|---:|---:|---:|
-| 中文正文字数 | **139,501** | 120,000 | 100,000 |
-| 实质内容 Markdown 文档 | 43 | 120 | — |
-| Markdown 表格 | 461 | 110 | — |
-| Mermaid 图示 | 37 | 60 | — |
+| 中文正文字数 | **161,100** | 120,000 | 100,000 |
+| 实质内容 Markdown 文档 | 49 | 120 | — |
+| Markdown 表格 | 536 | 110 | — |
+| Mermaid 图示 | 43 | 60 | — |
 | 已核验来源条目 | 5 | 550 | — |
 | 模型记录 | 0 | 120 | — |
 | 推理引擎记录 | 2 | 40 | — |
@@ -106,7 +106,7 @@ InferenceAtlas 是一个**中文**的 AI 推理知识数据库，目标是在 Gi
 | 组织深度档案 | 0 | 30 | — |
 | 面试题 | 0 | **恰好 100** | — |
 
-**当前阶段**：Phase 5 进行中（模块 04 已完成 5/11 篇）。**注意：`papers`、`models`、`accelerators`、`benchmarks`、`networking_technologies`、`companies`、`cloud_pricing` 七个 CSV 因组织级网络出口策略无法按来源纪律录入，详见 [AGENTS.md 第 11 节](AGENTS.md)。****中文正文字数已达最终目标 120,000**（121,924，101.6%）。其余 14 个模块 `待开始`，其中面试题库、论文卡片与结构化数据仍是主要缺口。
+**当前阶段**：Phase 5 已完成（模块 00–04）。**注意：`papers`、`models`、`accelerators`、`benchmarks`、`networking_technologies`、`companies`、`cloud_pricing` 七个 CSV 因组织级网络出口策略无法按来源纪律录入，详见 [AGENTS.md 第 11 节](AGENTS.md)。****中文正文字数已达最终目标 120,000**（121,924，101.6%）。其余 14 个模块 `待开始`，其中面试题库、论文卡片与结构化数据仍是主要缺口。
 
 ---
 
@@ -138,7 +138,7 @@ InferenceAtlas 是一个**中文**的 AI 推理知识数据库，目标是在 Gi
 | 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | **已完成** |
 | 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | **已完成** |
 | 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | **已完成** |
-| 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 进行中（5/11） |
+| 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | **已完成** |
 | 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 待开始 |
 | 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 待开始 |
 | 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 待开始 |

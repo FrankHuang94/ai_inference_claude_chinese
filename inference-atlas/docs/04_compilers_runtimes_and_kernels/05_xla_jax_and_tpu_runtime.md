@@ -231,7 +231,7 @@ XLA 一类的编译器优先栈体现了一次系统级的复杂度转移：硬�
 ## 延伸阅读
 
 - [02 图编译器与 IR](02_graph_compilers_and_ir.md) —— 形状策略的通用讨论
-- `06_onnx_runtime_openvino_and_portability.md` —— 跨硬件的另一条路径
+- [06 跨硬件可移植性](06_onnx_runtime_openvino_and_portability.md) —— 跨硬件的另一条路径
 - [模块 07：硬件架构](../07_hardware_and_server_architecture/) —— 加速器设计取舍
 
 ## 主要来源

@@ -3,7 +3,7 @@
 > 位置：[InferenceAtlas](../../INDEX.md) > [模块 04](README.md) > 当前文档
 > 信息截至：2026-07-29 ｜ 最后核验：2026-07-29 ｜ 内容版本：v0.1
 > 时效性等级：**高**（90 天复核）
-> 相关主题：[图编译器与 IR](02_graph_compilers_and_ir.md)｜`07_kernel_fusion_and_operator_optimization.md`｜`11_compiler_debugging_and_profiling.md`
+> 相关主题：[图编译器与 IR](02_graph_compilers_and_ir.md)｜[07 算子融合与 kernel 优化](07_kernel_fusion_and_operator_optimization.md)｜[11 编译调试与 profiling](11_compiler_debugging_and_profiling.md)
 
 > **来源限制声明**：`pytorch.org`、`docs.pytorch.org` 与相关 GitHub 仓库在本环境**不可访问**（见 [AGENTS.md 第 11 节](../../AGENTS.md)）。本章只给出**可从编译原理推导的架构分析**，所有 API 名称、版本行为、配置项与性能数字标注 `待核实`。
 
@@ -255,8 +255,8 @@ flowchart TD
 ## 延伸阅读
 
 - [03 TensorRT-LLM](03_tensorrt_llm.md) —— 对照的深度编译路线
-- `07_kernel_fusion_and_operator_optimization.md` —— 融合的实现细节
-- `11_compiler_debugging_and_profiling.md` —— 诊断工具
+- [07 算子融合与 kernel 优化](07_kernel_fusion_and_operator_optimization.md) —— 融合的实现细节
+- [11 编译调试与 profiling](11_compiler_debugging_and_profiling.md) —— 诊断工具
 
 ## 主要来源
 

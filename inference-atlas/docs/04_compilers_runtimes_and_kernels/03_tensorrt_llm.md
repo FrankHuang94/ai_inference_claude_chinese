@@ -3,7 +3,7 @@
 > 位置：[InferenceAtlas](../../INDEX.md) > [模块 04](README.md) > 当前文档
 > 信息截至：2026-07-29 ｜ 最后核验：2026-07-29 ｜ 内容版本：v0.1
 > 时效性等级：**高**（版本演进快，90 天复核）
-> 相关主题：[软件栈](01_inference_software_stack.md)｜[部署实践](../12_open_source_deployment_and_reproduction/)｜`09_quantization_kernels.md`
+> 相关主题：[软件栈](01_inference_software_stack.md)｜[部署实践](../12_open_source_deployment_and_reproduction/)｜[09 量化 kernel](09_quantization_kernels.md)
 
 > **来源限制声明**：撰写本章时，`docs.nvidia.com`、`developer.nvidia.com` 与 GitHub 上的
 > NVIDIA/TensorRT-LLM 仓库在本环境**均不可访问**（组织级出口策略，见 [AGENTS.md 第 11 节](../../AGENTS.md)）。

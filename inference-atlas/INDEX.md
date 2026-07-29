@@ -17,7 +17,7 @@
 | 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 已完成 | 26,531 | 91 | 8 | 2026-07-29 |
 | 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 已完成 | 30,961 | 110 | 10 | 2026-07-29 |
 | 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 已完成 | 38,095 | 133 | 11 | 2026-07-29 |
-| 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 进行中 | 16,513 | 63 | 5 | 2026-07-29 |
+| 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 已完成 | 37,186 | 138 | 11 | 2026-07-29 |
 | 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 待开始 | 0 | 0 | 0 | — |
 | 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 待开始 | 0 | 0 | 0 | — |
 | 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 待开始 | 0 | 0 | 0 | — |
@@ -31,7 +31,7 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 待开始 | 0 | 0 | 0 | — |
-| — | **合计** | — | **133,924** | **461** | **37** | 2026-07-29 |
+| — | **合计** | — | **154,597** | **536** | **43** | 2026-07-29 |
 
 ---
 
@@ -95,7 +95,7 @@
 | [11_serverless_and_burst_inference.md](docs/03_serving_engines_and_scheduling/11_serverless_and_burst_inference.md) | serverless 与突发容量的适用边界 |
 | [12_serving_incident_playbook.md](docs/03_serving_engines_and_scheduling/12_serving_incident_playbook.md) | 线上事故分级、排查与降级手册 |
 
-### [04 — Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) `进行中`
+### [04 — Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) `已完成`
 
 | 文档 | 一句话说明 |
 |---|---|
@@ -104,12 +104,12 @@
 | [03_tensorrt_llm.md](docs/04_compilers_runtimes_and_kernels/03_tensorrt_llm.md) | TensorRT-LLM 的架构、优化与适用边界 |
 | [04_torch_compile_inductor_and_triton.md](docs/04_compilers_runtimes_and_kernels/04_torch_compile_inductor_and_triton.md) | TorchDynamo/Inductor/Triton 的推理路径 |
 | [05_xla_jax_and_tpu_runtime.md](docs/04_compilers_runtimes_and_kernels/05_xla_jax_and_tpu_runtime.md) | XLA/JAX 与 TPU runtime |
-| `06_onnx_runtime_openvino_and_portability.md` | 跨硬件可移植性与代价 |
-| `07_kernel_fusion_and_operator_optimization.md` | 算子融合与 kernel 优化基本功 |
-| `08_flashattention_and_memory_efficient_attention.md` | IO-aware attention 与显存/带宽优化 |
-| `09_quantization_kernels.md` | 量化 GEMM 与低精度 kernel 实现 |
-| `10_cuda_graphs_and_execution_overhead.md` | launch overhead 与 CUDA Graphs |
-| `11_compiler_debugging_and_profiling.md` | 编译与 kernel 层的调试与 profiling |
+| [06_onnx_runtime_openvino_and_portability.md](docs/04_compilers_runtimes_and_kernels/06_onnx_runtime_openvino_and_portability.md) | 跨硬件可移植性与代价 |
+| [07_kernel_fusion_and_operator_optimization.md](docs/04_compilers_runtimes_and_kernels/07_kernel_fusion_and_operator_optimization.md) | 算子融合与 kernel 优化基本功 |
+| [08_flashattention_and_memory_efficient_attention.md](docs/04_compilers_runtimes_and_kernels/08_flashattention_and_memory_efficient_attention.md) | IO-aware attention 与显存/带宽优化 |
+| [09_quantization_kernels.md](docs/04_compilers_runtimes_and_kernels/09_quantization_kernels.md) | 量化 GEMM 与低精度 kernel 实现 |
+| [10_cuda_graphs_and_execution_overhead.md](docs/04_compilers_runtimes_and_kernels/10_cuda_graphs_and_execution_overhead.md) | launch overhead 与 CUDA Graphs |
+| [11_compiler_debugging_and_profiling.md](docs/04_compilers_runtimes_and_kernels/11_compiler_debugging_and_profiling.md) | 编译与 kernel 层的调试与 profiling |
 
 ### [05 — 解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) `待开始`
 

@@ -3,7 +3,7 @@
 > 位置：[InferenceAtlas](../../INDEX.md) > [模块 04](README.md) > 当前文档
 > 信息截至：2026-07-29 ｜ 最后核验：2026-07-29 ｜ 内容版本：v0.1
 > 时效性等级：低
-> 相关主题：[软件栈](01_inference_software_stack.md)｜`07_kernel_fusion_and_operator_optimization.md`｜`11_compiler_debugging_and_profiling.md`
+> 相关主题：[软件栈](01_inference_software_stack.md)｜[07 算子融合与 kernel 优化](07_kernel_fusion_and_operator_optimization.md)｜[11 编译调试与 profiling](11_compiler_debugging_and_profiling.md)
 
 ## 本章导读
 
@@ -95,7 +95,7 @@
 | Fused sampling | logits 处理 + top-k/top-p | 减少大词表张量往返 |
 | Fused dequant + GEMM | 反量化与矩阵乘合并 | 避免物化高精度权重 |
 
-**最后一行尤其重要**：若量化权重需要先反量化成完整的高精度张量再做矩阵乘，量化的带宽收益就完全丧失了。**量化必须与 kernel 融合才有意义**——这是 `09_quantization_kernels.md` 的核心。
+**最后一行尤其重要**：若量化权重需要先反量化成完整的高精度张量再做矩阵乘，量化的带宽收益就完全丧失了。**量化必须与 kernel 融合才有意义**——这是 [09 量化 kernel](09_quantization_kernels.md) 的核心。
 
 ### 2.3 动态形状的三种应对
 
@@ -109,7 +109,7 @@
 
 **填充的浪费量化**：设桶边界为 $S_{bucket}$，实际长度为 $S$，则浪费比例为 $1 - S/S_{bucket}$。桶越粗浪费越大。
 
-**推理的常见组合**：**序列长度用分桶或全动态，batch 用分桶**（因为 batch 的取值范围小且离散）。这与 CUDA Graphs 的要求也匹配——后者需要形状固定（见 `10_cuda_graphs_and_execution_overhead.md`）。
+**推理的常见组合**：**序列长度用分桶或全动态，batch 用分桶**（因为 batch 的取值范围小且离散）。这与 CUDA Graphs 的要求也匹配——后者需要形状固定（见 [10 CUDA Graphs](10_cuda_graphs_and_execution_overhead.md)）。
 
 ### 2.4 Pass 顺序的影响
 
@@ -263,9 +263,9 @@ flowchart TD
 
 ## 延伸阅读
 
-- `07_kernel_fusion_and_operator_optimization.md` —— 融合的实现层面
-- `09_quantization_kernels.md` —— 量化与融合的必然结合
-- `11_compiler_debugging_and_profiling.md` —— 验证优化是否生效
+- [07 算子融合与 kernel 优化](07_kernel_fusion_and_operator_optimization.md) —— 融合的实现层面
+- [09 量化 kernel](09_quantization_kernels.md) —— 量化与融合的必然结合
+- [11 编译调试与 profiling](11_compiler_debugging_and_profiling.md) —— 验证优化是否生效
 
 ## 主要来源
 
