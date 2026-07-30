@@ -13,24 +13,24 @@
 
 | # | 模块 | 状态 | 字数 | 表格 | 图示 | 最后更新 |
 |---|---|---|---:|---:|---:|---|
-| 00 | [入门与端到端总览](docs/00_start_here/) | 已完成 | 21,824 | 64 | 3 | 2026-07-29 |
-| 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 已完成 | 26,531 | 91 | 8 | 2026-07-29 |
-| 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 已完成 | 30,961 | 110 | 10 | 2026-07-29 |
-| 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 已完成 | 38,095 | 133 | 11 | 2026-07-29 |
-| 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 已完成 | 37,186 | 138 | 11 | 2026-07-29 |
-| 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 进行中 | 6,897 | 23 | 2 | 2026-07-29 |
-| 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 待开始 | 0 | 0 | 0 | — |
-| 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 待开始 | 0 | 0 | 0 | — |
+| 00 | [入门与端到端总览](docs/00_start_here/) | 已完成 | 21,824 | 64 | 3 | 2026-07-30 |
+| 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 已完成 | 26,531 | 91 | 8 | 2026-07-30 |
+| 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 已完成 | 30,961 | 110 | 10 | 2026-07-30 |
+| 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 已完成 | 38,095 | 133 | 11 | 2026-07-30 |
+| 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 已完成 | 37,186 | 138 | 11 | 2026-07-30 |
+| 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 已完成 | 69,325 | 162 | 25 | 2026-07-30 |
+| 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 已完成 | 85,544 | 202 | 27 | 2026-07-30 |
+| 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 进行中 | 15,251 | 46 | 4 | 2026-07-30 |
 | 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 待开始 | 0 | 0 | 0 | — |
 | 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 待开始 | 0 | 0 | 0 | — |
 | 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 待开始 | 0 | 0 | 0 | — |
-| 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 待开始 | 0 | 0 | 0 | — |
+| 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 进行中 | 10,774 | 27 | 2 | 2026-07-30 |
 | 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 待开始 | 0 | 0 | 0 | — |
 | 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 待开始 | 0 | 0 | 0 | — |
 | 14 | [公司与生态](docs/14_company_and_ecosystem_landscape/) | 待开始 | 0 | 0 | 0 | — |
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
-| 17 | [面试准备](docs/17_interview_prep/) | 待开始 | 0 | 0 | 0 | — |
+| 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-07-30 |
 | — | **合计** | — | **515,765** | **1133** | **113** | 2026-07-30 |
 
 ---
@@ -111,43 +111,43 @@
 | [10_cuda_graphs_and_execution_overhead.md](docs/04_compilers_runtimes_and_kernels/10_cuda_graphs_and_execution_overhead.md) | launch overhead 与 CUDA Graphs |
 | [11_compiler_debugging_and_profiling.md](docs/04_compilers_runtimes_and_kernels/11_compiler_debugging_and_profiling.md) | 编译与 kernel 层的调试与 profiling |
 
-### [05 — 解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) `进行中`
+### [05 — 解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) `已完成`
 
 | 文档 | 一句话说明 |
 |---|---|
 | [01_decoding_basics.md](docs/05_decoding_and_generation_algorithms/01_decoding_basics.md) | 自回归解码循环与采样接口 |
-| `02_greedy_sampling_topk_topp_temperature.md` | 采样参数对质量、时延与可复现性的影响 |
-| `03_beam_search_and_constrained_decoding.md` | beam search 与约束解码的推理代价 |
+| [02_greedy_sampling_topk_topp_temperature.md](docs/05_decoding_and_generation_algorithms/02_greedy_sampling_topk_topp_temperature.md) | 采样参数对质量、时延与可复现性的影响 |
+| [03_beam_search_and_constrained_decoding.md](docs/05_decoding_and_generation_algorithms/03_beam_search_and_constrained_decoding.md) | beam search 与约束解码的推理代价 |
 | [04_speculative_decoding.md](docs/05_decoding_and_generation_algorithms/04_speculative_decoding.md) | draft/verify 机制、接受率与真实收益判定 |
-| `05_medusa_eagle_and_multi_token_prediction.md` | 多头/树形投机与多 token 预测 |
-| `06_draft_model_selection_and_acceptance_rate.md` | draft 模型选型与接受率工程 |
-| `07_reasoning_inference_and_test_time_scaling.md` | test-time compute 的质量-成本曲线 |
-| `08_tool_use_and_agent_inference.md` | 工具调用与 agent 循环的推理特征 |
-| `09_structured_output_and_grammar_constrained_decoding.md` | JSON mode 与语法约束解码 |
-| `10_generation_quality_latency_tradeoffs.md` | 生成质量与时延的系统级权衡 |
+| [05_medusa_eagle_and_multi_token_prediction.md](docs/05_decoding_and_generation_algorithms/05_medusa_eagle_and_multi_token_prediction.md) | 多头/树形投机与多 token 预测 |
+| [06_draft_model_selection_and_acceptance_rate.md](docs/05_decoding_and_generation_algorithms/06_draft_model_selection_and_acceptance_rate.md) | draft 模型选型与接受率工程 |
+| [07_reasoning_inference_and_test_time_scaling.md](docs/05_decoding_and_generation_algorithms/07_reasoning_inference_and_test_time_scaling.md) | test-time compute 的质量-成本曲线 |
+| [08_tool_use_and_agent_inference.md](docs/05_decoding_and_generation_algorithms/08_tool_use_and_agent_inference.md) | 工具调用与 agent 循环的推理特征 |
+| [09_structured_output_and_grammar_constrained_decoding.md](docs/05_decoding_and_generation_algorithms/09_structured_output_and_grammar_constrained_decoding.md) | JSON mode 与语法约束解码 |
+| [10_generation_quality_latency_tradeoffs.md](docs/05_decoding_and_generation_algorithms/10_generation_quality_latency_tradeoffs.md) | 生成质量与时延的系统级权衡 |
 
-### [06 — 分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) `待开始`
-
-| 文档 | 一句话说明 |
-|---|---|
-| `01_distributed_inference_overview.md` | 何时需要分布式推理及其代价 |
-| `02_tensor_parallel_inference.md` | TP 的通信模式与时延影响 |
-| `03_pipeline_parallel_inference.md` | PP 的气泡、微批与推理适配性 |
-| `04_sequence_context_parallel_inference.md` | 长上下文的序列/上下文并行 |
-| `05_moe_inference_and_expert_parallelism.md` | MoE 推理与专家并行 |
-| `06_moe_routing_all_to_all_and_load_balancing.md` | all-to-all、token 倾斜与热专家治理 |
-| `07_prefill_decode_disaggregation.md` | prefill/decode 池分离的收益与边界 |
-| `08_kv_cache_transfer_and_remote_memory.md` | KV 迁移、RDMA 与远端内存 |
-| `09_multi_node_serving_topologies.md` | 多节点部署拓扑与放置策略 |
-| `10_fault_tolerance_and_graceful_degradation.md` | 故障域、容错与优雅降级 |
-| `11_distributed_serving_case_studies.md` | 公开分布式推理案例研究 |
-
-### [07 — 硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) `待开始`
+### [06 — 分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) `已完成`
 
 | 文档 | 一句话说明 |
 |---|---|
-| `01_ai_inference_hardware_overview.md` | 推理硬件全景与分类 |
-| `02_gpu_architecture_for_inference.md` | GPU 微架构中与推理相关的部分 |
+| [01_distributed_inference_overview.md](docs/06_distributed_and_moe_inference/01_distributed_inference_overview.md) | 何时需要分布式推理及其代价 |
+| [02_tensor_parallel_inference.md](docs/06_distributed_and_moe_inference/02_tensor_parallel_inference.md) | TP 的通信模式与时延影响 |
+| [03_pipeline_parallel_inference.md](docs/06_distributed_and_moe_inference/03_pipeline_parallel_inference.md) | PP 的气泡、微批与推理适配性 |
+| [04_sequence_context_parallel_inference.md](docs/06_distributed_and_moe_inference/04_sequence_context_parallel_inference.md) | 长上下文的序列/上下文并行 |
+| [05_moe_inference_and_expert_parallelism.md](docs/06_distributed_and_moe_inference/05_moe_inference_and_expert_parallelism.md) | MoE 推理与专家并行 |
+| [06_moe_routing_all_to_all_and_load_balancing.md](docs/06_distributed_and_moe_inference/06_moe_routing_all_to_all_and_load_balancing.md) | all-to-all、token 倾斜与热专家治理 |
+| [07_prefill_decode_disaggregation.md](docs/06_distributed_and_moe_inference/07_prefill_decode_disaggregation.md) | prefill/decode 池分离的收益与边界 |
+| [08_kv_cache_transfer_and_remote_memory.md](docs/06_distributed_and_moe_inference/08_kv_cache_transfer_and_remote_memory.md) | KV 迁移、RDMA 与远端内存 |
+| [09_multi_node_serving_topologies.md](docs/06_distributed_and_moe_inference/09_multi_node_serving_topologies.md) | 多节点部署拓扑与放置策略 |
+| [10_fault_tolerance_and_graceful_degradation.md](docs/06_distributed_and_moe_inference/10_fault_tolerance_and_graceful_degradation.md) | 故障域、容错与优雅降级 |
+| [11_distributed_serving_case_studies.md](docs/06_distributed_and_moe_inference/11_distributed_serving_case_studies.md) | 公开分布式推理案例研究 |
+
+### [07 — 硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) `进行中`
+
+| 文档 | 一句话说明 |
+|---|---|
+| [01_ai_inference_hardware_overview.md](docs/07_hardware_and_server_architecture/01_ai_inference_hardware_overview.md) | 推理硬件全景与分类 |
+| [02_gpu_architecture_for_inference.md](docs/07_hardware_and_server_architecture/02_gpu_architecture_for_inference.md) | GPU 微架构中与推理相关的部分 |
 | `03_tensor_cores_matrix_engines_and_low_precision.md` | 矩阵引擎与低精度算力 |
 | `04_hbm_dram_and_memory_hierarchy.md` | HBM/DRAM/SRAM 层次与带宽 |
 | `05_memory_capacity_bandwidth_and_kv_cache.md` | 显存容量/带宽如何约束 KV cache 与并发 |
@@ -206,13 +206,13 @@
 | `08_private_hybrid_cloud_edge_architectures.md` | 云-边混合与隐私优先架构 |
 | `09_edge_deployment_case_studies.md` | 端侧部署案例 |
 
-### [11 — Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) `待开始`
+### [11 — Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) `进行中`
 
 | 文档 | 一句话说明 |
 |---|---|
-| `01_inference_benchmarking_methodology.md` | 严谨推理 benchmark 的设计方法论 |
+| [01_inference_benchmarking_methodology.md](docs/11_benchmarking_reliability_and_observability/01_inference_benchmarking_methodology.md) | 严谨推理 benchmark 的设计方法论 |
 | `02_mlperf_inference.md` | MLPerf Inference 能回答与不能回答的问题 |
-| `03_ttft_tpot_itl_and_end_to_end_latency.md` | 时延指标的精确定义与测量陷阱 |
+| [03_ttft_tpot_itl_and_end_to_end_latency.md](docs/11_benchmarking_reliability_and_observability/03_ttft_tpot_itl_and_end_to_end_latency.md) | 时延指标的精确定义与测量陷阱 |
 | `04_throughput_concurrency_and_goodput.md` | 吞吐、并发与 goodput |
 | `05_power_energy_and_cost_benchmarks.md` | 功耗、能耗与成本基准 |
 | `06_profiling_gpu_cpu_network_and_memory.md` | 全栈 profiling 方法 |
@@ -304,21 +304,21 @@
 | `11_edge_agents_and_private_inference.md` | 端侧 agent 与私有推理 |
 | `12_open_questions_and_scenarios.md` | 开放问题与情景推演 |
 
-### [17 — 面试准备](docs/17_interview_prep/) `待开始`
+### [17 — 面试准备](docs/17_interview_prep/) `已完成`
 
 | 文档 | 一句话说明 |
 |---|---|
-| `01_inference_system_design.md` | 推理系统设计题与完整参考答案 |
-| `02_kv_cache_and_transformer_questions.md` | Transformer 与 KV cache 题组 |
-| `03_serving_scheduling_and_slo_questions.md` | serving、调度与 SLO 题组 |
-| `04_compiler_kernel_and_quantization_questions.md` | 编译器、kernel 与量化题组 |
+| [01_inference_system_design.md](docs/17_interview_prep/01_inference_system_design.md) | 推理系统设计题与完整参考答案 |
+| [02_kv_cache_and_transformer_questions.md](docs/17_interview_prep/02_kv_cache_and_transformer_questions.md) | Transformer 与 KV cache 题组 |
+| [03_serving_scheduling_and_slo_questions.md](docs/17_interview_prep/03_serving_scheduling_and_slo_questions.md) | serving、调度与 SLO 题组 |
+| [04_compiler_kernel_and_quantization_questions.md](docs/17_interview_prep/04_compiler_kernel_and_quantization_questions.md) | 编译器、kernel 与量化题组 |
 | `05_distributed_moe_and_networking_questions.md` | 分布式、MoE 与网络题组 |
 | `06_hardware_datacenter_and_edge_questions.md` | 硬件、数据中心与边缘题组 |
 | `07_debugging_benchmarking_and_observability_questions.md` | 调试、基准与可观测性题组 |
 | `08_company_strategy_and_paper_discussion.md` | 公司战略与论文讨论题组 |
-| `09_mock_interview_cases.md` | 模拟面试案例 |
-| `10_coding_exercises.md` | 编码练习 |
-| `11_90_day_study_plan.md` | 90 天学习计划 |
+| [09_mock_interview_cases.md](docs/17_interview_prep/09_mock_interview_cases.md) | 模拟面试案例 |
+| [10_coding_exercises.md](docs/17_interview_prep/10_coding_exercises.md) | 编码练习 |
+| [11_90_day_study_plan.md](docs/17_interview_prep/11_90_day_study_plan.md) | 90 天学习计划 |
 
 > **面试题总数必须恰好 100 道**，分布约束见 [`data/schemas/interview_questions_schema.md`](data/schemas/interview_questions_schema.md)，由 `scripts/interview_coverage_report.py` 强制校验。
 
