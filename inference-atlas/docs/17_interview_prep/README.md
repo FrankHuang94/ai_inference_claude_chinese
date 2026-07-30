@@ -1,7 +1,7 @@
 # 模块 17 — 面试准备
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**进行中（8/11 篇；题库 100/100 道已完成）**
 > 模块目标字数：**≥ 12,000 字**
 > 最后更新：2026-07-29
 
@@ -17,19 +17,19 @@
 
 > 尚未创建的文档以 `代码体` 列出，避免死链。完成后改为链接并更新状态。
 
-| # | 文档 | 一句话说明 | 状态 |
-|---:|---|---|---|
-| 01 | `01_inference_system_design.md` | 推理系统设计题与完整参考答案 | 待开始 |
-| 02 | `02_kv_cache_and_transformer_questions.md` | Transformer 与 KV cache 题组 | 待开始 |
-| 03 | `03_serving_scheduling_and_slo_questions.md` | serving、调度与 SLO 题组 | 待开始 |
-| 04 | `04_compiler_kernel_and_quantization_questions.md` | 编译器、kernel 与量化题组 | 待开始 |
-| 05 | `05_distributed_moe_and_networking_questions.md` | 分布式、MoE 与网络题组 | 待开始 |
-| 06 | `06_hardware_datacenter_and_edge_questions.md` | 硬件、数据中心与边缘题组 | 待开始 |
-| 07 | `07_debugging_benchmarking_and_observability_questions.md` | 调试、基准与可观测性题组 | 待开始 |
-| 08 | `08_company_strategy_and_paper_discussion.md` | 公司战略与论文讨论题组 | 待开始 |
-| 09 | `09_mock_interview_cases.md` | 模拟面试案例 | 待开始 |
-| 10 | `10_coding_exercises.md` | 编码练习 | 待开始 |
-| 11 | `11_90_day_study_plan.md` | 90 天学习计划 | 待开始 |
+| # | 文档 | 一句话说明 | 题号 | 状态 |
+|---:|---|---|---|---|
+| 01 | [01_inference_system_design.md](01_inference_system_design.md) | 推理基础、指标、排队论与成本题组 | Q001–Q012 | 已完成 |
+| 02 | [02_kv_cache_and_transformer_questions.md](02_kv_cache_and_transformer_questions.md) | Transformer、prefill/decode 与 KV cache 题组 | Q013–Q028 | 已完成 |
+| 03 | [03_serving_scheduling_and_slo_questions.md](03_serving_scheduling_and_slo_questions.md) | Serving、batching、调度与 QoS 题组 | Q029–Q044 | 已完成 |
+| 04 | [04_compiler_kernel_and_quantization_questions.md](04_compiler_kernel_and_quantization_questions.md) | Compiler、kernel、量化与 runtime 题组 | Q045–Q058 | 已完成 |
+| 05 | [05_distributed_and_moe_questions.md](05_distributed_and_moe_questions.md) | 分布式、MoE、网络与 disaggregation 题组 | Q059–Q076 | 已完成 |
+| 06 | [06_hardware_and_datacenter_questions.md](06_hardware_and_datacenter_questions.md) | 硬件、HBM、数据中心与 edge 题组 | Q077–Q088 | 已完成 |
+| 07 | [07_debug_benchmark_and_reliability_questions.md](07_debug_benchmark_and_reliability_questions.md) | Debug、benchmark、可靠性与安全题组 | Q089–Q095 | 已完成 |
+| 08 | [08_company_paper_and_strategy_questions.md](08_company_paper_and_strategy_questions.md) | 公司、论文与战略讨论题组 | Q096–Q100 | 已完成 |
+| 09 | `09_mock_interview_cases.md` | 完整系统设计案例走查（不计入 100 道） | — | 待开始 |
+| 10 | `10_coding_exercises.md` | 编码练习 | — | 待开始 |
+| 11 | `11_90_day_study_plan.md` | 90 天学习计划 | — | 待开始 |
 
 ## 写作要求
 
