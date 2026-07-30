@@ -24,14 +24,14 @@
 | 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 待开始 | 0 | 0 | 0 | — |
 | 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 待开始 | 0 | 0 | 0 | — |
 | 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 待开始 | 0 | 0 | 0 | — |
-| 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 进行中 | 27,023 | 76 | 5 | 2026-07-30 |
+| 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 进行中 | 43,867 | 119 | 8 | 2026-07-30 |
 | 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 待开始 | 0 | 0 | 0 | — |
 | 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 待开始 | 0 | 0 | 0 | — |
 | 14 | [公司与生态](docs/14_company_and_ecosystem_landscape/) | 待开始 | 0 | 0 | 0 | — |
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-07-30 |
-| — | **合计** | — | **532,014** | **1182** | **116** | 2026-07-30 |
+| — | **合计** | — | **548,858** | **1225** | **119** | 2026-07-30 |
 
 ---
 
@@ -215,11 +215,11 @@
 | [03_ttft_tpot_itl_and_end_to_end_latency.md](docs/11_benchmarking_reliability_and_observability/03_ttft_tpot_itl_and_end_to_end_latency.md) | 时延指标的精确定义与测量陷阱 |
 | [04_throughput_concurrency_and_goodput.md](docs/11_benchmarking_reliability_and_observability/04_throughput_concurrency_and_goodput.md) | 吞吐、并发与 goodput |
 | `05_power_energy_and_cost_benchmarks.md` | 功耗、能耗与成本基准 |
-| `06_profiling_gpu_cpu_network_and_memory.md` | 全栈 profiling 方法 |
+| [06_profiling_gpu_cpu_network_and_memory.md](docs/11_benchmarking_reliability_and_observability/06_profiling_gpu_cpu_network_and_memory.md) | 全栈 profiling 方法 |
 | [07_observability_metrics_logs_traces.md](docs/11_benchmarking_reliability_and_observability/07_observability_metrics_logs_traces.md) | 指标、日志与 trace 体系 |
 | [08_slos_slas_and_error_budgets.md](docs/11_benchmarking_reliability_and_observability/08_slos_slas_and_error_budgets.md) | SLO/SLA 与错误预算 |
-| `09_reliability_incidents_and_capacity_failures.md` | 可靠性事故与容量失效模式 |
-| `10_safety_security_and_abuse_controls.md` | 安全、滥用防护与租户隔离 |
+| [09_reliability_incidents_and_capacity_failures.md](docs/11_benchmarking_reliability_and_observability/09_reliability_incidents_and_capacity_failures.md) | 可靠性事故与容量失效模式 |
+| [10_safety_security_and_abuse_controls.md](docs/11_benchmarking_reliability_and_observability/10_safety_security_and_abuse_controls.md) | 安全、滥用防护与租户隔离 |
 | `11_benchmark_case_studies.md` | benchmark 案例研究 |
 
 ### [12 — 开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) `待开始`

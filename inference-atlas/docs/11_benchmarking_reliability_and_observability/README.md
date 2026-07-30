@@ -1,7 +1,7 @@
 # 模块 11 — Benchmark、可靠性、可观测性与安全
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中（5/11 篇）**
+> 状态：**进行中（8/11 篇）**
 > 模块目标字数：**≥ 12,000 字**
 > 最后更新：2026-07-29
 
@@ -24,11 +24,11 @@
 | 03 | [03_ttft_tpot_itl_and_end_to_end_latency.md](03_ttft_tpot_itl_and_end_to_end_latency.md) | 时延指标的精确定义与测量陷阱 | 已完成 |
 | 04 | [04_throughput_concurrency_and_goodput.md](04_throughput_concurrency_and_goodput.md) | 吞吐、并发与 goodput | 已完成 |
 | 05 | `05_power_energy_and_cost_benchmarks.md` | 功耗、能耗与成本基准 | 待开始 |
-| 06 | `06_profiling_gpu_cpu_network_and_memory.md` | 全栈 profiling 方法 | 待开始 |
+| 06 | [06_profiling_gpu_cpu_network_and_memory.md](06_profiling_gpu_cpu_network_and_memory.md) | 全栈 profiling 方法 | 已完成 |
 | 07 | [07_observability_metrics_logs_traces.md](07_observability_metrics_logs_traces.md) | 指标、日志与 trace 体系 | 已完成 |
 | 08 | [08_slos_slas_and_error_budgets.md](08_slos_slas_and_error_budgets.md) | SLO/SLA 与错误预算 | 已完成 |
-| 09 | `09_reliability_incidents_and_capacity_failures.md` | 可靠性事故与容量失效模式 | 待开始 |
-| 10 | `10_safety_security_and_abuse_controls.md` | 安全、滥用防护与租户隔离 | 待开始 |
+| 09 | [09_reliability_incidents_and_capacity_failures.md](09_reliability_incidents_and_capacity_failures.md) | 可靠性事故与容量失效模式 | 已完成 |
+| 10 | [10_safety_security_and_abuse_controls.md](10_safety_security_and_abuse_controls.md) | 安全、滥用防护与租户隔离 | 已完成 |
 | 11 | `11_benchmark_case_studies.md` | benchmark 案例研究 | 待开始 |
 
 ## 写作要求
