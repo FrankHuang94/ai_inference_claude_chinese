@@ -1,7 +1,7 @@
 # 模块 17 — 面试准备
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中（8/11 篇；题库 100/100 道已完成）**
+> 状态：**进行中（9/11 篇；题库 100/100 道已完成）**
 > 模块目标字数：**≥ 12,000 字**
 > 最后更新：2026-07-29
 
@@ -27,7 +27,7 @@
 | 06 | [06_hardware_and_datacenter_questions.md](06_hardware_and_datacenter_questions.md) | 硬件、HBM、数据中心与 edge 题组 | Q077–Q088 | 已完成 |
 | 07 | [07_debug_benchmark_and_reliability_questions.md](07_debug_benchmark_and_reliability_questions.md) | Debug、benchmark、可靠性与安全题组 | Q089–Q095 | 已完成 |
 | 08 | [08_company_paper_and_strategy_questions.md](08_company_paper_and_strategy_questions.md) | 公司、论文与战略讨论题组 | Q096–Q100 | 已完成 |
-| 09 | `09_mock_interview_cases.md` | 完整系统设计案例走查（不计入 100 道） | — | 待开始 |
+| 09 | [09_mock_interview_cases.md](09_mock_interview_cases.md) | 八个完整系统设计案例走查（不计入 100 道） | — | 已完成 |
 | 10 | `10_coding_exercises.md` | 编码练习 | — | 待开始 |
 | 11 | `11_90_day_study_plan.md` | 90 天学习计划 | — | 待开始 |
 
