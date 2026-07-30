@@ -1,7 +1,7 @@
 # 模块 11 — Benchmark、可靠性、可观测性与安全
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中（8/11 篇）**
+> 状态：**已完成（11/11 篇）**
 > 模块目标字数：**≥ 12,000 字**
 > 最后更新：2026-07-29
 
@@ -15,21 +15,21 @@
 
 ## 规划文档
 
-> 尚未创建的文档以 `代码体` 列出，避免死链。完成后改为链接并更新状态。
+> 全部 11 篇已完成。第 02 篇因出口策略无法访问套件官方文档，改写为「标准化 benchmark 这一类工具能回答与不能回答什么」的方法论，不描述任何具体套件。
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
 | 01 | [01_inference_benchmarking_methodology.md](01_inference_benchmarking_methodology.md) | 严谨推理 benchmark 的设计方法论 | 已完成 |
-| 02 | `02_mlperf_inference.md` | MLPerf Inference 能回答与不能回答的问题 | 待开始 |
+| 02 | [02_mlperf_inference.md](02_mlperf_inference.md) | MLPerf Inference 能回答与不能回答的问题 | 已完成 |
 | 03 | [03_ttft_tpot_itl_and_end_to_end_latency.md](03_ttft_tpot_itl_and_end_to_end_latency.md) | 时延指标的精确定义与测量陷阱 | 已完成 |
 | 04 | [04_throughput_concurrency_and_goodput.md](04_throughput_concurrency_and_goodput.md) | 吞吐、并发与 goodput | 已完成 |
-| 05 | `05_power_energy_and_cost_benchmarks.md` | 功耗、能耗与成本基准 | 待开始 |
+| 05 | [05_power_energy_and_cost_benchmarks.md](05_power_energy_and_cost_benchmarks.md) | 功耗、能耗与成本基准 | 已完成 |
 | 06 | [06_profiling_gpu_cpu_network_and_memory.md](06_profiling_gpu_cpu_network_and_memory.md) | 全栈 profiling 方法 | 已完成 |
 | 07 | [07_observability_metrics_logs_traces.md](07_observability_metrics_logs_traces.md) | 指标、日志与 trace 体系 | 已完成 |
 | 08 | [08_slos_slas_and_error_budgets.md](08_slos_slas_and_error_budgets.md) | SLO/SLA 与错误预算 | 已完成 |
 | 09 | [09_reliability_incidents_and_capacity_failures.md](09_reliability_incidents_and_capacity_failures.md) | 可靠性事故与容量失效模式 | 已完成 |
 | 10 | [10_safety_security_and_abuse_controls.md](10_safety_security_and_abuse_controls.md) | 安全、滥用防护与租户隔离 | 已完成 |
-| 11 | `11_benchmark_case_studies.md` | benchmark 案例研究 | 待开始 |
+| 11 | [11_benchmark_case_studies.md](11_benchmark_case_studies.md) | benchmark 案例研究 | 已完成 |
 
 ## 写作要求
 
@@ -42,14 +42,14 @@
 
 ## 完成标准
 
-- [ ] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
-- [ ] 模块正文合计 ≥ 12,000 字
-- [ ] 上述"写作要求"逐条覆盖
+- [x] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
+- [x] 模块正文合计 ≥ 12,000 字
+- [x] 上述"写作要求"逐条覆盖
 - [ ] 所有事实性数字带来源链接与披露标签
 - [ ] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
 - [ ] 相关 [`data/`](../../data/) CSV 已更新
-- [ ] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
-- [ ] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
+- [x] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
+- [x] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
 
 ## 工作节奏
 
