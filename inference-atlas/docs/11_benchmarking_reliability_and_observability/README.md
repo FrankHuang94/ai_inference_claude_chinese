@@ -1,7 +1,7 @@
 # 模块 11 — Benchmark、可靠性、可观测性与安全
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**进行中（2/11 篇）**
 > 模块目标字数：**≥ 12,000 字**
 > 最后更新：2026-07-29
 
@@ -19,9 +19,9 @@
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
-| 01 | `01_inference_benchmarking_methodology.md` | 严谨推理 benchmark 的设计方法论 | 待开始 |
+| 01 | [01_inference_benchmarking_methodology.md](01_inference_benchmarking_methodology.md) | 严谨推理 benchmark 的设计方法论 | 已完成 |
 | 02 | `02_mlperf_inference.md` | MLPerf Inference 能回答与不能回答的问题 | 待开始 |
-| 03 | `03_ttft_tpot_itl_and_end_to_end_latency.md` | 时延指标的精确定义与测量陷阱 | 待开始 |
+| 03 | [03_ttft_tpot_itl_and_end_to_end_latency.md](03_ttft_tpot_itl_and_end_to_end_latency.md) | 时延指标的精确定义与测量陷阱 | 已完成 |
 | 04 | `04_throughput_concurrency_and_goodput.md` | 吞吐、并发与 goodput | 待开始 |
 | 05 | `05_power_energy_and_cost_benchmarks.md` | 功耗、能耗与成本基准 | 待开始 |
 | 06 | `06_profiling_gpu_cpu_network_and_memory.md` | 全栈 profiling 方法 | 待开始 |
