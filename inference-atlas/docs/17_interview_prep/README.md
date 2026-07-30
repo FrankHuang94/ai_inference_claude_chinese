@@ -1,7 +1,7 @@
 # 模块 17 — 面试准备
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中（9/11 篇；题库 100/100 道已完成）**
+> 状态：**已完成（11/11 篇；题库 100/100 道）**
 > 模块目标字数：**≥ 12,000 字**
 > 最后更新：2026-07-29
 
@@ -15,7 +15,7 @@
 
 ## 规划文档
 
-> 尚未创建的文档以 `代码体` 列出，避免死链。完成后改为链接并更新状态。
+> 全部 11 篇已完成。可运行的编码题参考实现位于 [`code/interview_exercises.py`](../../code/interview_exercises.py)。
 
 | # | 文档 | 一句话说明 | 题号 | 状态 |
 |---:|---|---|---|---|
@@ -28,8 +28,8 @@
 | 07 | [07_debug_benchmark_and_reliability_questions.md](07_debug_benchmark_and_reliability_questions.md) | Debug、benchmark、可靠性与安全题组 | Q089–Q095 | 已完成 |
 | 08 | [08_company_paper_and_strategy_questions.md](08_company_paper_and_strategy_questions.md) | 公司、论文与战略讨论题组 | Q096–Q100 | 已完成 |
 | 09 | [09_mock_interview_cases.md](09_mock_interview_cases.md) | 八个完整系统设计案例走查（不计入 100 道） | — | 已完成 |
-| 10 | `10_coding_exercises.md` | 编码练习 | — | 待开始 |
-| 11 | `11_90_day_study_plan.md` | 90 天学习计划 | — | 待开始 |
+| 10 | [10_coding_exercises.md](10_coding_exercises.md) | 十道编码题与可运行的参考实现 | — | 已完成 |
+| 11 | [11_90_day_study_plan.md](11_90_day_study_plan.md) | 90 天学习计划与自我诊断 | — | 已完成 |
 
 ## 写作要求
 
@@ -101,14 +101,14 @@
 
 ## 完成标准
 
-- [ ] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
-- [ ] 模块正文合计 ≥ 12,000 字
-- [ ] 上述"写作要求"逐条覆盖
+- [x] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
+- [x] 模块正文合计 ≥ 12,000 字
+- [x] 上述"写作要求"逐条覆盖
 - [ ] 所有事实性数字带来源链接与披露标签
 - [ ] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
-- [ ] 相关 [`data/`](../../data/) CSV 已更新
-- [ ] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
-- [ ] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
+- [x] 相关 [`data/`](../../data/) CSV 已更新（`interview_questions.csv` 100 行）
+- [x] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
+- [x] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
 
 ## 工作节奏
 
