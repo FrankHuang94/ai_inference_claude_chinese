@@ -22,7 +22,7 @@
 | 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 已完成 | 85,544 | 202 | 27 | 2026-07-30 |
 | 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 进行中 | 15,251 | 46 | 4 | 2026-07-30 |
 | 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 待开始 | 0 | 0 | 0 | — |
-| 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 进行中 | 16,519 | 41 | 3 | 2026-07-30 |
+| 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 进行中 | 21,346 | 56 | 4 | 2026-07-30 |
 | 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 待开始 | 0 | 0 | 0 | — |
 | 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-07-30 |
 | 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 待开始 | 0 | 0 | 0 | — |
@@ -31,7 +31,7 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-07-30 |
-| — | **合计** | — | **579,963** | **1306** | **125** | 2026-07-30 |
+| — | **合计** | — | **584,790** | **1321** | **126** | 2026-07-30 |
 
 ---
 
@@ -183,7 +183,7 @@
 |---|---|
 | [01_ai_datacenter_overview.md](docs/09_datacenter_power_thermal_and_operations/01_ai_datacenter_overview.md) | AI 数据中心与传统数据中心的差异 |
 | [02_rack_power_and_density.md](docs/09_datacenter_power_thermal_and_operations/02_rack_power_and_density.md) | 机架功率密度与扩容速度 |
-| `03_power_delivery_48v_and_busbar.md` | 48V 供电、busbar 与配电链路 |
+| [03_power_delivery_48v_and_busbar.md](docs/09_datacenter_power_thermal_and_operations/03_power_delivery_48v_and_busbar.md) | 48V 供电、busbar 与配电链路 |
 | [04_cooling_air_direct_liquid_and_immersion.md](docs/09_datacenter_power_thermal_and_operations/04_cooling_air_direct_liquid_and_immersion.md) | 风冷、冷板液冷与浸没式散热 |
 | `05_power_usage_effectiveness_and_energy_modeling.md` | PUE/WUE 与能耗建模 |
 | `06_cluster_capacity_and_site_planning.md` | 集群容量与选址规划 |
