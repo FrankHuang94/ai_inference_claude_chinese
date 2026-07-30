@@ -1,7 +1,7 @@
 # 模块 09 — 数据中心、电力、散热与运维
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中（6/10 篇）**
+> 状态：**进行中（8/10 篇）**
 > 模块目标字数：**≥ 10,000 字**
 > 最后更新：2026-07-29
 
@@ -25,8 +25,8 @@ AI 数据中心的机架功率密度已远超传统云机房，供电与散热�
 | 04 | [04_cooling_air_direct_liquid_and_immersion.md](04_cooling_air_direct_liquid_and_immersion.md) | 风冷、冷板液冷与浸没式散热 | 已完成 |
 | 05 | [05_power_usage_effectiveness_and_energy_modeling.md](05_power_usage_effectiveness_and_energy_modeling.md) | PUE、WUE 与设施能耗建模 | 已完成 |
 | 06 | [06_cluster_capacity_and_site_planning.md](06_cluster_capacity_and_site_planning.md) | 集群容量与选址规划 | 已完成 |
-| 07 | `07_reliability_redundancy_and_maintenance.md` | 冗余、可维护性与 RAS | 待开始 |
-| 08 | `08_storage_logging_and_data_plane.md` | 存储、日志与数据面 | 待开始 |
+| 07 | [07_reliability_redundancy_and_maintenance.md](07_reliability_redundancy_and_maintenance.md) | 设施冗余、可维护性与 RAS | 已完成 |
+| 08 | [08_storage_logging_and_data_plane.md](08_storage_logging_and_data_plane.md) | 存储、日志与数据面 | 已完成 |
 | 09 | `09_security_compliance_and_data_residency.md` | 安全、合规与数据驻留 | 待开始 |
 | 10 | `10_operations_case_studies.md` | 运维案例研究 | 待开始 |
 

@@ -22,7 +22,7 @@
 | 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 已完成 | 85,544 | 202 | 27 | 2026-07-30 |
 | 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 进行中 | 15,251 | 46 | 4 | 2026-07-30 |
 | 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 待开始 | 0 | 0 | 0 | — |
-| 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 进行中 | 32,180 | 82 | 6 | 2026-07-30 |
+| 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 进行中 | 42,750 | 113 | 8 | 2026-07-30 |
 | 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 待开始 | 0 | 0 | 0 | — |
 | 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-07-30 |
 | 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 待开始 | 0 | 0 | 0 | — |
@@ -31,7 +31,7 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-07-30 |
-| — | **合计** | — | **595,624** | **1347** | **128** | 2026-07-30 |
+| — | **合计** | — | **606,194** | **1378** | **130** | 2026-07-30 |
 
 ---
 
@@ -187,8 +187,8 @@
 | [04_cooling_air_direct_liquid_and_immersion.md](docs/09_datacenter_power_thermal_and_operations/04_cooling_air_direct_liquid_and_immersion.md) | 风冷、冷板液冷与浸没式散热 |
 | [05_power_usage_effectiveness_and_energy_modeling.md](docs/09_datacenter_power_thermal_and_operations/05_power_usage_effectiveness_and_energy_modeling.md) | PUE/WUE 与能耗建模 |
 | [06_cluster_capacity_and_site_planning.md](docs/09_datacenter_power_thermal_and_operations/06_cluster_capacity_and_site_planning.md) | 集群容量与选址规划 |
-| `07_reliability_redundancy_and_maintenance.md` | 冗余、可维护性与 RAS |
-| `08_storage_logging_and_data_plane.md` | 存储、日志与数据面 |
+| [07_reliability_redundancy_and_maintenance.md](docs/09_datacenter_power_thermal_and_operations/07_reliability_redundancy_and_maintenance.md) | 冗余、可维护性与 RAS |
+| [08_storage_logging_and_data_plane.md](docs/09_datacenter_power_thermal_and_operations/08_storage_logging_and_data_plane.md) | 存储、日志与数据面 |
 | `09_security_compliance_and_data_residency.md` | 安全、合规与数据驻留 |
 | `10_operations_case_studies.md` | 运维案例研究 |
 
