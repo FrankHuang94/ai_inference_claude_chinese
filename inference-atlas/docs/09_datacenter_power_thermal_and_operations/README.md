@@ -1,7 +1,7 @@
 # 模块 09 — 数据中心、电力、散热与运维
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**进行中（3/10 篇）**
 > 模块目标字数：**≥ 10,000 字**
 > 最后更新：2026-07-29
 
@@ -19,10 +19,10 @@ AI 数据中心的机架功率密度已远超传统云机房，供电与散热�
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
-| 01 | `01_ai_datacenter_overview.md` | AI 数据中心与传统数据中心的差异 | 待开始 |
-| 02 | `02_rack_power_and_density.md` | 机架功率密度与扩容速度 | 待开始 |
+| 01 | [01_ai_datacenter_overview.md](01_ai_datacenter_overview.md) | AI 数据中心与传统数据中心的差异 | 已完成 |
+| 02 | [02_rack_power_and_density.md](02_rack_power_and_density.md) | 机架功率密度与扩容速度 | 已完成 |
 | 03 | `03_power_delivery_48v_and_busbar.md` | 48V 供电、busbar 与配电链路 | 待开始 |
-| 04 | `04_cooling_air_direct_liquid_and_immersion.md` | 风冷、冷板液冷与浸没式散热 | 待开始 |
+| 04 | [04_cooling_air_direct_liquid_and_immersion.md](04_cooling_air_direct_liquid_and_immersion.md) | 风冷、冷板液冷与浸没式散热 | 已完成 |
 | 05 | `05_power_usage_effectiveness_and_energy_modeling.md` | PUE/WUE 与能耗建模 | 待开始 |
 | 06 | `06_cluster_capacity_and_site_planning.md` | 集群容量与选址规划 | 待开始 |
 | 07 | `07_reliability_redundancy_and_maintenance.md` | 冗余、可维护性与 RAS | 待开始 |
