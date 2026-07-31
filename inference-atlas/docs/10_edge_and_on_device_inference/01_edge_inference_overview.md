@@ -63,8 +63,8 @@
 | 类别 | 特征 | 本模块的覆盖 |
 |---|---|---|
 | 移动设备 | 内存最紧、功耗预算最小、与系统共享 | 主要对象 |
-| 个人电脑 | 内存较宽松、有主动散热 | `04_pc_ai_inference.md` |
-| 车载与机器人 | 有实时性与安全要求 | `05_automotive_robotics_and_embedded_inference.md` |
+| 个人电脑 | 内存较宽松、有主动散热 | [04_pc_ai_inference.md](04_pc_ai_inference.md) |
+| 车载与机器人 | 有实时性与安全要求 | [05_automotive_robotics_and_embedded_inference.md](05_automotive_robotics_and_embedded_inference.md) |
 | 嵌入式 | 资源最紧、通常是专用任务 | 同上 |
 
 **四者的共同点是「资源固定且无法扩展」**，

@@ -3,7 +3,7 @@
 > 位置：[InferenceAtlas](../../INDEX.md) > [模块 10](README.md) > 当前文档
 > 信息截至：2026-07-29 ｜ 最后核验：2026-07-29 ｜ 内容版本：v0.1
 > 时效性等级：低
-> 相关主题：[边缘推理总览](01_edge_inference_overview.md)｜`04_pc_ai_inference.md`｜[AI 推理硬件总览](../07_hardware_and_server_architecture/01_ai_inference_hardware_overview.md)
+> 相关主题：[边缘推理总览](01_edge_inference_overview.md)｜[AI PC 的推理路径](04_pc_ai_inference.md)｜[AI 推理硬件总览](../07_hardware_and_server_architecture/01_ai_inference_hardware_overview.md)
 
 ## 本章导读
 

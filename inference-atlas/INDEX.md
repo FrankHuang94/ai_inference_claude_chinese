@@ -23,7 +23,7 @@
 | 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 进行中 | 15,251 | 46 | 4 | 2026-07-31 |
 | 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 待开始 | 0 | 0 | 0 | — |
 | 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 已完成 | 53,456 | 141 | 10 | 2026-07-31 |
-| 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 进行中 | 28,451 | 73 | 5 | 2026-07-31 |
+| 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 进行中 | 39,009 | 109 | 7 | 2026-07-31 |
 | 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-07-31 |
 | 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 待开始 | 0 | 0 | 0 | — |
 | 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 待开始 | 0 | 0 | 0 | — |
@@ -31,7 +31,7 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-07-31 |
-| — | **合计** | — | **645,351** | **1479** | **137** | 2026-07-31 |
+| — | **合计** | — | **655,909** | **1515** | **139** | 2026-07-31 |
 
 ---
 
@@ -199,8 +199,8 @@
 | [01_edge_inference_overview.md](docs/10_edge_and_on_device_inference/01_edge_inference_overview.md) | 边缘推理的约束条件与价值主张 |
 | [02_mobile_npu_soc_and_memory_constraints.md](docs/10_edge_and_on_device_inference/02_mobile_npu_soc_and_memory_constraints.md) | 移动 SoC、NPU 与 LPDDR 约束 |
 | `03_qualcomm_apple_mediatek_google_samsung_platforms.md` | 主要移动平台的端侧推理能力 |
-| `04_pc_ai_inference.md` | AI PC 的推理路径 |
-| `05_automotive_robotics_and_embedded_inference.md` | 车载、机器人与嵌入式推理 |
+| [04_pc_ai_inference.md](docs/10_edge_and_on_device_inference/04_pc_ai_inference.md) | AI PC 的推理路径 |
+| [05_automotive_robotics_and_embedded_inference.md](docs/10_edge_and_on_device_inference/05_automotive_robotics_and_embedded_inference.md) | 车载、机器人与嵌入式推理 |
 | [06_small_language_models_and_on_device_agents.md](docs/10_edge_and_on_device_inference/06_small_language_models_and_on_device_agents.md) | 小模型与端侧 agent |
 | [07_quantization_distillation_and_pruning_for_edge.md](docs/10_edge_and_on_device_inference/07_quantization_distillation_and_pruning_for_edge.md) | 面向端侧的模型压缩 |
 | [08_private_hybrid_cloud_edge_architectures.md](docs/10_edge_and_on_device_inference/08_private_hybrid_cloud_edge_architectures.md) | 云-边混合与隐私优先架构 |
