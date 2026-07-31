@@ -23,7 +23,7 @@
 | 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 进行中 | 15,251 | 46 | 4 | 2026-07-31 |
 | 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 待开始 | 0 | 0 | 0 | — |
 | 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 已完成 | 53,456 | 141 | 10 | 2026-07-31 |
-| 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 待开始 | 0 | 0 | 0 | — |
+| 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 进行中 | 5,562 | 15 | 1 | 2026-07-31 |
 | 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-07-31 |
 | 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 待开始 | 0 | 0 | 0 | — |
 | 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 待开始 | 0 | 0 | 0 | — |
@@ -31,7 +31,7 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-07-31 |
-| — | **合计** | — | **616,900** | **1406** | **132** | 2026-07-31 |
+| — | **合计** | — | **622,462** | **1421** | **133** | 2026-07-31 |
 
 ---
 
@@ -192,11 +192,11 @@
 | [09_security_compliance_and_data_residency.md](docs/09_datacenter_power_thermal_and_operations/09_security_compliance_and_data_residency.md) | 安全、合规与数据驻留 |
 | [10_operations_case_studies.md](docs/09_datacenter_power_thermal_and_operations/10_operations_case_studies.md) | 运维案例研究 |
 
-### [10 — Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) `待开始`
+### [10 — Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) `进行中`
 
 | 文档 | 一句话说明 |
 |---|---|
-| `01_edge_inference_overview.md` | 边缘推理的约束条件与价值主张 |
+| [01_edge_inference_overview.md](docs/10_edge_and_on_device_inference/01_edge_inference_overview.md) | 边缘推理的约束条件与价值主张 |
 | `02_mobile_npu_soc_and_memory_constraints.md` | 移动 SoC、NPU 与 LPDDR 约束 |
 | `03_qualcomm_apple_mediatek_google_samsung_platforms.md` | 主要移动平台的端侧推理能力 |
 | `04_pc_ai_inference.md` | AI PC 的推理路径 |

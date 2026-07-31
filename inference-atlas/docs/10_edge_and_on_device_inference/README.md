@@ -1,7 +1,7 @@
 # 模块 10 — Edge 与 On-Device Inference
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**进行中（1/9 篇）**
 > 模块目标字数：**≥ 10,000 字**
 > 最后更新：2026-07-29
 
@@ -19,9 +19,9 @@
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
-| 01 | `01_edge_inference_overview.md` | 边缘推理的约束条件与价值主张 | 待开始 |
+| 01 | [01_edge_inference_overview.md](01_edge_inference_overview.md) | 边缘推理的约束条件与价值主张 | 已完成 |
 | 02 | `02_mobile_npu_soc_and_memory_constraints.md` | 移动 SoC、NPU 与 LPDDR 约束 | 待开始 |
-| 03 | `03_qualcomm_apple_mediatek_google_samsung_platforms.md` | 主要移动平台的端侧推理能力 | 待开始 |
+| 03 | `03_qualcomm_apple_mediatek_google_samsung_platforms.md` | 主要移动平台的端侧推理能力 | **受阻**（内容本体为需核验的厂商规格，出口策略下无法撰写） |
 | 04 | `04_pc_ai_inference.md` | AI PC 的推理路径 | 待开始 |
 | 05 | `05_automotive_robotics_and_embedded_inference.md` | 车载、机器人与嵌入式推理 | 待开始 |
 | 06 | `06_small_language_models_and_on_device_agents.md` | 小模型与端侧 agent | 待开始 |
