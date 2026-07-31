@@ -26,7 +26,7 @@
 | 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 已完成 | 69,325 | 162 | 25 | 2026-07-31 |
 | 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 已完成 | 85,544 | 202 | 27 | 2026-07-31 |
 | 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 进行中 | 15,251 | 46 | 4 | 2026-07-31 |
-| 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 进行中 | 17,703 | 65 | 6 | 2026-07-31 |
+| 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 已完成* | 39,947 | 156 | 13 | 2026-07-31 |
 | 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 已完成 | 53,456 | 141 | 10 | 2026-07-31 |
 | 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 已完成* | 47,932 | 129 | 11 | 2026-07-31 |
 | 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-07-31 |
@@ -36,7 +36,7 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-07-31 |
-| — | **合计** | — | **682,535** | **1600** | **149** | 2026-07-31 |
+| — | **合计** | — | **704,779** | **1691** | **156** | 2026-07-31 |
 
 > **`已完成*`**：可撰写的规划文档已全部完成，
 > 余下文档因其内容本体为需核验的外部资料、在当前网络出口策略下无法撰写而**受阻**
@@ -171,7 +171,7 @@
 | `12_hbm_supply_chain_and_memory_roadmaps.md` | HBM 供应链与内存路线图 |
 | `13_hardware_selection_framework.md` | 面向 workload 的硬件选型框架 |
 
-### [08 — 网络、互连与光学](docs/08_networking_and_interconnect/) `进行中`
+### [08 — 网络、互连与光学](docs/08_networking_and_interconnect/) `已完成*`
 
 | 文档 | 一句话说明 |
 |---|---|
@@ -181,12 +181,12 @@
 | `04_ethernet_roce_and_ultra_ethernet.md` | 以太网、RoCE 与 Ultra Ethernet |
 | [05_collectives_rdma_and_communication_libraries.md](docs/08_networking_and_interconnect/05_collectives_rdma_and_communication_libraries.md) | 集合通信、RDMA 与通信库 |
 | [06_scale_up_vs_scale_out.md](docs/08_networking_and_interconnect/06_scale_up_vs_scale_out.md) | scale-up 与 scale-out 的决策框架 |
-| `07_network_topologies_fat_tree_dragonfly_rail_optimized.md` | 拓扑设计与 rail 优化 |
+| [07_network_topologies_fat_tree_dragonfly_rail_optimized.md](docs/08_networking_and_interconnect/07_network_topologies_fat_tree_dragonfly_rail_optimized.md) | 拓扑设计与 rail 优化 |
 | `08_optical_transceivers_aec_dac_and_cpo.md` | DAC/AEC/可插拔光模块与 CPO |
 | `09_optical_switching_and_photonic_interconnect.md` | 光交换与光子互连 |
-| `10_network_congestion_tail_latency_and_qos.md` | 拥塞控制、incast 与 tail latency |
-| `11_network_observability_and_debugging.md` | 网络可观测性与排查 |
-| `12_inference_network_case_studies.md` | 公开推理网络案例 |
+| [10_network_congestion_tail_latency_and_qos.md](docs/08_networking_and_interconnect/10_network_congestion_tail_latency_and_qos.md) | 拥塞控制、incast 与 tail latency |
+| [11_network_observability_and_debugging.md](docs/08_networking_and_interconnect/11_network_observability_and_debugging.md) | 网络可观测性与排查 |
+| [12_inference_network_case_studies.md](docs/08_networking_and_interconnect/12_inference_network_case_studies.md) | 公开推理网络案例 |
 
 ### [09 — 数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) `已完成`
 

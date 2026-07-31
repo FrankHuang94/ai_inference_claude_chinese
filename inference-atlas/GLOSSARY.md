@@ -332,6 +332,24 @@
 | 层等价量 | layer-equivalent | $L/(\text{TP}\cdot\text{PP})$；**只依赖乘积，故 TP 与 PP 对内存等价** | — |
 | 一阶开销估计 | first-order overhead | 通信占比与气泡占比之和；**用于排序而非精确预测** | % |
 | 线速 | line rate | 物理层标称速率，未扣除编码与协议开销 | Gb/s |
+| 二分带宽 | bisection bandwidth | 把网络分成两半时跨越切面的总带宽 | GB/s |
+| 直径 | diameter | 任意两主机间最长最短路径的跳数；**只加在 $\alpha$ 上，影响有限** | 跳 |
+| 交换机基数 | switch radix | 单台交换机端口数 $k$；Clos 的交换机/主机比为 $5/k$ | 端口 |
+| 超订比 | oversubscription ratio | 下行与上行带宽之比；**直接乘在需满二分带宽的操作上** | — |
+| 争用因子 | contention factor | 空载 $\beta$ 与满载有效 $\beta$ 之比；**乘在 $\beta$ 上，影响远大于跳数** | 无量纲 |
+| rail 优化 | rail-optimized | 各主机同序号端口连到同一交换机；**本质是流量隔离而非减少跳数** | — |
+| 映射校验 | mapping validation | 确认并行组成员的物理放置与假设一致；**每次部署都可能变** | — |
+| 排队放大 | queueing amplification | $\frac{\rho}{1-\rho}$；$\rho=0.85$ 时为 5.67 倍 | 无量纲 |
+| incast | incast | 多发送方同时向同一接收方汇聚 | degree |
+| incast degree | incast degree | 并发发送方数；**all-to-all 为 $P-1$，ring 恒为 1** | — |
+| 端到端标记式 | end-to-end marking | 交换机打标记、发送方降速；**反应需一个往返，对 incast 来不及** | — |
+| 逐跳暂停式 | hop-by-hop pause | 下游满时暂停上游；**不丢包但拥塞会逆流扩散** | — |
+| 流控粒度 | flow-control granularity | 流控作用的单位；**须与 QoS 分类一致，否则分类失效** | — |
+| 等待时长 | wait time $w_i$ | $\max_j(t_j)-t_i$；rank $i$ 到达同步点后等待其余各方的时间 | 秒 |
+| 等待极差 | wait spread | $\max_i w_i-\min_i w_i$；**区分「网络慢」与「单点掉队」的判据** | 秒 |
+| 掉队者 | straggler | 最后到达同步点者；**其等待时长为 0，即等待最短者** | — |
+| 上游级联 | upstream cascade | 全体都晚但彼此齐整；**本同步点全部指标正常，须跨同步点对齐才能发现** | — |
+| 触发式采样 | triggered sampling | 仅在超阈值时详细记录；针对尾部，开销可控 | — |
 
 > **两条容易出错的口径**：
 > ① **网络链路速率用比特（Gb/s、Tb/s），内存与互连带宽用字节（GB/s、TB/s），相差 8 倍**；
