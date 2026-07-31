@@ -1,11 +1,16 @@
 # INDEX — InferenceAtlas 全库导航
 
 > 本文件是 InferenceAtlas 的**唯一入口**。
-> 信息截至：2026-07-29 ｜ 最后更新：2026-07-29 ｜ 版本：v0.1.0
+> 信息截至：2026-07-31 ｜ 最后更新：2026-07-31 ｜ 版本：v0.1.0
 
-**链接约定**：已完成的文档以链接形式给出；`待开始` 的文档以 `代码体` 给出文件名（尚未创建，避免死链）。模块目录始终可点击。
+**链接约定**：已完成的文档以链接形式给出；`待开始` 与 `受阻` 的文档以 `代码体` 给出文件名（尚未创建，避免死链）。模块目录始终可点击。
 
-**状态图例**：`已完成` ｜ `进行中` ｜ `待开始`
+**状态图例**：`已完成` ｜ `已完成*`（可撰写部分已完成，余下受阻） ｜ `进行中` ｜ `待开始`
+
+**关于 `受阻`**：部分文档的内容本体即是需核验的外部资料（厂商规格、标准文本、论文、公司披露）。
+当前网络出口策略下本库无法访问这些来源（见 [AGENTS.md 第 11 节](AGENTS.md)），
+**在无法核验的前提下撰写等同于编造**，因此这些文档暂不撰写，并在各模块 README 中逐篇标注原因。
+**受阻不是待推进的工作量**。
 
 ---
 
@@ -21,7 +26,7 @@
 | 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 已完成 | 69,325 | 162 | 25 | 2026-07-31 |
 | 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 已完成 | 85,544 | 202 | 27 | 2026-07-31 |
 | 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 进行中 | 15,251 | 46 | 4 | 2026-07-31 |
-| 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 待开始 | 0 | 0 | 0 | — |
+| 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 进行中 | 17,703 | 65 | 6 | 2026-07-31 |
 | 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 已完成 | 53,456 | 141 | 10 | 2026-07-31 |
 | 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 已完成* | 47,932 | 129 | 11 | 2026-07-31 |
 | 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-07-31 |
@@ -31,7 +36,7 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-07-31 |
-| — | **合计** | — | **664,832** | **1535** | **143** | 2026-07-31 |
+| — | **合计** | — | **682,535** | **1600** | **149** | 2026-07-31 |
 
 > **`已完成*`**：可撰写的规划文档已全部完成，
 > 余下文档因其内容本体为需核验的外部资料、在当前网络出口策略下无法撰写而**受阻**
@@ -166,16 +171,16 @@
 | `12_hbm_supply_chain_and_memory_roadmaps.md` | HBM 供应链与内存路线图 |
 | `13_hardware_selection_framework.md` | 面向 workload 的硬件选型框架 |
 
-### [08 — 网络、互连与光学](docs/08_networking_and_interconnect/) `待开始`
+### [08 — 网络、互连与光学](docs/08_networking_and_interconnect/) `进行中`
 
 | 文档 | 一句话说明 |
 |---|---|
-| `01_inference_networking_overview.md` | 从 die-to-die 到跨数据中心的互连层次 |
+| [01_inference_networking_overview.md](docs/08_networking_and_interconnect/01_inference_networking_overview.md) | 从 die-to-die 到跨数据中心的互连层次 |
 | `02_pcie_cxl_nvlink_nvswitch.md` | 节点内与 scale-up 互连 |
 | `03_infiniband_for_ai_inference.md` | InfiniBand 在推理集群中的角色 |
 | `04_ethernet_roce_and_ultra_ethernet.md` | 以太网、RoCE 与 Ultra Ethernet |
-| `05_collectives_rdma_and_communication_libraries.md` | 集合通信、RDMA 与通信库 |
-| `06_scale_up_vs_scale_out.md` | scale-up 与 scale-out 的决策框架 |
+| [05_collectives_rdma_and_communication_libraries.md](docs/08_networking_and_interconnect/05_collectives_rdma_and_communication_libraries.md) | 集合通信、RDMA 与通信库 |
+| [06_scale_up_vs_scale_out.md](docs/08_networking_and_interconnect/06_scale_up_vs_scale_out.md) | scale-up 与 scale-out 的决策框架 |
 | `07_network_topologies_fat_tree_dragonfly_rail_optimized.md` | 拓扑设计与 rail 优化 |
 | `08_optical_transceivers_aec_dac_and_cpo.md` | DAC/AEC/可插拔光模块与 CPO |
 | `09_optical_switching_and_photonic_interconnect.md` | 光交换与光子互连 |

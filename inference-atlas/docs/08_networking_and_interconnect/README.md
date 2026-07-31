@@ -1,9 +1,9 @@
 # 模块 08 — 网络、互连与光学
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**进行中（3/7 篇可撰写文档；另有 5 篇受阻，见下）**
 > 模块目标字数：**≥ 15,000 字**
-> 最后更新：2026-07-29
+> 最后更新：2026-07-31
 
 ## 模块定位
 
@@ -19,18 +19,24 @@
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
-| 01 | `01_inference_networking_overview.md` | 从 die-to-die 到跨数据中心的互连层次 | 待开始 |
-| 02 | `02_pcie_cxl_nvlink_nvswitch.md` | 节点内与 scale-up 互连 | 待开始 |
-| 03 | `03_infiniband_for_ai_inference.md` | InfiniBand 在推理集群中的角色 | 待开始 |
-| 04 | `04_ethernet_roce_and_ultra_ethernet.md` | 以太网、RoCE 与 Ultra Ethernet | 待开始 |
-| 05 | `05_collectives_rdma_and_communication_libraries.md` | 集合通信、RDMA 与通信库 | 待开始 |
-| 06 | `06_scale_up_vs_scale_out.md` | scale-up 与 scale-out 的决策框架 | 待开始 |
+| 01 | [01_inference_networking_overview.md](01_inference_networking_overview.md) | 从 die-to-die 到跨数据中心的互连层次 | 已完成 |
+| 02 | `02_pcie_cxl_nvlink_nvswitch.md` | 节点内与 scale-up 互连 | **受阻**（内容本体为需核验的厂商规格与标准文本） |
+| 03 | `03_infiniband_for_ai_inference.md` | InfiniBand 在推理集群中的角色 | **受阻**（同上） |
+| 04 | `04_ethernet_roce_and_ultra_ethernet.md` | 以太网、RoCE 与 Ultra Ethernet | **受阻**（同上） |
+| 05 | [05_collectives_rdma_and_communication_libraries.md](05_collectives_rdma_and_communication_libraries.md) | 集合通信、RDMA 与通信库 | 已完成 |
+| 06 | [06_scale_up_vs_scale_out.md](06_scale_up_vs_scale_out.md) | scale-up 与 scale-out 的决策框架 | 已完成 |
 | 07 | `07_network_topologies_fat_tree_dragonfly_rail_optimized.md` | 拓扑设计与 rail 优化 | 待开始 |
-| 08 | `08_optical_transceivers_aec_dac_and_cpo.md` | DAC/AEC/可插拔光模块与 CPO | 待开始 |
-| 09 | `09_optical_switching_and_photonic_interconnect.md` | 光交换与光子互连 | 待开始 |
+| 08 | `08_optical_transceivers_aec_dac_and_cpo.md` | DAC/AEC/可插拔光模块与 CPO | **受阻**（同上） |
+| 09 | `09_optical_switching_and_photonic_interconnect.md` | 光交换与光子互连 | **受阻**（同上） |
 | 10 | `10_network_congestion_tail_latency_and_qos.md` | 拥塞控制、incast 与 tail latency | 待开始 |
 | 11 | `11_network_observability_and_debugging.md` | 网络可观测性与排查 | 待开始 |
 | 12 | `12_inference_network_case_studies.md` | 公开推理网络案例 | 待开始 |
+
+> **关于受阻的五篇**：第 40 行的写作要求规定「所有标准引用须指向标准组织官方资料」，
+> 而当前网络出口策略下本库无法访问标准组织文本或厂商文档
+> （详见 [AGENTS.md 第 11 节](../../AGENTS.md)）。
+> 这五篇的内容本体即是这些规格本身，**在无法核验的前提下撰写等同于编造**，因此暂不撰写。
+> 其中的机制性内容（如 RDMA 的作用范围、拥塞控制的行为）已分别并入第 5 章与第 10 章。
 
 ## 写作要求
 

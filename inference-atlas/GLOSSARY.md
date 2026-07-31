@@ -308,6 +308,35 @@
 > [第 9 章](docs/10_edge_and_on_device_inference/09_edge_deployment_case_studies.md) 把全部 token 按速率计（写作 $n^{*}$），二者相差 1。
 > **同一次分析内不可混用**。
 
+## 17. 网络、互连与集合通信
+
+> 本节随 [模块 08](docs/08_networking_and_interconnect/) 推进新增。
+
+| 中文术语 | 英文 | 定义 | 单位/口径 |
+|---|---|---|---|
+| $\alpha$-$\beta$ 模型 | alpha-beta model | $T(n)=\alpha+n/\beta$，把传输拆为固定开销与带宽项 | — |
+| 半功率消息尺寸 | half-power message size | $n_{1/2}=\alpha\beta$；固定开销与传输时间相等的尺寸 | 字节 |
+| 时延主导 | latency-bound | $n \ll n_{1/2}$；**应减少通信次数，压缩无用** | — |
+| 带宽主导 | bandwidth-bound | $n \gg n_{1/2}$；**应减少通信字节，批合并无用** | — |
+| 环状 all-reduce | ring all-reduce | $2(P-1)$ 步、只与邻居通信；带宽最优但时延项 $O(P)$ | — |
+| 递归折半-倍增 | recursive halving-doubling | $2\log_2 P$ 步且字节数与 ring 相同；对拓扑映射敏感 | — |
+| 二项树 | binomial tree | $2\log_2 P$ 步但每步传完整 $D$；适用区间窄 | — |
+| 带宽下界 | bandwidth lower bound | all-reduce 每节点至少移动 $\frac{2(P-1)}{P}D$ 字节 | 字节 |
+| 抖动放大 | jitter amplification | $1-(1-p)^{2L}$；单次异常率经每 token $2L$ 次通信的放大 | — |
+| 内核旁路 | kernel bypass | 绕过内核协议栈直接与 NIC 交互；**消除的是 $\alpha$ 的软件部分** | — |
+| 单边操作 | one-sided operation | 接收方不参与的远程读写；适合 KV 拉取 | — |
+| 内存注册 | memory registration | 锁定页表并向 NIC 登记；一次性高成本，**不应在关键路径上** | — |
+| 同步点 | synchronization point | 后续计算依赖其结果因而不可重叠的通信；TP 的两次 all-reduce 即是 | — |
+| 一致域大小 | scale-up domain size $S$ | 以高带宽低时延互连成一致域的设备数；也是故障域 | 设备数 |
+| 所需设备数 | required device count | $\lceil (N b_w + M_{KV})/(M_{dev}u) \rceil$ | 设备数 |
+| 层等价量 | layer-equivalent | $L/(\text{TP}\cdot\text{PP})$；**只依赖乘积，故 TP 与 PP 对内存等价** | — |
+| 一阶开销估计 | first-order overhead | 通信占比与气泡占比之和；**用于排序而非精确预测** | % |
+| 线速 | line rate | 物理层标称速率，未扣除编码与协议开销 | Gb/s |
+
+> **两条容易出错的口径**：
+> ① **网络链路速率用比特（Gb/s、Tb/s），内存与互连带宽用字节（GB/s、TB/s），相差 8 倍**；
+> ② **线速不是可用吞吐**，其间还有编码、协议与有效载荷比三层折扣。
+
 ---
 
 ## 单位书写规范（强制）
