@@ -13,25 +13,25 @@
 
 | # | 模块 | 状态 | 字数 | 表格 | 图示 | 最后更新 |
 |---|---|---|---:|---:|---:|---|
-| 00 | [入门与端到端总览](docs/00_start_here/) | 已完成 | 21,824 | 64 | 3 | 2026-07-30 |
-| 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 已完成 | 26,531 | 91 | 8 | 2026-07-30 |
-| 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 已完成 | 30,961 | 110 | 10 | 2026-07-30 |
-| 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 已完成 | 38,095 | 133 | 11 | 2026-07-30 |
-| 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 已完成 | 37,186 | 138 | 11 | 2026-07-30 |
-| 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 已完成 | 69,325 | 162 | 25 | 2026-07-30 |
-| 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 已完成 | 85,544 | 202 | 27 | 2026-07-30 |
-| 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 进行中 | 15,251 | 46 | 4 | 2026-07-30 |
+| 00 | [入门与端到端总览](docs/00_start_here/) | 已完成 | 21,824 | 64 | 3 | 2026-07-31 |
+| 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 已完成 | 26,531 | 91 | 8 | 2026-07-31 |
+| 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 已完成 | 30,961 | 110 | 10 | 2026-07-31 |
+| 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 已完成 | 38,095 | 133 | 11 | 2026-07-31 |
+| 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 已完成 | 37,186 | 138 | 11 | 2026-07-31 |
+| 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 已完成 | 69,325 | 162 | 25 | 2026-07-31 |
+| 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 已完成 | 85,544 | 202 | 27 | 2026-07-31 |
+| 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 进行中 | 15,251 | 46 | 4 | 2026-07-31 |
 | 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 待开始 | 0 | 0 | 0 | — |
-| 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 进行中 | 42,750 | 113 | 8 | 2026-07-30 |
+| 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 已完成 | 53,456 | 141 | 10 | 2026-07-31 |
 | 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 待开始 | 0 | 0 | 0 | — |
-| 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-07-30 |
+| 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-07-31 |
 | 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 待开始 | 0 | 0 | 0 | — |
 | 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 待开始 | 0 | 0 | 0 | — |
 | 14 | [公司与生态](docs/14_company_and_ecosystem_landscape/) | 待开始 | 0 | 0 | 0 | — |
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
-| 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-07-30 |
-| — | **合计** | — | **606,194** | **1378** | **130** | 2026-07-30 |
+| 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-07-31 |
+| — | **合计** | — | **616,900** | **1406** | **132** | 2026-07-31 |
 
 ---
 
@@ -177,7 +177,7 @@
 | `11_network_observability_and_debugging.md` | 网络可观测性与排查 |
 | `12_inference_network_case_studies.md` | 公开推理网络案例 |
 
-### [09 — 数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) `进行中`
+### [09 — 数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) `已完成`
 
 | 文档 | 一句话说明 |
 |---|---|
@@ -189,8 +189,8 @@
 | [06_cluster_capacity_and_site_planning.md](docs/09_datacenter_power_thermal_and_operations/06_cluster_capacity_and_site_planning.md) | 集群容量与选址规划 |
 | [07_reliability_redundancy_and_maintenance.md](docs/09_datacenter_power_thermal_and_operations/07_reliability_redundancy_and_maintenance.md) | 冗余、可维护性与 RAS |
 | [08_storage_logging_and_data_plane.md](docs/09_datacenter_power_thermal_and_operations/08_storage_logging_and_data_plane.md) | 存储、日志与数据面 |
-| `09_security_compliance_and_data_residency.md` | 安全、合规与数据驻留 |
-| `10_operations_case_studies.md` | 运维案例研究 |
+| [09_security_compliance_and_data_residency.md](docs/09_datacenter_power_thermal_and_operations/09_security_compliance_and_data_residency.md) | 安全、合规与数据驻留 |
+| [10_operations_case_studies.md](docs/09_datacenter_power_thermal_and_operations/10_operations_case_studies.md) | 运维案例研究 |
 
 ### [10 — Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) `待开始`
 
