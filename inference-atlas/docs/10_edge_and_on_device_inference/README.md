@@ -1,7 +1,7 @@
 # 模块 10 — Edge 与 On-Device Inference
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中（7/9 篇）**
+> 状态：**8/9 篇已完成；剩余第 03 篇受出口策略阻塞，非进度问题**
 > 模块目标字数：**≥ 10,000 字**
 > 最后更新：2026-07-31
 
@@ -27,7 +27,7 @@
 | 06 | [06_small_language_models_and_on_device_agents.md](06_small_language_models_and_on_device_agents.md) | 小模型与端侧 agent | 已完成 |
 | 07 | [07_quantization_distillation_and_pruning_for_edge.md](07_quantization_distillation_and_pruning_for_edge.md) | 面向端侧的模型压缩：量化、蒸馏与剪枝 | 已完成 |
 | 08 | [08_private_hybrid_cloud_edge_architectures.md](08_private_hybrid_cloud_edge_architectures.md) | 云-边混合与隐私优先架构 | 已完成 |
-| 09 | `09_edge_deployment_case_studies.md` | 端侧部署案例 | 待开始 |
+| 09 | [09_edge_deployment_case_studies.md](09_edge_deployment_case_studies.md) | 端侧部署案例 | 已完成 |
 
 ## 写作要求
 
@@ -37,14 +37,15 @@
 
 ## 完成标准
 
-- [ ] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
-- [ ] 模块正文合计 ≥ 10,000 字
-- [ ] 上述"写作要求"逐条覆盖
-- [ ] 所有事实性数字带来源链接与披露标签
-- [ ] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
-- [ ] 相关 [`data/`](../../data/) CSV 已更新
-- [ ] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
-- [ ] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
+- [x] 全部**可撰写的**规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成（8/9；第 03 篇见下）
+- [ ] 第 03 篇：**受阻**，其内容本体为需核验的厂商规格，出口策略下无法撰写
+- [x] 模块正文合计 ≥ 10,000 字
+- [x] 上述"写作要求"逐条覆盖（厂商平台对比一项因第 03 篇受阻而未覆盖）
+- [x] 所有事实性数字带来源链接与披露标签
+- [x] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md) 第 16 节
+- [ ] 相关 [`data/`](../../data/) CSV 已更新——**受阻**，端侧设备规格无法核验
+- [x] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
+- [x] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
 
 ## 工作节奏
 

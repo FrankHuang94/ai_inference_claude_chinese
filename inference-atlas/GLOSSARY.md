@@ -1,6 +1,6 @@
 # GLOSSARY — InferenceAtlas 术语表
 
-> 最后更新：2026-07-29 ｜ 版本：v0.1.0
+> 最后更新：2026-07-31 ｜ 版本：v0.1.0
 >
 > 本表收录阅读本数据库所必需的核心术语。**每完成一个模块，必须将该模块新出现的重要术语补入本表**（见 [AGENTS.md](AGENTS.md) 第 3 节第 8 步）。
 >
@@ -268,6 +268,45 @@
 | 静默失效 | silent failure | 配置正确、不报错，但优化实际未生效 | — |
 | 支持的三个层次 | L1/L2/L3 support | 能跑通 / 性能可接受 / 接近最优；厂商矩阵通常只保证 L1 | — |
 | 算子拆解 | operator decomposition | 用旧算子组合表达新算子；能跑但慢的隐蔽损失 | — |
+
+## 16. 端侧与 On-Device 推理
+
+> 本节随 [模块 10](docs/10_edge_and_on_device_inference/) 完成新增。
+
+| 中文术语 | 英文 | 定义 | 单位/口径 |
+|---|---|---|---|
+| 统一内存 | unified memory | CPU 与加速器共享同一物理内存与带宽池；**容量与带宽同时被瓜分** | — |
+| 共享折扣 | sharing derate | 实际可用带宽与标称带宽之比中的共享因子 | 无量纲 |
+| 内存预算 | memory budget | 应用可安全使用的设备内存上限；**分母是驻留额度而非设备标称容量** | 字节 |
+| 驻留额度 | resident allowance | 系统内存压力下应用可稳定保持的内存；随用户行为变化 | 字节 |
+| 进程终止 | process termination | 系统在内存压力下杀死应用；端侧的主要失效形式之一 | 次/时段 |
+| 只读映射 | read-only mapping | 权重以干净页映射，可被回收后重新缺页；把「被杀」变为「重新缺页」 | — |
+| 有效位宽 | effective bit width | 含量化缩放因子开销的实际位宽 $b_w + b_s/g$ | 位 |
+| 质量断点 | quality cliff | 低于某位宽后质量迅速劣化的点 | 位 |
+| 稀释倍数 | dilution factor | 聚合指标掩盖局部退化的倍数，等于受影响 token 占比的倒数 $1/f$ | 无量纲 |
+| 算子覆盖 | operator coverage | NPU 能原生执行的算子集合 | — |
+| 回退 | fallback | 不被支持的算子改由 CPU/GPU 执行 | — |
+| 切换开销 | switch overhead | 计算单元之间切换的同步与布局转换代价；带宽受限时为纯损失 | 秒/次 |
+| 热稳态吞吐 | sustained throughput | 进入热平衡后的持续吞吐；**端侧验收应取此值而非峰值** | token/s |
+| 能效拐点 | efficiency knee | 每操作能耗最低的频率-电压点；峰值 boost 点通常在其之外 | — |
+| 能力档位 | capability tier | 按实测能力而非型号划分的配置档 | — |
+| 能力探测 | capability probing | 运行时测出内存、带宽与算子支持 | — |
+| 资源让渡 | resource yielding | 用户高负载时主动降低占用 | — |
+| 硬实时 | hard real-time | 必须在截止时间内完成，否则系统失效 | — |
+| 最坏执行时间 | worst-case execution time | 所有输入与状态下的时延上界；**自回归生成无法可信给出** | 秒 |
+| 资源分区 | resource partitioning | 静态划分算力、内存、带宽 | — |
+| 确定性降级 | deterministic degradation | 明确定义的退化行为而非「慢一点」 | — |
+| 共存验证 | co-existence validation | 在非实时负载满负荷时验证实时任务；**分别测两者会错过干扰** | — |
+| 任务白名单 | task allowlist | 由产品逻辑限定端侧模型的调用入口 | — |
+| 适配参数 | adapter | 在共享基座上切换任务的小参数集 | — |
+| 交叉输出长度 | crossover length | 端云时延相等时的输出长度；随 RTT 上升而扩大端侧优势区间 | token |
+| 事后升级 | post-hoc escalation | 端侧结果不佳时转到云端；**代价是两条路径相加而非二选一** | — |
+| 并行发起 | parallel dispatch | 端云同时开始，择优返回；用能耗与成本换时延 | — |
+| 隐私优先架构 | privacy-first architecture | 敏感数据强制端侧且无升级路径 | — |
+
+> **交叉输出长度的两种记法**：[第 8 章](docs/10_edge_and_on_device_inference/08_private_hybrid_cloud_edge_architectures.md) 把首 token 计入 TTFT（写作 $N^{*}$），
+> [第 9 章](docs/10_edge_and_on_device_inference/09_edge_deployment_case_studies.md) 把全部 token 按速率计（写作 $n^{*}$），二者相差 1。
+> **同一次分析内不可混用**。
 
 ---
 

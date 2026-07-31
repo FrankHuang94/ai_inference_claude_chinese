@@ -23,7 +23,7 @@
 | 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 进行中 | 15,251 | 46 | 4 | 2026-07-31 |
 | 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 待开始 | 0 | 0 | 0 | — |
 | 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 已完成 | 53,456 | 141 | 10 | 2026-07-31 |
-| 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 进行中 | 39,009 | 109 | 7 | 2026-07-31 |
+| 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 已完成* | 47,932 | 129 | 11 | 2026-07-31 |
 | 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-07-31 |
 | 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 待开始 | 0 | 0 | 0 | — |
 | 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 待开始 | 0 | 0 | 0 | — |
@@ -31,7 +31,13 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-07-31 |
-| — | **合计** | — | **655,909** | **1515** | **139** | 2026-07-31 |
+| — | **合计** | — | **664,832** | **1535** | **143** | 2026-07-31 |
+
+> **`已完成*`**：可撰写的规划文档已全部完成，
+> 余下文档因其内容本体为需核验的外部资料、在当前网络出口策略下无法撰写而**受阻**
+> （见 [AGENTS.md 第 11 节](AGENTS.md)）。
+> 受阻文档在各模块 README 的规划表中逐篇标注了原因。
+> **这与「进行中」不同**：受阻不是待推进的工作量。
 
 ---
 
@@ -192,7 +198,7 @@
 | [09_security_compliance_and_data_residency.md](docs/09_datacenter_power_thermal_and_operations/09_security_compliance_and_data_residency.md) | 安全、合规与数据驻留 |
 | [10_operations_case_studies.md](docs/09_datacenter_power_thermal_and_operations/10_operations_case_studies.md) | 运维案例研究 |
 
-### [10 — Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) `进行中`
+### [10 — Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) `已完成*`
 
 | 文档 | 一句话说明 |
 |---|---|
@@ -204,7 +210,7 @@
 | [06_small_language_models_and_on_device_agents.md](docs/10_edge_and_on_device_inference/06_small_language_models_and_on_device_agents.md) | 小模型与端侧 agent |
 | [07_quantization_distillation_and_pruning_for_edge.md](docs/10_edge_and_on_device_inference/07_quantization_distillation_and_pruning_for_edge.md) | 面向端侧的模型压缩 |
 | [08_private_hybrid_cloud_edge_architectures.md](docs/10_edge_and_on_device_inference/08_private_hybrid_cloud_edge_architectures.md) | 云-边混合与隐私优先架构 |
-| `09_edge_deployment_case_studies.md` | 端侧部署案例 |
+| [09_edge_deployment_case_studies.md](docs/10_edge_and_on_device_inference/09_edge_deployment_case_studies.md) | 端侧部署案例 |
 
 ### [11 — Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) `已完成`
 
