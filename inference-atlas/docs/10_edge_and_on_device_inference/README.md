@@ -1,7 +1,7 @@
 # 模块 10 — Edge 与 On-Device Inference
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中（3/9 篇）**
+> 状态：**进行中（5/9 篇）**
 > 模块目标字数：**≥ 10,000 字**
 > 最后更新：2026-07-29
 
@@ -24,9 +24,9 @@
 | 03 | `03_qualcomm_apple_mediatek_google_samsung_platforms.md` | 主要移动平台的端侧推理能力 | **受阻**（内容本体为需核验的厂商规格，出口策略下无法撰写） |
 | 04 | `04_pc_ai_inference.md` | AI PC 的推理路径 | 待开始 |
 | 05 | `05_automotive_robotics_and_embedded_inference.md` | 车载、机器人与嵌入式推理 | 待开始 |
-| 06 | `06_small_language_models_and_on_device_agents.md` | 小模型与端侧 agent | 待开始 |
+| 06 | [06_small_language_models_and_on_device_agents.md](06_small_language_models_and_on_device_agents.md) | 小模型与端侧 agent | 已完成 |
 | 07 | [07_quantization_distillation_and_pruning_for_edge.md](07_quantization_distillation_and_pruning_for_edge.md) | 面向端侧的模型压缩：量化、蒸馏与剪枝 | 已完成 |
-| 08 | `08_private_hybrid_cloud_edge_architectures.md` | 云-边混合与隐私优先架构 | 待开始 |
+| 08 | [08_private_hybrid_cloud_edge_architectures.md](08_private_hybrid_cloud_edge_architectures.md) | 云-边混合与隐私优先架构 | 已完成 |
 | 09 | `09_edge_deployment_case_studies.md` | 端侧部署案例 | 待开始 |
 
 ## 写作要求
