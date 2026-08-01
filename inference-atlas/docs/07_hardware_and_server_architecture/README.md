@@ -1,7 +1,7 @@
 # 模块 07 — 硬件、HBM、封装与服务器
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中（5/8 篇可撰写文档；另有 5 篇受阻，见下）**
+> 状态：**8/8 篇可撰写文档已完成；另有 5 篇受阻，见下**
 > 模块目标字数：**≥ 18,000 字**
 > 最后更新：2026-07-31
 
@@ -24,14 +24,14 @@
 | 03 | [03_tensor_cores_matrix_engines_and_low_precision.md](03_tensor_cores_matrix_engines_and_low_precision.md) | 矩阵引擎与低精度算力 | 已完成 |
 | 04 | [04_hbm_dram_and_memory_hierarchy.md](04_hbm_dram_and_memory_hierarchy.md) | HBM/DRAM/SRAM 层次与带宽 | 已完成 |
 | 05 | [05_memory_capacity_bandwidth_and_kv_cache.md](05_memory_capacity_bandwidth_and_kv_cache.md) | 显存容量/带宽如何约束 KV cache 与并发 | 已完成 |
-| 06 | `06_gpu_server_node_architecture.md` | 服务器节点：CPU、PCIe、NVLink、NIC、存储 | 待开始 |
-| 07 | `07_inference_asic_architectures.md` | 推理 ASIC 的架构取舍 | 待开始 |
+| 06 | [06_gpu_server_node_architecture.md](06_gpu_server_node_architecture.md) | 服务器节点：CPU、PCIe、NVLink、NIC、存储 | 已完成 |
+| 07 | [07_inference_asic_architectures.md](07_inference_asic_architectures.md) | 推理 ASIC 的架构取舍 | 已完成 |
 | 08 | `08_nvidia_amd_intel_and_custom_accelerators.md` | 主流商用加速器对比 | **受阻**（内容本体为需核验的厂商规格与供应链数据） |
 | 09 | `09_google_tpu_aws_inferentia_trainium_and_maia.md` | 超大规模厂商自研芯片 | **受阻**（内容本体为需核验的厂商规格与供应链数据） |
 | 10 | `10_groq_cerebras_sambanova_dmatrix_etched_tenstorrent.md` | 推理初创公司的架构路线 | **受阻**（内容本体为需核验的厂商规格与供应链数据） |
 | 11 | `11_advanced_packaging_chiplets_and_ucie.md` | 先进封装、chiplet 与 UCIe | **受阻**（内容本体为需核验的厂商规格与供应链数据） |
 | 12 | `12_hbm_supply_chain_and_memory_roadmaps.md` | HBM 供应链与内存路线图 | **受阻**（内容本体为需核验的厂商规格与供应链数据） |
-| 13 | `13_hardware_selection_framework.md` | 面向 workload 的硬件选型框架 | 待开始 |
+| 13 | [13_hardware_selection_framework.md](13_hardware_selection_framework.md) | 面向 workload 的硬件选型框架 | 已完成 |
 
 > **关于受阻的五篇**：下方「写作要求」第 6 条规定「所有规格必须标注来源与披露等级」，
 > 而当前网络出口策略下本库无法访问厂商文档、标准文本或供应链资料
@@ -51,14 +51,17 @@
 
 ## 完成标准
 
-- [ ] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
-- [ ] 模块正文合计 ≥ 18,000 字
-- [ ] 上述"写作要求"逐条覆盖
-- [ ] 所有事实性数字带来源链接与披露标签
-- [ ] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
-- [ ] 相关 [`data/`](../../data/) CSV 已更新
-- [ ] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
-- [ ] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
+- [x] 全部**可撰写的**规划文档已完成（8/8；另 5 篇受阻，见上）
+- [ ] 第 08–12 篇：**受阻**，内容本体为需核验的厂商规格与供应链数据
+- [x] 模块正文合计 ≥ 18,000 字
+- [x] 写作要求第 1、2、4、5、6 条中与架构原理有关的部分已覆盖
+- [ ] 写作要求第 3 条的**具名厂商芯片**（hyperscaler 自研、wafer-scale、可重构等）**未覆盖**——即受阻的第 08–10 篇；架构范式的结构性取舍已并入第 07 篇
+- [ ] 写作要求第 4 条的**封装与供应**（CoWoS/2.5D/3D、chiplet、UCIe、HBM supply）**未覆盖**——即受阻的第 11–12 篇
+- [x] 所有事实性数字带来源链接与披露标签
+- [x] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md) 第 18 节
+- [ ] 相关 [`data/`](../../data/) CSV 已更新——**受阻**，硬件规格无法核验
+- [x] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
+- [x] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
 
 ## 工作节奏
 

@@ -25,7 +25,7 @@
 | 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 已完成 | 37,186 | 138 | 11 | 2026-08-01 |
 | 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 已完成 | 69,325 | 162 | 25 | 2026-08-01 |
 | 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 已完成 | 85,544 | 202 | 27 | 2026-08-01 |
-| 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 进行中 | 31,544 | 112 | 9 | 2026-08-01 |
+| 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 已完成* | 46,763 | 177 | 12 | 2026-08-01 |
 | 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 已完成* | 39,947 | 156 | 13 | 2026-08-01 |
 | 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 已完成 | 53,456 | 141 | 10 | 2026-08-01 |
 | 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 已完成* | 47,932 | 129 | 11 | 2026-08-01 |
@@ -36,7 +36,7 @@
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-08-01 |
-| — | **合计** | — | **721,072** | **1757** | **161** | 2026-08-01 |
+| — | **合计** | — | **736,291** | **1822** | **164** | 2026-08-01 |
 
 > **`已完成*`**：可撰写的规划文档已全部完成，
 > 余下文档因其内容本体为需核验的外部资料、在当前网络出口策略下无法撰写而**受阻**
@@ -153,7 +153,7 @@
 | [10_fault_tolerance_and_graceful_degradation.md](docs/06_distributed_and_moe_inference/10_fault_tolerance_and_graceful_degradation.md) | 故障域、容错与优雅降级 |
 | [11_distributed_serving_case_studies.md](docs/06_distributed_and_moe_inference/11_distributed_serving_case_studies.md) | 公开分布式推理案例研究 |
 
-### [07 — 硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) `进行中`
+### [07 — 硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) `已完成*`
 
 | 文档 | 一句话说明 |
 |---|---|
@@ -162,14 +162,14 @@
 | [03_tensor_cores_matrix_engines_and_low_precision.md](docs/07_hardware_and_server_architecture/03_tensor_cores_matrix_engines_and_low_precision.md) | 矩阵引擎与低精度算力 |
 | [04_hbm_dram_and_memory_hierarchy.md](docs/07_hardware_and_server_architecture/04_hbm_dram_and_memory_hierarchy.md) | HBM/DRAM/SRAM 层次与带宽 |
 | [05_memory_capacity_bandwidth_and_kv_cache.md](docs/07_hardware_and_server_architecture/05_memory_capacity_bandwidth_and_kv_cache.md) | 显存容量/带宽如何约束 KV cache 与并发 |
-| `06_gpu_server_node_architecture.md` | 服务器节点：CPU、PCIe、NVLink、NIC、存储 |
-| `07_inference_asic_architectures.md` | 推理 ASIC 的架构取舍 |
+| [06_gpu_server_node_architecture.md](docs/07_hardware_and_server_architecture/06_gpu_server_node_architecture.md) | 服务器节点：CPU、PCIe、NVLink、NIC、存储 |
+| [07_inference_asic_architectures.md](docs/07_hardware_and_server_architecture/07_inference_asic_architectures.md) | 推理 ASIC 的架构取舍 |
 | `08_nvidia_amd_intel_and_custom_accelerators.md` | 主流商用加速器对比 |
 | `09_google_tpu_aws_inferentia_trainium_and_maia.md` | 超大规模厂商自研芯片 |
 | `10_groq_cerebras_sambanova_dmatrix_etched_tenstorrent.md` | 推理初创公司的架构路线 |
 | `11_advanced_packaging_chiplets_and_ucie.md` | 先进封装、chiplet 与 UCIe |
 | `12_hbm_supply_chain_and_memory_roadmaps.md` | HBM 供应链与内存路线图 |
-| `13_hardware_selection_framework.md` | 面向 workload 的硬件选型框架 |
+| [13_hardware_selection_framework.md](docs/07_hardware_and_server_architecture/13_hardware_selection_framework.md) | 面向 workload 的硬件选型框架 |
 
 ### [08 — 网络、互连与光学](docs/08_networking_and_interconnect/) `已完成*`
 

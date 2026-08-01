@@ -379,6 +379,17 @@
 | 容量并发上限 | capacity concurrency limit | $C_{\max}=(M-W)/(Sk)$ | — |
 | 显存权重比 | memory-to-weight ratio | $M_{\text{total}}/W$；**可达吞吐占饱和上限的比例为 $1-W/M$** | 无量纲 |
 | 每 token 搬运地板 | per-token traffic floor | $Sk$，不可被批摊薄的那部分；长上下文下主导能耗 | 字节 |
+| 主机瓶颈批 | host-bound batch $B^{*}$ | $t_{\text{dev}}/h$；超过它主机成为瓶颈。**设备越快门槛越低** | — |
+| 冷启动时间 | cold start time | $W/\text{BW}_{\text{存储}}$ 加初始化；**与尖峰时长同量级时扩缩容失效** | 秒 |
+| 预热池 | warm pool | 预先就绪的副本；以成本换就绪时间 | 副本数 |
+| 节点级口径 | node-level accounting | 含主机、风扇、电源转换的功耗与成本口径；**加速器级口径会系统性低估** | W / $ |
+| 故障粒度 | failure granularity | 一次故障带走的最小单位；TP 组横跨整节点时即为整节点 | — |
+| SRAM 常驻 | SRAM-resident | 权重全部放进片上存储；**$M/W\approx1$，故结构上拿不到批处理收益** | — |
+| 阵列效率 | array efficiency | $\min(1, B/T_{\text{array}})$；小批下极低但带宽受限时只影响能耗 | % |
+| 专用化适应风险 | specialisation adaptation risk | 模型结构变化时专用架构的失效风险 | — |
+| 可摊薄性 | amortisability | 成本能否随并发下降；由 $1-W/M$ 决定 | — |
+| 扣除通信后的 SLO 上界 | communication-adjusted SLO bound | $((\text{TPOT}-T_{\text{comm}})\text{BW}-W)/(Sk)$；**不扣会随 $P$ 增大而越发高估** | — |
+| 边际收益耗尽点 | marginal-return exhaustion point | 每设备吞吐增幅降至阈值以下的 $P$；**同时是脆弱性拐点** | — |
 
 > **本节最值得记住的一条**：decode 的两个上界相除后，序列长度与 KV 配置**完全约掉**——
 > $C_{\max}/B_{\text{half}} = M_{\text{total}}/W - 1$，
