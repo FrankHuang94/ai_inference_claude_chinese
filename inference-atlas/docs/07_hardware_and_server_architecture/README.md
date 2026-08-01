@@ -1,9 +1,9 @@
 # 模块 07 — 硬件、HBM、封装与服务器
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**进行中（5/8 篇可撰写文档；另有 5 篇受阻，见下）**
 > 模块目标字数：**≥ 18,000 字**
-> 最后更新：2026-07-29
+> 最后更新：2026-07-31
 
 ## 模块定位
 
@@ -19,19 +19,26 @@
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
-| 01 | `01_ai_inference_hardware_overview.md` | 推理硬件全景与分类 | 待开始 |
-| 02 | `02_gpu_architecture_for_inference.md` | GPU 微架构中与推理相关的部分 | 待开始 |
-| 03 | `03_tensor_cores_matrix_engines_and_low_precision.md` | 矩阵引擎与低精度算力 | 待开始 |
-| 04 | `04_hbm_dram_and_memory_hierarchy.md` | HBM/DRAM/SRAM 层次与带宽 | 待开始 |
-| 05 | `05_memory_capacity_bandwidth_and_kv_cache.md` | 显存容量/带宽如何约束 KV cache 与并发 | 待开始 |
+| 01 | [01_ai_inference_hardware_overview.md](01_ai_inference_hardware_overview.md) | 推理硬件全景与分类 | 已完成 |
+| 02 | [02_gpu_architecture_for_inference.md](02_gpu_architecture_for_inference.md) | GPU 微架构中与推理相关的部分 | 已完成 |
+| 03 | [03_tensor_cores_matrix_engines_and_low_precision.md](03_tensor_cores_matrix_engines_and_low_precision.md) | 矩阵引擎与低精度算力 | 已完成 |
+| 04 | [04_hbm_dram_and_memory_hierarchy.md](04_hbm_dram_and_memory_hierarchy.md) | HBM/DRAM/SRAM 层次与带宽 | 已完成 |
+| 05 | [05_memory_capacity_bandwidth_and_kv_cache.md](05_memory_capacity_bandwidth_and_kv_cache.md) | 显存容量/带宽如何约束 KV cache 与并发 | 已完成 |
 | 06 | `06_gpu_server_node_architecture.md` | 服务器节点：CPU、PCIe、NVLink、NIC、存储 | 待开始 |
 | 07 | `07_inference_asic_architectures.md` | 推理 ASIC 的架构取舍 | 待开始 |
-| 08 | `08_nvidia_amd_intel_and_custom_accelerators.md` | 主流商用加速器对比 | 待开始 |
-| 09 | `09_google_tpu_aws_inferentia_trainium_and_maia.md` | 超大规模厂商自研芯片 | 待开始 |
-| 10 | `10_groq_cerebras_sambanova_dmatrix_etched_tenstorrent.md` | 推理初创公司的架构路线 | 待开始 |
-| 11 | `11_advanced_packaging_chiplets_and_ucie.md` | 先进封装、chiplet 与 UCIe | 待开始 |
-| 12 | `12_hbm_supply_chain_and_memory_roadmaps.md` | HBM 供应链与内存路线图 | 待开始 |
+| 08 | `08_nvidia_amd_intel_and_custom_accelerators.md` | 主流商用加速器对比 | **受阻**（内容本体为需核验的厂商规格与供应链数据） |
+| 09 | `09_google_tpu_aws_inferentia_trainium_and_maia.md` | 超大规模厂商自研芯片 | **受阻**（内容本体为需核验的厂商规格与供应链数据） |
+| 10 | `10_groq_cerebras_sambanova_dmatrix_etched_tenstorrent.md` | 推理初创公司的架构路线 | **受阻**（内容本体为需核验的厂商规格与供应链数据） |
+| 11 | `11_advanced_packaging_chiplets_and_ucie.md` | 先进封装、chiplet 与 UCIe | **受阻**（内容本体为需核验的厂商规格与供应链数据） |
+| 12 | `12_hbm_supply_chain_and_memory_roadmaps.md` | HBM 供应链与内存路线图 | **受阻**（内容本体为需核验的厂商规格与供应链数据） |
 | 13 | `13_hardware_selection_framework.md` | 面向 workload 的硬件选型框架 | 待开始 |
+
+> **关于受阻的五篇**：下方「写作要求」第 6 条规定「所有规格必须标注来源与披露等级」，
+> 而当前网络出口策略下本库无法访问厂商文档、标准文本或供应链资料
+> （详见 [AGENTS.md 第 11 节](../../AGENTS.md)）。
+> 这五篇的内容本体即是这些规格与市场数据本身，
+> **在无法核验的前提下撰写等同于编造**，因此暂不撰写。
+> 其中与架构取舍有关的结构性内容将并入第 07 篇（推理 ASIC 的架构取舍）。
 
 ## 写作要求
 

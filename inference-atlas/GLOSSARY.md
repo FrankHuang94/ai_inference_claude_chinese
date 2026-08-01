@@ -355,6 +355,36 @@
 > ① **网络链路速率用比特（Gb/s、Tb/s），内存与互连带宽用字节（GB/s、TB/s），相差 8 倍**；
 > ② **线速不是可用吞吐**，其间还有编码、协议与有效载荷比三层折扣。
 
+## 18. 硬件、存储层次与低精度
+
+> 本节随 [模块 07](docs/07_hardware_and_server_architecture/) 推进新增。
+
+| 中文术语 | 英文 | 定义 | 单位/口径 |
+|---|---|---|---|
+| 机器平衡 | machine balance | $\text{FLOPS}/\text{BW}$，硬件的算术强度分界 | FLOP/B |
+| 分块算术强度 | tile arithmetic intensity | $I=2T/(3b)$，**随分块边长线性增长**；矩阵引擎与分块的存在理由 | FLOP/B |
+| 算力效应 | compute effect | 低精度提高峰值算力；**只在计算受限（prefill）时兑现** | — |
+| 访存效应 | memory effect | 低精度减少搬运字节；**只在带宽受限（decode）时兑现** | — |
+| 仅权重量化 | weight-only quantisation | 只量化权重，读入后反量化再计算；**decode 接近位宽比，prefill 接近 1×** | — |
+| 有效位宽 | effective bit width | $b_w+b_s/g$，含缩放因子开销 | 位 |
+| 累加精度 | accumulation precision | 乘积求和所用格式；**误差随 $\sqrt{K}$～$K$ 增长，通常不该降** | — |
+| 补齐浪费 | padding waste | 维度非分块倍数造成的无效计算；**decode 下通常无害** | % |
+| 在途字节 | bytes in flight | $\text{BW}\times\text{延迟}$，打满带宽所需的并发访存量 | 字节 |
+| 访存并发不足 | insufficient memory-level parallelism | 在途字节低于 $\text{BW}\times\text{延迟}$；**表现为「带宽低」但只需改 kernel** | — |
+| 可达分块 | achievable tile size | $T_{\max}=\sqrt{M_{\text{片上}}/3b}$；**片上容量对强度的影响是 $\sqrt{\cdot}$** | — |
+| 卸载带宽比 | offload bandwidth ratio | $\text{BW}_{\text{HBM}}/\text{BW}_{\text{卸载层}}$；权重卸载的代价倍数 | 无量纲 |
+| 可选择性 | selectivity | 能否只访问所需的一部分；**KV 有而权重没有**，决定卸载可行性 | — |
+| 饱和吞吐上限 | throughput ceiling | $\text{BW}/(Sk)$，批趋于无穷时的 decode 吞吐；**与权重无关** | token/s |
+| 半饱和批 | half-saturation batch | $B_{\text{half}}=W/(Sk)$；**KV 流量等于权重流量的批** | — |
+| 容量并发上限 | capacity concurrency limit | $C_{\max}=(M-W)/(Sk)$ | — |
+| 显存权重比 | memory-to-weight ratio | $M_{\text{total}}/W$；**可达吞吐占饱和上限的比例为 $1-W/M$** | 无量纲 |
+| 每 token 搬运地板 | per-token traffic floor | $Sk$，不可被批摊薄的那部分；长上下文下主导能耗 | 字节 |
+
+> **本节最值得记住的一条**：decode 的两个上界相除后，序列长度与 KV 配置**完全约掉**——
+> $C_{\max}/B_{\text{half}} = M_{\text{total}}/W - 1$，
+> 而可达吞吐占饱和上限的比例是 $1-W/M_{\text{total}}$，即**显存中未被权重占据的比例**。
+> $M/W < 2$ 时连半饱和吞吐都达不到。
+
 ---
 
 ## 单位书写规范（强制）
