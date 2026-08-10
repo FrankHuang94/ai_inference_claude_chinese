@@ -30,13 +30,13 @@
 | 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 已完成 | 53,456 | 141 | 10 | 2026-08-10 |
 | 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 已完成* | 47,932 | 129 | 11 | 2026-08-10 |
 | 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-08-10 |
-| 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 进行中 | 4,749 | 20 | 1 | 2026-08-10 |
+| 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 进行中 | 14,835 | 61 | 3 | 2026-08-10 |
 | 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 待开始 | 0 | 0 | 0 | — |
 | 14 | [公司与生态](docs/14_company_and_ecosystem_landscape/) | 待开始 | 0 | 0 | 0 | — |
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-08-10 |
-| — | **合计** | — | **741,040** | **1842** | **165** | 2026-08-10 |
+| — | **合计** | — | **751,126** | **1883** | **167** | 2026-08-10 |
 
 > **`已完成*`**：可撰写的规划文档已全部完成，
 > 余下文档因其内容本体为需核验的外部资料、在当前网络出口策略下无法撰写而**受阻**
@@ -238,8 +238,8 @@
 | 文档 | 一句话说明 |
 |---|---|
 | [01_open_source_inference_ecosystem.md](docs/12_open_source_deployment_and_reproduction/01_open_source_inference_ecosystem.md) | 开源推理生态全景 |
-| `02_vllm.md` | vLLM 架构、优化与适用边界 |
-| `03_sglang.md` | SGLang 架构与结构化生成 |
+| [02_vllm.md](docs/12_open_source_deployment_and_reproduction/02_vllm.md) | vLLM 架构、优化与适用边界 |
+| [03_sglang.md](docs/12_open_source_deployment_and_reproduction/03_sglang.md) | SGLang 架构与结构化生成 |
 | `04_tgi.md` | Hugging Face TGI |
 | `05_tensorrt_llm_deployment.md` | TensorRT-LLM 部署实践 |
 | `06_deepspeed_fastgen.md` | DeepSpeed-FastGen |

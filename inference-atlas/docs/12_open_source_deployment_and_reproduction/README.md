@@ -1,7 +1,7 @@
 # 模块 12 — 开源部署、复现与参考架构
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中（1/12 篇）**
+> 状态：**进行中（3/12 篇）**
 > 模块目标字数：**≥ 12,000 字**
 > 最后更新：2026-08-10
 
@@ -20,8 +20,8 @@
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
 | 01 | [01_open_source_inference_ecosystem.md](01_open_source_inference_ecosystem.md) | 开源推理生态全景 | 已完成 |
-| 02 | `02_vllm.md` | vLLM 架构、优化与适用边界 | 待开始 |
-| 03 | `03_sglang.md` | SGLang 架构与结构化生成 | 待开始 |
+| 02 | [02_vllm.md](02_vllm.md) | vLLM 架构、优化与适用边界 | 已完成 |
+| 03 | [03_sglang.md](03_sglang.md) | SGLang 架构与结构化生成 | 已完成 |
 | 04 | `04_tgi.md` | Hugging Face TGI | 待开始 |
 | 05 | `05_tensorrt_llm_deployment.md` | TensorRT-LLM 部署实践 | 待开始 |
 | 06 | `06_deepspeed_fastgen.md` | DeepSpeed-FastGen | 待开始 |
