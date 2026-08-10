@@ -30,13 +30,13 @@
 | 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 已完成 | 53,456 | 141 | 10 | 2026-08-10 |
 | 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 已完成* | 47,932 | 129 | 11 | 2026-08-10 |
 | 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-08-10 |
-| 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 进行中 | 28,753 | 122 | 6 | 2026-08-10 |
+| 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 进行中 | 43,038 | 182 | 9 | 2026-08-10 |
 | 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 待开始 | 0 | 0 | 0 | — |
 | 14 | [公司与生态](docs/14_company_and_ecosystem_landscape/) | 待开始 | 0 | 0 | 0 | — |
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
 | 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-08-10 |
-| — | **合计** | — | **765,044** | **1944** | **170** | 2026-08-10 |
+| — | **合计** | — | **779,329** | **2004** | **173** | 2026-08-10 |
 
 > **`已完成*`**：可撰写的规划文档已全部完成，
 > 余下文档因其内容本体为需核验的外部资料、在当前网络出口策略下无法撰写而**受阻**
@@ -243,9 +243,9 @@
 | [04_tgi.md](docs/12_open_source_deployment_and_reproduction/04_tgi.md) | Hugging Face TGI |
 | [05_tensorrt_llm_deployment.md](docs/12_open_source_deployment_and_reproduction/05_tensorrt_llm_deployment.md) | TensorRT-LLM 部署实践 |
 | [06_deepspeed_fastgen.md](docs/12_open_source_deployment_and_reproduction/06_deepspeed_fastgen.md) | DeepSpeed-FastGen |
-| `07_llama_cpp_mlx_ollama_and_local_serving.md` | 本地与端侧 serving |
-| `08_ray_serve_kubernetes_kserve_and_triton.md` | 编排层与推理服务器 |
-| `09_litellm_gateways_and_model_routing.md` | 网关与多模型路由 |
+| [07_llama_cpp_mlx_ollama_and_local_serving.md](docs/12_open_source_deployment_and_reproduction/07_llama_cpp_mlx_ollama_and_local_serving.md) | 本地与端侧 serving |
+| [08_ray_serve_kubernetes_kserve_and_triton.md](docs/12_open_source_deployment_and_reproduction/08_ray_serve_kubernetes_kserve_and_triton.md) | 编排层与推理服务器 |
+| [09_litellm_gateways_and_model_routing.md](docs/12_open_source_deployment_and_reproduction/09_litellm_gateways_and_model_routing.md) | 网关与多模型路由 |
 | `10_observability_stack.md` | Prometheus/Grafana/OpenTelemetry 观测栈 |
 | `11_reference_architectures.md` | 10 个教学性参考架构 |
 | `12_reproduction_playbooks.md` | 可复现实验手册 |

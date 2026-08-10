@@ -1,7 +1,7 @@
 # 模块 12 — 开源部署、复现与参考架构
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中（6/12 篇）**
+> 状态：**进行中（9/12 篇）**
 > 模块目标字数：**≥ 12,000 字**
 > 最后更新：2026-08-10
 
@@ -25,9 +25,9 @@
 | 04 | [04_tgi.md](04_tgi.md) | Hugging Face TGI | 已完成 |
 | 05 | [05_tensorrt_llm_deployment.md](05_tensorrt_llm_deployment.md) | TensorRT-LLM 部署实践 | 已完成 |
 | 06 | [06_deepspeed_fastgen.md](06_deepspeed_fastgen.md) | DeepSpeed-FastGen | 已完成 |
-| 07 | `07_llama_cpp_mlx_ollama_and_local_serving.md` | 本地与端侧 serving | 待开始 |
-| 08 | `08_ray_serve_kubernetes_kserve_and_triton.md` | 编排层与推理服务器 | 待开始 |
-| 09 | `09_litellm_gateways_and_model_routing.md` | 网关与多模型路由 | 待开始 |
+| 07 | [07_llama_cpp_mlx_ollama_and_local_serving.md](07_llama_cpp_mlx_ollama_and_local_serving.md) | 本地与端侧 serving | 已完成 |
+| 08 | [08_ray_serve_kubernetes_kserve_and_triton.md](08_ray_serve_kubernetes_kserve_and_triton.md) | 编排层与推理服务器 | 已完成 |
+| 09 | [09_litellm_gateways_and_model_routing.md](09_litellm_gateways_and_model_routing.md) | 网关与多模型路由 | 已完成 |
 | 10 | `10_observability_stack.md` | Prometheus/Grafana/OpenTelemetry 观测栈 | 待开始 |
 | 11 | `11_reference_architectures.md` | 10 个教学性参考架构 | 待开始 |
 | 12 | `12_reproduction_playbooks.md` | 可复现实验手册 | 待开始 |
