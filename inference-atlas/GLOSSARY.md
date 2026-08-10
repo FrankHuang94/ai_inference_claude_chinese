@@ -396,6 +396,42 @@
 > 而可达吞吐占饱和上限的比例是 $1-W/M_{\text{total}}$，即**显存中未被权重占据的比例**。
 > $M/W < 2$ 时连半饱和吞吐都达不到。
 
+## 19. 开源部署、复现与参考架构
+
+> 本节随 [模块 12](docs/12_open_source_deployment_and_reproduction/) 完成新增。
+
+| 中文术语 | 英文 | 定义 | 单位/口径 |
+|---|---|---|---|
+| 机制对齐 | mechanism alignment | 把各项目术语映射到统一概念，**而非按 README 词面比较** | — |
+| 命名分歧 | naming divergence | 同一机制在各项目的不同名称（prefix caching / RadixAttention / KV Cache Reuse） | — |
+| 参数同名不同义 | parameter semantic divergence | 名字相近但**分母或包含项不同**的参数；跨引擎不可直接搬运 | — |
+| 分化点 | differentiator | 不写进特性表却决定实际行为的设计选择（默认值、调度、预留、失败行为、可观测面） | — |
+| 有效容量比 | effective capacity ratio $u$ | 实际可分配给 KV 的容量占标称的比例；**推荐的首选横向指标** | % |
+| 重算式抢占 | `RECOMPUTE` preemption | KV 不足时丢弃并重算；代价是重复 prefill，打在 TTFT 上 | — |
+| retract | retract | 部分项目对「抢占」的用词；**按 preemption 检索会漏掉** | — |
+| 分层 KV 缓存 | hierarchical KV cache | L1(GPU)/L2(主机)/L3(分布式)；**L3 可集群共享** | — |
+| 预取阈值 | prefetch threshold | 触发从远端预取所需的最小命中长度；**过低则短命中的往返变纯开销** | token |
+| 优先级 LRU | prioritized LRU | 先清空最低优先级再按 LRU；**驱逐可为降级而非失效** | — |
+| 取小规则 | min-rule allocation | 同时设容量比例与绝对上限时，实际分配取两者下界 | — |
+| 规模一致性 | forward-size consistency | 各次前向的 token 数接近相等；**直接压缩时延方差** | — |
+| 驻留比例 | resident fraction $\varphi$ | 本地推理中驻留显存的权重比例；**接近 1 与否几乎决定全部性能** | 无量纲 |
+| 可行性参数 | feasibility parameter | 决定「能否跑」而非「跑多快」的参数；本地场景的位宽即是 | — |
+| 弹性上界 | elasticity ceiling | 由冷启动时间决定的扩缩容有效性上界；**编排层无法突破** | — |
+| 组调度 | gang scheduling | 并行组要么整组就位、要么不启动 | — |
+| 前缀感知路由 | prefix-aware routing | 把共享前缀的请求聚集到同一实例；**与负载均衡目标冲突** | — |
+| 串联尾部放大 | serial tail amplification | $1-(1-p)^n$，$n$ 为串联层数；与每 token $2L$ 次通信同式 | — |
+| GenAI 语义约定 | GenAI semantic conventions | OTel 的标准指标命名；**在名字里区分 server/client 与 token/chunk** | — |
+| 分位数不可平均 | percentiles are not averageable | 须先聚合直方图桶计数再求分位数 | — |
+| 决定性约束 | binding constraint | 某架构最先撞上的那个上界 | — |
+| 纸上否决 | paper rejection | 实施前用判据排除不可行架构 | — |
+| 口径问题 | measurement-artifact | 测到的是测量方式而非系统性质 | — |
+| 可复核结论 | reproducible conclusion | 含版本 tag、口径、样本量与复现命令；**缺任一项等同未核验** | — |
+
+> **本节最值得记住的一条**：三家引擎的显存比例参数**分母各不相同**——
+> vLLM `gpu_memory_utilization`（总显存）、SGLang `--mem-fraction-static`（总显存**含权重**）、
+> TensorRT-LLM `free_gpu_memory_fraction`（**空闲显存**，默认 0.9）。
+> **同样填 0.9 会得到不同的 KV 容量，进而按 $C_{\max}=M_{\text{KV}}/(Sk)$ 得到不同的并发上限**。
+
 ---
 
 ## 单位书写规范（强制）

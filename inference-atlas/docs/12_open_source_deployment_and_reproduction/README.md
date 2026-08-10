@@ -1,7 +1,7 @@
 # 模块 12 — 开源部署、复现与参考架构
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中（9/12 篇）**
+> 状态：**已完成（12/12 篇）**
 > 模块目标字数：**≥ 12,000 字**
 > 最后更新：2026-08-10
 
@@ -28,9 +28,9 @@
 | 07 | [07_llama_cpp_mlx_ollama_and_local_serving.md](07_llama_cpp_mlx_ollama_and_local_serving.md) | 本地与端侧 serving | 已完成 |
 | 08 | [08_ray_serve_kubernetes_kserve_and_triton.md](08_ray_serve_kubernetes_kserve_and_triton.md) | 编排层与推理服务器 | 已完成 |
 | 09 | [09_litellm_gateways_and_model_routing.md](09_litellm_gateways_and_model_routing.md) | 网关与多模型路由 | 已完成 |
-| 10 | `10_observability_stack.md` | Prometheus/Grafana/OpenTelemetry 观测栈 | 待开始 |
-| 11 | `11_reference_architectures.md` | 10 个教学性参考架构 | 待开始 |
-| 12 | `12_reproduction_playbooks.md` | 可复现实验手册 | 待开始 |
+| 10 | [10_observability_stack.md](10_observability_stack.md) | Prometheus/Grafana/OpenTelemetry 观测栈 | 已完成 |
+| 11 | [11_reference_architectures.md](11_reference_architectures.md) | 10 个教学性参考架构 | 已完成 |
+| 12 | [12_reproduction_playbooks.md](12_reproduction_playbooks.md) | 可复现实验手册 | 已完成 |
 
 > **本模块的出口策略状态（2026-08-10 复核）**：
 > 各项目的**官方文档站点不可达**（`docs.vllm.ai`、`huggingface.co` 等均返回 403），
@@ -48,14 +48,18 @@
 
 ## 完成标准
 
-- [ ] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成
-- [ ] 模块正文合计 ≥ 12,000 字
-- [ ] 上述"写作要求"逐条覆盖
-- [ ] 所有事实性数字带来源链接与披露标签
-- [ ] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md)
-- [ ] 相关 [`data/`](../../data/) CSV 已更新
-- [ ] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
-- [ ] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
+- [x] 全部规划文档已按 [`templates/chapter_template.md`](../../templates/chapter_template.md) 完成（12/12）
+- [x] 模块正文合计 ≥ 12,000 字
+- [x] 上述"写作要求"第 1 条：各项目均给出定位、架构、核心机制、适合/**不适合** workload、可观测性、局限、来源与版本
+- [ ] 写作要求第 1 条中的**支持模型与支持硬件清单**未逐项复制——**刻意为之**：该类清单随版本变化快，[第 1 章](01_open_source_inference_ecosystem.md) 已说明应由读者在目标版本上自行核验
+- [x] 写作要求第 2 条：[第 11 章](11_reference_architectures.md) 给出 10 个参考架构，逐一对应要求中的 ①–⑩
+- [x] 写作要求第 3 条：版本信息带核验日期；**配置示例一律用 tag 而非 `main`**
+- [x] 所有事实性数字带来源路径与披露标签（各章第 5 节逐条列出）
+- [x] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md) 第 19 节
+- [ ] 相关 [`data/`](../../data/) CSV 已更新——**受阻**：`inference_engines.csv` 需要跨项目的可比字段（性能、支持矩阵），而本模块刻意不采信此类未经独立复现的数据
+- [x] 本 README 的文档状态与 [`INDEX.md`](../../INDEX.md) 模块状态表已同步
+- [x] QA 门禁通过（见 [`CONTRIBUTING.md`](../../CONTRIBUTING.md) 第 2 节）
+- [x] 配套可运行代码：[`code/reproduction_toolkit.py`](../../code/reproduction_toolkit.py)（17 项自测全部通过）
 
 ## 工作节奏
 
