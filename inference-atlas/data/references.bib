@@ -563,3 +563,141 @@
   url       = {https://arxiv.org/abs/2211.15841},
   note      = {InferenceAtlas paper_id: P-039}
 }
+
+% ---------------------------------------------------------------------------
+% 模块 13 第四批（2026-08-10 追加）：硬件与体系结构 P-040~P-044、网络与数据中心 P-045~P-049
+% 本批**全部**为 WebSearch 逐条核对的书目（类别 B）——这一族论文基本没有配套代码仓库，
+% 因此没有作者提供的 BibTeX 可用。arXiv 编号与 DOI 均未凭记忆填写；
+% TPU v1 的 arXiv 编号另用一次不预设编号的检索独立复核过。
+% ---------------------------------------------------------------------------
+
+@article{williams2009roofline,
+  title     = {Roofline: An Insightful Visual Performance Model for Multicore
+               Architectures},
+  author    = {Williams, Samuel and Waterman, Andrew and Patterson, David A.},
+  journal   = {Communications of the ACM},
+  volume    = {52},
+  number    = {4},
+  year      = {2009},
+  doi       = {10.1145/1498765.1498785},
+  url       = {https://dl.acm.org/doi/10.1145/1498765.1498785},
+  note      = {InferenceAtlas paper_id: P-040}
+}
+
+@inproceedings{jouppi2017tpu,
+  title     = {In-Datacenter Performance Analysis of a Tensor Processing Unit},
+  author    = {Jouppi, Norman P. and Young, Cliff and Patil, Nishant and
+               Patterson, David and Agrawal, Gaurav and Bajwa, Raminder and
+               Bates, Sarah and Bhatia, Suresh and others},
+  booktitle = {Proceedings of the 44th Annual International Symposium on Computer
+               Architecture (ISCA)},
+  year      = {2017},
+  eprint    = {1704.04760},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AR},
+  url       = {https://arxiv.org/abs/1704.04760},
+  note      = {InferenceAtlas paper_id: P-041}
+}
+
+@inproceedings{jouppi2021tpuv4i,
+  title     = {Ten Lessons From Three Generations Shaped {Google's} {TPUv4i}:
+               Industrial Product},
+  author    = {Jouppi, Norman P. and Yoon, Doe Hyun and Ashcraft, Matthew B. and
+               Gottscho, Mark and Jablin, Thomas B. and Kurian, George and
+               Laudon, James and Li, Sheng and others},
+  booktitle = {Proceedings of the 48th Annual International Symposium on Computer
+               Architecture (ISCA)},
+  year      = {2021},
+  doi       = {10.1109/ISCA52012.2021.00010},
+  url       = {https://dl.acm.org/doi/10.1109/ISCA52012.2021.00010},
+  note      = {InferenceAtlas paper_id: P-042}
+}
+
+@inproceedings{jouppi2023tpuv4,
+  title     = {{TPU} v4: An Optically Reconfigurable Supercomputer for Machine
+               Learning with Hardware Support for Embeddings},
+  author    = {Jouppi, Norman P. and others},
+  booktitle = {Proceedings of the 50th Annual International Symposium on Computer
+               Architecture (ISCA)},
+  year      = {2023},
+  eprint    = {2304.01433},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AR},
+  url       = {https://arxiv.org/abs/2304.01433},
+  note      = {InferenceAtlas paper_id: P-043; 完整作者名单待核实}
+}
+
+@inproceedings{chen2016eyeriss,
+  title     = {{Eyeriss}: A Spatial Architecture for Energy-Efficient Dataflow for
+               Convolutional Neural Networks},
+  author    = {Chen, Yu-Hsin and Emer, Joel S. and Sze, Vivienne},
+  booktitle = {Proceedings of the 43rd Annual International Symposium on Computer
+               Architecture (ISCA)},
+  year      = {2016},
+  doi       = {10.1145/3007787.3001177},
+  url       = {https://dl.acm.org/doi/10.1145/3007787.3001177},
+  note      = {InferenceAtlas paper_id: P-044}
+}
+
+@article{dean2013tail,
+  title     = {The Tail at Scale},
+  author    = {Dean, Jeffrey and Barroso, Luiz Andr{\'e}},
+  journal   = {Communications of the ACM},
+  volume    = {56},
+  number    = {2},
+  year      = {2013},
+  doi       = {10.1145/2408776.2408794},
+  url       = {https://dl.acm.org/doi/10.1145/2408776.2408794},
+  note      = {InferenceAtlas paper_id: P-045}
+}
+
+@inproceedings{singh2015jupiter,
+  title     = {{Jupiter} Rising: A Decade of {Clos} Topologies and Centralized
+               Control in {Google's} Datacenter Network},
+  author    = {Singh, Arjun and Ong, Joon and Agarwal, Amit and Anderson, Glen and
+               Armistead, Ashby and Bannon, Roy and Boving, Seb and Desai, Gaurav and
+               others},
+  booktitle = {Proceedings of the 2015 ACM Conference on Special Interest Group on
+               Data Communication (SIGCOMM)},
+  year      = {2015},
+  doi       = {10.1145/2785956.2787508},
+  url       = {https://dl.acm.org/doi/10.1145/2785956.2787508},
+  note      = {InferenceAtlas paper_id: P-046}
+}
+
+@inproceedings{poutievski2022jupiter,
+  title     = {{Jupiter} Evolving: Transforming {Google's} Datacenter Network via
+               Optical Circuit Switches and Software-Defined Networking},
+  author    = {Poutievski, Leon and Mashayekhi, Omid and Ong, Joon and Singh, Arjun and
+               Tariq, Muhammad Mukarram Bin and Wang, Rui and Zhang, Jianan and
+               Beauregard, Virginia and others},
+  booktitle = {Proceedings of the ACM SIGCOMM 2022 Conference},
+  year      = {2022},
+  doi       = {10.1145/3544216.3544265},
+  url       = {https://research.google/pubs/jupiter-evolving-transforming-googles-datacenter-network-via-optical-circuit-switches-and-software-defined-networking/},
+  note      = {InferenceAtlas paper_id: P-047}
+}
+
+@inproceedings{zhu2015dcqcn,
+  title     = {Congestion Control for Large-Scale {RDMA} Deployments},
+  author    = {Zhu, Yibo and Eran, Haggai and Firestone, Daniel and Guo, Chuanxiong and
+               Lipshteyn, Marina and Liron, Yehonatan and Padhye, Jitendra and
+               Raindel, Shachar and Yahia, Mohamad Haj and Zhang, Ming},
+  booktitle = {Proceedings of the 2015 ACM Conference on Special Interest Group on
+               Data Communication (SIGCOMM)},
+  year      = {2015},
+  doi       = {10.1145/2785956.2787484},
+  url       = {https://dl.acm.org/doi/10.1145/2785956.2787484},
+  note      = {InferenceAtlas paper_id: P-048}
+}
+
+@inproceedings{guo2016roce,
+  title     = {{RDMA} over Commodity {Ethernet} at Scale},
+  author    = {Guo, Chuanxiong and Wu, Haitao and Deng, Zhong and Soni, Gaurav and
+               Ye, Jianxi and Padhye, Jitu and Lipshteyn, Marina},
+  booktitle = {Proceedings of the 2016 ACM SIGCOMM Conference},
+  year      = {2016},
+  doi       = {10.1145/2934872.2934908},
+  url       = {https://dl.acm.org/doi/10.1145/2934872.2934908},
+  note      = {InferenceAtlas paper_id: P-049}
+}

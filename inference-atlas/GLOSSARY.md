@@ -477,6 +477,20 @@
 | 容量因子 | capacity factor | 每专家 token 容量相对均分值的倍数；超出即丢弃 | — |
 | 丢 token | token dropping | 超出专家容量的 token 跳过专家计算走残差；**推理中不可补偿且静默** | 个 |
 | 块稀疏 MoE | block-sparse MoE | 把 MoE 前向表述为块稀疏矩阵乘，取消容量上限 | — |
+| 脉动阵列 | systolic array | 数据在 PE 间直接流动的矩阵乘结构，减少寄存器堆访问 | — |
+| 软件管理片上存储 | software-managed on-chip memory | 由编译器而非硬件缓存逻辑决定驻留内容的片上存储 | — |
+| 数据流 | dataflow | 空间阵列上「哪一类数据留在原地」的编排方式 | — |
+| 权重复用度 | weight reuse factor | 一份权重在一次前向中被使用的次数；**LLM decode 约为 1** | 次 |
+| 光路交换 | optical circuit switch | 物理层路径切换，不解析分组；切换在毫秒量级，只能做作业级重配置 | — |
+| 编译器兼容性 | compiler compatibility | 已有模型能否被编译到该芯片上；VLIW 类 DSA 的首要约束 | — |
+| 尾延迟放大 | tail latency amplification | $n$ 个组件参与时整体变慢的概率 $1-(1-p)^n$ | % |
+| 对冲请求 | hedged request | 延迟一小段后向副本重发取先返回者；**同步集合通信中不适用** | — |
+| 超订比 | oversubscription ratio | 下行容量与上行容量之比；AI 集合通信对其容忍度低 | 无量纲 |
+| 优先级流控 | PFC (priority flow control) | 逐跳按端口暂停发送以实现无损；粒度粗，会连带无辜流并向上游扩散 | — |
+| incast | incast | 多个发送端同时打向同一接收端；all-to-all 的度为 $P-1$ | — |
+| 显式拥塞通告 | ECN | 交换机标记分组以通知拥塞，供端到端速率控制使用 | — |
+| PFC 死锁 | PFC deadlock | 暂停依赖成环导致网络永久卡死，与路由环路同构 | — |
+| 暂停帧风暴 | pause frame storm | 故障网卡持续发送暂停帧，把单点故障放大为域级故障 | — |
 
 ## 单位书写规范（强制）
 
