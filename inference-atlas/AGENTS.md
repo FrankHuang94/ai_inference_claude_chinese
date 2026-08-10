@@ -195,6 +195,31 @@ done
 **结论**：在此环境下，`papers`、`models`、`accelerators`、`benchmarks`、
 `networking_technologies`、`companies`、`cloud_pricing` 七个 CSV **无法按第 5 节纪律录入**。
 
+### 2026-08-10 复测（结论未变，补充三点）
+
+复测方法同上，并增测 `WebFetch` 与 `WebSearch` 两条工具通路。
+
+| 项 | 结果 |
+|---|---|
+| 上表全部「拒绝」项 | **仍为 403**（代理记录 `connect_rejected`，属组织策略拒绝） |
+| 新增确认拒绝 | `pytorch.org`、`docs.nvidia.com`、`docs.vllm.ai`、`jedec.org`、`aclanthology.org`、`papers.nips.cc`、`proceedings.mlsys.org`、`en.wikipedia.org` |
+| **GitHub 系** | `github.com`、`raw.githubusercontent.com`、`objects.githubusercontent.com`、`codeload.github.com` **可达** |
+| **WebFetch** | 与 curl 同一白名单：GitHub 系可读（含**目录树浏览**），其余返回 `EGRESS_BLOCKED` |
+| **WebSearch** | **可用**：返回标题、作者、出处、URL 与摘要片段；**但结果指向的页面基本打不开** |
+
+**由此得到的模块级判断**：
+
+| 模块 | 判断 | 理由 |
+|---|---|---|
+| **12 开源部署与复现** | **可解锁** | 其一手来源**就是** GitHub 仓库：README、仓库内 `docs/`（如 vLLM 的 `docs/` 即 docs.vllm.ai 的源）、配置与代码。披露标签用 `开源代码/配置披露` |
+| **13 论文地图** | **降级可写** | 论文正文不可达；书目信息可由搜索核实，官方实现仓库可读。**须在章首声明未读过正文**，论文中的任何数值一律 `待核实` 并给出原文链接 |
+| 14 公司生态 / 15 市场经济 | **维持受阻** | 公司披露、财报、市场数据一概不可达；搜索片段不足以支撑此类断言，且与本节「禁止」第 1、3 条直接冲突 |
+| 16 未来路线 | **维持受阻** | 依赖论文正文 |
+
+**注意 `WebSearch` 可用不改变第 5 节的取证纪律**：
+它只用于**建立方向性认识与核实书目信息**（标题、作者、会议、年份、URL），
+**不得**用其摘要片段作为任何技术数值的依据——这一点与下方「禁止」第 1 条一致。
+
 ### 受阻时的强制行为
 
 **允许**：

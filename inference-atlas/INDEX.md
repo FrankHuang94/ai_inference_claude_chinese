@@ -18,25 +18,25 @@
 
 | # | 模块 | 状态 | 字数 | 表格 | 图示 | 最后更新 |
 |---|---|---|---:|---:|---:|---|
-| 00 | [入门与端到端总览](docs/00_start_here/) | 已完成 | 21,824 | 64 | 3 | 2026-08-01 |
-| 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 已完成 | 26,531 | 91 | 8 | 2026-08-01 |
-| 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 已完成 | 30,961 | 110 | 10 | 2026-08-01 |
-| 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 已完成 | 38,095 | 133 | 11 | 2026-08-01 |
-| 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 已完成 | 37,186 | 138 | 11 | 2026-08-01 |
-| 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 已完成 | 69,325 | 162 | 25 | 2026-08-01 |
-| 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 已完成 | 85,544 | 202 | 27 | 2026-08-01 |
-| 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 已完成* | 46,763 | 177 | 12 | 2026-08-01 |
-| 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 已完成* | 39,947 | 156 | 13 | 2026-08-01 |
-| 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 已完成 | 53,456 | 141 | 10 | 2026-08-01 |
-| 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 已完成* | 47,932 | 129 | 11 | 2026-08-01 |
-| 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-08-01 |
-| 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 待开始 | 0 | 0 | 0 | — |
+| 00 | [入门与端到端总览](docs/00_start_here/) | 已完成 | 21,824 | 64 | 3 | 2026-08-10 |
+| 01 | [基础、指标、排队论与成本](docs/01_foundations_and_metrics/) | 已完成 | 26,531 | 91 | 8 | 2026-08-10 |
+| 02 | [Transformer 推理与 KV Cache](docs/02_transformer_and_kv_cache/) | 已完成 | 30,961 | 110 | 10 | 2026-08-10 |
+| 03 | [Serving Engines、调度与 QoS](docs/03_serving_engines_and_scheduling/) | 已完成 | 38,095 | 133 | 11 | 2026-08-10 |
+| 04 | [Compiler、Runtime、Kernel 与量化](docs/04_compilers_runtimes_and_kernels/) | 已完成 | 37,186 | 138 | 11 | 2026-08-10 |
+| 05 | [解码、Speculative 与 Reasoning 推理](docs/05_decoding_and_generation_algorithms/) | 已完成 | 69,325 | 162 | 25 | 2026-08-10 |
+| 06 | [分布式、MoE 与 Disaggregated Inference](docs/06_distributed_and_moe_inference/) | 已完成 | 85,544 | 202 | 27 | 2026-08-10 |
+| 07 | [硬件、HBM、封装与服务器](docs/07_hardware_and_server_architecture/) | 已完成* | 46,763 | 177 | 12 | 2026-08-10 |
+| 08 | [网络、互连与光学](docs/08_networking_and_interconnect/) | 已完成* | 39,947 | 156 | 13 | 2026-08-10 |
+| 09 | [数据中心、电力、散热与运维](docs/09_datacenter_power_thermal_and_operations/) | 已完成 | 53,456 | 141 | 10 | 2026-08-10 |
+| 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 已完成* | 47,932 | 129 | 11 | 2026-08-10 |
+| 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-08-10 |
+| 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 进行中 | 4,749 | 20 | 1 | 2026-08-10 |
 | 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 待开始 | 0 | 0 | 0 | — |
 | 14 | [公司与生态](docs/14_company_and_ecosystem_landscape/) | 待开始 | 0 | 0 | 0 | — |
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
-| 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-08-01 |
-| — | **合计** | — | **736,291** | **1822** | **164** | 2026-08-01 |
+| 17 | [面试准备](docs/17_interview_prep/) | 已完成 | 180,274 | 160 | 12 | 2026-08-10 |
+| — | **合计** | — | **741,040** | **1842** | **165** | 2026-08-10 |
 
 > **`已完成*`**：可撰写的规划文档已全部完成，
 > 余下文档因其内容本体为需核验的外部资料、在当前网络出口策略下无法撰写而**受阻**
@@ -233,11 +233,11 @@
 | [10_safety_security_and_abuse_controls.md](docs/11_benchmarking_reliability_and_observability/10_safety_security_and_abuse_controls.md) | 安全、滥用防护与租户隔离 |
 | [11_benchmark_case_studies.md](docs/11_benchmarking_reliability_and_observability/11_benchmark_case_studies.md) | benchmark 案例研究 |
 
-### [12 — 开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) `待开始`
+### [12 — 开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) `进行中`
 
 | 文档 | 一句话说明 |
 |---|---|
-| `01_open_source_inference_ecosystem.md` | 开源推理生态全景 |
+| [01_open_source_inference_ecosystem.md](docs/12_open_source_deployment_and_reproduction/01_open_source_inference_ecosystem.md) | 开源推理生态全景 |
 | `02_vllm.md` | vLLM 架构、优化与适用边界 |
 | `03_sglang.md` | SGLang 架构与结构化生成 |
 | `04_tgi.md` | Hugging Face TGI |

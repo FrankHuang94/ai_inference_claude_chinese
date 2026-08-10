@@ -1,9 +1,9 @@
 # 模块 12 — 开源部署、复现与参考架构
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**待开始**
+> 状态：**进行中（1/12 篇）**
 > 模块目标字数：**≥ 12,000 字**
-> 最后更新：2026-07-29
+> 最后更新：2026-08-10
 
 ## 模块定位
 
@@ -19,7 +19,7 @@
 
 | # | 文档 | 一句话说明 | 状态 |
 |---:|---|---|---|
-| 01 | `01_open_source_inference_ecosystem.md` | 开源推理生态全景 | 待开始 |
+| 01 | [01_open_source_inference_ecosystem.md](01_open_source_inference_ecosystem.md) | 开源推理生态全景 | 已完成 |
 | 02 | `02_vllm.md` | vLLM 架构、优化与适用边界 | 待开始 |
 | 03 | `03_sglang.md` | SGLang 架构与结构化生成 | 待开始 |
 | 04 | `04_tgi.md` | Hugging Face TGI | 待开始 |
@@ -31,6 +31,14 @@
 | 10 | `10_observability_stack.md` | Prometheus/Grafana/OpenTelemetry 观测栈 | 待开始 |
 | 11 | `11_reference_architectures.md` | 10 个教学性参考架构 | 待开始 |
 | 12 | `12_reproduction_playbooks.md` | 可复现实验手册 | 待开始 |
+
+> **本模块的出口策略状态（2026-08-10 复核）**：
+> 各项目的**官方文档站点不可达**（`docs.vllm.ai`、`huggingface.co` 等均返回 403），
+> **但 GitHub 系可达**（`github.com`、`raw.githubusercontent.com`），
+> 而这些项目的文档源文件、配置与代码**就在仓库里**。
+> 因此本模块的一手来源是可核验的，**12 篇全部可撰写**，
+> 披露标签统一为 `开源代码/配置披露`。
+> 详见 [AGENTS.md 第 11 节](../../AGENTS.md) 的复测结果。
 
 ## 写作要求
 
