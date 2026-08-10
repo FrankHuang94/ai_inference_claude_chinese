@@ -76,3 +76,155 @@
   url       = {https://arxiv.org/abs/2211.17192},
   note      = {InferenceAtlas paper_id: P-005}
 }
+
+% ---------------------------------------------------------------------------
+% 模块 13 第一批（2026-08-10 追加）
+% 书目字段来源分两类：
+%   (a) 作者自己在官方实现仓库 README 中给出的 BibTeX（一手，可核验）；
+%   (b) WebSearch 返回的书目信息（标题/作者/venue/arXiv 编号）。
+% 两类都**不等于**读过论文正文，故 papers.csv 中 citation_status 一律为 待核实。
+% ---------------------------------------------------------------------------
+
+@inproceedings{dao2024flashattention2,
+  title     = {{FlashAttention-2}: Faster Attention with Better Parallelism and
+               Work Partitioning},
+  author    = {Dao, Tri},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2024},
+  eprint    = {2307.08691},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/2307.08691},
+  note      = {InferenceAtlas paper_id: P-006}
+}
+
+@misc{shazeer2019multiquery,
+  title     = {Fast Transformer Decoding: One Write-Head is All You Need},
+  author    = {Shazeer, Noam},
+  year      = {2019},
+  eprint    = {1911.02150},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.NE},
+  url       = {https://arxiv.org/abs/1911.02150},
+  note      = {InferenceAtlas paper_id: P-007}
+}
+
+@inproceedings{ainslie2023gqa,
+  title     = {{GQA}: Training Generalized Multi-Query Transformer Models from
+               Multi-Head Checkpoints},
+  author    = {Ainslie, Joshua and Lee-Thorp, James and de Jong, Michiel and
+               Zemlyanskiy, Yury and Lebron, Federico and Sanghai, Sumit},
+  booktitle = {Proceedings of the 2023 Conference on Empirical Methods in
+               Natural Language Processing (EMNLP)},
+  year      = {2023},
+  eprint    = {2305.13245},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url       = {https://arxiv.org/abs/2305.13245},
+  note      = {InferenceAtlas paper_id: P-008}
+}
+
+@inproceedings{xiao2024streamingllm,
+  title     = {Efficient Streaming Language Models with Attention Sinks},
+  author    = {Xiao, Guangxuan and Tian, Yuandong and Chen, Beidi and
+               Han, Song and Lewis, Mike},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2024},
+  eprint    = {2309.17453},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url       = {https://arxiv.org/abs/2309.17453},
+  note      = {InferenceAtlas paper_id: P-009}
+}
+
+@inproceedings{agrawal2024sarathiserve,
+  title     = {Taming Throughput-Latency Tradeoff in {LLM} Inference with
+               {Sarathi-Serve}},
+  author    = {Agrawal, Amey and Kedia, Nitin and Panwar, Ashish and
+               Mohan, Jayashree and Kwatra, Nipun and Gulavani, Bhargav S. and
+               Tumanov, Alexey and Ramjee, Ramachandran},
+  booktitle = {18th USENIX Symposium on Operating Systems Design and
+               Implementation (OSDI 24)},
+  year      = {2024},
+  publisher = {USENIX Association},
+  eprint    = {2403.02310},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.DC},
+  url       = {https://arxiv.org/abs/2403.02310},
+  note      = {InferenceAtlas paper_id: P-010}
+}
+
+@inproceedings{zhong2024distserve,
+  title     = {{DistServe}: Disaggregating Prefill and Decoding for
+               Goodput-optimized Large Language Model Serving},
+  author    = {Zhong, Yinmin and Liu, Shengyu and Chen, Junda and Hu, Jianbo and
+               Zhu, Yibo and Liu, Xuanzhe and Jin, Xin and Zhang, Hao},
+  booktitle = {18th USENIX Symposium on Operating Systems Design and
+               Implementation (OSDI 24)},
+  year      = {2024},
+  publisher = {USENIX Association},
+  eprint    = {2401.09670},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.DC},
+  url       = {https://arxiv.org/abs/2401.09670},
+  note      = {InferenceAtlas paper_id: P-011}
+}
+
+@inproceedings{zheng2024sglang,
+  title     = {{SGLang}: Efficient Execution of Structured Language Model
+               Programs},
+  author    = {Zheng, Lianmin and Yin, Liangsheng and Xie, Zhiqiang and
+               Sun, Chuyue and Huang, Jeff and Yu, Cody Hao and Cao, Shiyi and
+               Kozyrakis, Christos and Stoica, Ion and Gonzalez, Joseph E. and
+               Barrett, Clark W. and Sheng, Ying},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2024},
+  eprint    = {2312.07104},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  url       = {https://arxiv.org/abs/2312.07104},
+  note      = {InferenceAtlas paper_id: P-012}
+}
+
+@inproceedings{li2023alpaserve,
+  title     = {{AlpaServe}: Statistical Multiplexing with Model Parallelism for
+               Deep Learning Serving},
+  author    = {Li, Zhuohan and Zheng, Lianmin and Zhong, Yinmin and Liu, Vincent and
+               Sheng, Ying and Jin, Xin and Huang, Yanping and Chen, Zhifeng and
+               Zhang, Hao and Gonzalez, Joseph E. and Stoica, Ion},
+  booktitle = {17th USENIX Symposium on Operating Systems Design and
+               Implementation (OSDI 23)},
+  year      = {2023},
+  publisher = {USENIX Association},
+  eprint    = {2302.11665},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.DC},
+  url       = {https://arxiv.org/abs/2302.11665},
+  note      = {InferenceAtlas paper_id: P-013}
+}
+
+@misc{wu2023fastserve,
+  title     = {Fast Distributed Inference Serving for Large Language Models},
+  author    = {Wu, Bingyang and Zhong, Yinmin and Zhang, Zili and Huang, Gang and
+               Liu, Xuanzhe and Jin, Xin},
+  year      = {2023},
+  eprint    = {2305.05920},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/2305.05920},
+  note      = {InferenceAtlas paper_id: P-014}
+}
+
+@inproceedings{patel2024splitwise,
+  title     = {{Splitwise}: Efficient Generative {LLM} Inference Using Phase
+               Splitting},
+  author    = {Patel, Pratyush and Choukse, Esha and Zhang, Chaojie and
+               Shah, Aashaka and Goiri, {\'I}{\~n}igo and Maleki, Saeed and
+               Bianchini, Ricardo},
+  booktitle = {Proceedings of the 51st Annual International Symposium on
+               Computer Architecture (ISCA)},
+  year      = {2024},
+  doi       = {10.1109/ISCA59077.2024.00019},
+  url       = {https://dl.acm.org/doi/10.1109/ISCA59077.2024.00019},
+  note      = {InferenceAtlas paper_id: P-015}
+}

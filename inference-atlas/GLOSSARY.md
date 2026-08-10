@@ -434,6 +434,25 @@
 
 ---
 
+## 20. 文献工作与证据分级
+
+> 本节随 [模块 13](docs/13_research_papers_and_technical_reports/) 第一批文档新增。
+
+| 中文术语 | 英文 | 定义 | 单位/口径 |
+|---|---|---|---|
+| 降级书写 | degraded authoring | 一手来源不可达时，只书写可独立论证的部分，并对其余部分**显式标注欠账**而非省略 | — |
+| 证据类别 | evidence class | 字段来源的四级划分：A 仓库 BibTeX / B 搜索书目 / C 实现代码 / D 论文正文 | — |
+| 结构性论断 | structural claim | 可由机制形状推出、不依赖实验数据的结论（如收益归零条件、能否叠加） | — |
+| 测量性论断 | measured claim | 必须由实验给出、跨条件不可外推的结论（如加速比） | — |
+| 瓶颈导向地图 | bottleneck-oriented map | 按论文攻击的性能方程分项、而非按时间或会议组织文献 | — |
+| 可见欠账 | visible debt | 审计中单独计数并逐条列出、但不阻断门禁的未完成项；对立面是「为了让门禁变绿而谎报」 | 条 |
+| 精确注意力 | exact attention | 与标准注意力逐位相等的实现，区别于稀疏/低秩等近似方法 | — |
+| 注意力泄压点 | attention sink | 序列最开头承接多余注意力质量的少数 token；被驱逐会导致窗口注意力突然崩坏 | 个 |
+| 续训 | uptraining | 由已有检查点经结构变换与短期继续训练得到新结构（如 MHA → GQA） | — |
+| 生成停顿 | generation stall | 批内出现长 prefill 导致同批 decode 请求的 ITL 被同步拉长 | s |
+| 无停顿调度 | stall-free scheduling | 固定每迭代 token 预算，使迭代耗时方差趋近于零 | — |
+| 统计复用 | statistical multiplexing | 合并 $n$ 条独立突发流使相对波动按 $1/\sqrt{n}$ 量级下降 | — |
+
 ## 单位书写规范（强制）
 
 | 规范 | 说明 |

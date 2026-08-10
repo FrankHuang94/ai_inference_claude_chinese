@@ -31,7 +31,7 @@
 | 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 已完成* | 47,932 | 129 | 11 | 2026-08-10 |
 | 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-08-10 |
 | 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 已完成 | 56,607 | 246 | 12 | 2026-08-10 |
-| 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 待开始 | 0 | 0 | 0 | — |
+| 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 进行中 | 20,372 | 30 | 3 | 2026-08-10 |
 | 14 | [公司与生态](docs/14_company_and_ecosystem_landscape/) | 待开始 | 0 | 0 | 0 | — |
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
@@ -250,13 +250,17 @@
 | [11_reference_architectures.md](docs/12_open_source_deployment_and_reproduction/11_reference_architectures.md) | 10 个教学性参考架构 |
 | [12_reproduction_playbooks.md](docs/12_open_source_deployment_and_reproduction/12_reproduction_playbooks.md) | 可复现实验手册 |
 
-### [13 — 论文与技术报告地图](docs/13_research_papers_and_technical_reports/) `待开始`
+### [13 — 论文与技术报告地图](docs/13_research_papers_and_technical_reports/) `进行中`
+
+> **降级书写**：出口策略拒绝一切论文来源，本模块**未读过任何论文正文**。
+> 卡片的「实验设置」与「关键结果」一律 `待核实`，机制与适用边界由本库自有推导支撑。
+> 详见 [第 01 章的降级声明](docs/13_research_papers_and_technical_reports/01_paper_map.md)。
 
 | 文档 | 一句话说明 |
 |---|---|
-| `01_paper_map.md` | 论文全景地图与阅读顺序 |
-| `02_transformer_inference_and_kv_cache_papers.md` | Transformer 推理与 KV cache 论文卡片 |
-| `03_batching_serving_and_scheduler_papers.md` | batching、serving 与调度器论文 |
+| [01_paper_map.md](docs/13_research_papers_and_technical_reports/01_paper_map.md) | 论文全景地图与阅读顺序 |
+| [02_transformer_inference_and_kv_cache_papers.md](docs/13_research_papers_and_technical_reports/02_transformer_inference_and_kv_cache_papers.md) | Transformer 推理与 KV cache 论文卡片 |
+| [03_batching_serving_and_scheduler_papers.md](docs/13_research_papers_and_technical_reports/03_batching_serving_and_scheduler_papers.md) | batching、serving 与调度器论文 |
 | `04_speculative_decoding_papers.md` | 投机解码论文 |
 | `05_quantization_and_compression_papers.md` | 量化与压缩论文 |
 | `06_compiler_runtime_and_kernel_papers.md` | 编译器、runtime 与 kernel 论文 |
