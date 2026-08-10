@@ -452,6 +452,17 @@
 | 生成停顿 | generation stall | 批内出现长 prefill 导致同批 decode 请求的 ITL 被同步拉长 | s |
 | 无停顿调度 | stall-free scheduling | 固定每迭代 token 预算，使迭代耗时方差趋近于零 | — |
 | 统计复用 | statistical multiplexing | 合并 $n$ 条独立突发流使相对波动按 $1/\sqrt{n}$ 量级下降 | — |
+| 分布不变性 | distribution preservation | 投机解码的接受/重采样规则使输出与直接从目标模型采样同分布 | — |
+| 自投机 | self-speculation | draft 与 target 共享主干计算，不引入第二个模型 | — |
+| token 树 | token tree | 多条候选序列组成的树，可由一次前向并行验证 | — |
+| 雅可比解码 | Jacobi decoding | 把自回归约束视为非线性方程组并行迭代求解 | — |
+| 用算力换时延 | compute-for-latency trade | 增加总计算量以减少串行步数；能耗随之上升 | J/token |
+| 名义位宽 | nominal bit width | 量化格式声明的位宽，不含定标参数开销 | bit |
+| 有效位宽 | effective bit width | 计入定标开销后的平均位宽 $b_w + b_s/g$；报压缩比必须用它 | bit |
+| 仅权重量化 | weight-only quantization | 只量化权重，计算时反量化回高精度；**省带宽不省算力** | — |
+| 权重激活联合量化 | W+A quantization | 权重与激活同时量化，矩阵乘可落到低精度算力单元 | — |
+| 等价缩放变换 | equivalent scaling transform | 插入一对互逆对角缩放，在激活与权重之间**再分配**量化难度 | — |
+| 稠密-稀疏分解 | dense-and-sparse decomposition | 少数权重以稀疏高精度保留、其余低位宽稠密存储 | — |
 
 ## 单位书写规范（强制）
 

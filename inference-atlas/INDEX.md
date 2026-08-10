@@ -31,7 +31,7 @@
 | 10 | [Edge 与 On-Device Inference](docs/10_edge_and_on_device_inference/) | 已完成* | 47,932 | 129 | 11 | 2026-08-10 |
 | 11 | [Benchmark、可靠性、可观测性与安全](docs/11_benchmarking_reliability_and_observability/) | 已完成 | 58,453 | 159 | 11 | 2026-08-10 |
 | 12 | [开源部署、复现与参考架构](docs/12_open_source_deployment_and_reproduction/) | 已完成 | 56,607 | 246 | 12 | 2026-08-10 |
-| 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 进行中 | 20,372 | 30 | 3 | 2026-08-10 |
+| 13 | [论文与技术报告地图](docs/13_research_papers_and_technical_reports/) | 进行中 | 36,289 | 56 | 5 | 2026-08-10 |
 | 14 | [公司与生态](docs/14_company_and_ecosystem_landscape/) | 待开始 | 0 | 0 | 0 | — |
 | 15 | [市场、经济学与战略](docs/15_market_economics_and_strategy/) | 待开始 | 0 | 0 | 0 | — |
 | 16 | [未来路线](docs/16_research_frontiers/) | 待开始 | 0 | 0 | 0 | — |
@@ -261,8 +261,8 @@
 | [01_paper_map.md](docs/13_research_papers_and_technical_reports/01_paper_map.md) | 论文全景地图与阅读顺序 |
 | [02_transformer_inference_and_kv_cache_papers.md](docs/13_research_papers_and_technical_reports/02_transformer_inference_and_kv_cache_papers.md) | Transformer 推理与 KV cache 论文卡片 |
 | [03_batching_serving_and_scheduler_papers.md](docs/13_research_papers_and_technical_reports/03_batching_serving_and_scheduler_papers.md) | batching、serving 与调度器论文 |
-| `04_speculative_decoding_papers.md` | 投机解码论文 |
-| `05_quantization_and_compression_papers.md` | 量化与压缩论文 |
+| [04_speculative_decoding_papers.md](docs/13_research_papers_and_technical_reports/04_speculative_decoding_papers.md) | 投机解码论文 |
+| [05_quantization_and_compression_papers.md](docs/13_research_papers_and_technical_reports/05_quantization_and_compression_papers.md) | 量化与压缩论文 |
 | `06_compiler_runtime_and_kernel_papers.md` | 编译器、runtime 与 kernel 论文 |
 | `07_distributed_and_moe_inference_papers.md` | 分布式与 MoE 推理论文 |
 | `08_hardware_and_architecture_papers.md` | 硬件与体系结构论文 |
