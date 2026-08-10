@@ -1,6 +1,6 @@
 # GLOSSARY — InferenceAtlas 术语表
 
-> 最后更新：2026-07-31 ｜ 版本：v0.1.0
+> 最后更新：2026-08-10 ｜ 版本：v0.1.0
 >
 > 本表收录阅读本数据库所必需的核心术语。**每完成一个模块，必须将该模块新出现的重要术语补入本表**（见 [AGENTS.md](AGENTS.md) 第 3 节第 8 步）。
 >
@@ -463,6 +463,20 @@
 | 权重激活联合量化 | W+A quantization | 权重与激活同时量化，矩阵乘可落到低精度算力单元 | — |
 | 等价缩放变换 | equivalent scaling transform | 插入一对互逆对角缩放，在激活与权重之间**再分配**量化难度 | — |
 | 稠密-稀疏分解 | dense-and-sparse decomposition | 少数权重以稀疏高精度保留、其余低位宽稠密存储 | — |
+| 计算与调度分离 | compute/schedule separation | 语义描述算什么、调度描述怎么算；同一语义对应多种合法调度 | — |
+| 分块抽象 | tile abstraction | 以张量块而非线程为 kernel 编程的基本单位 | — |
+| 方言 | dialect | MLIR 中同一 IR 框架下的领域特定操作集合 | — |
+| 逐级下降 | progressive lowering | 从高层抽象逐级降到低层，而非一步到底 | — |
+| 图打断 | graph break | 遇到无法捕获的构造时回退 eager 执行，计算图被切开 | 次 |
+| 符号形状 | symbolic shape | 把 batch、序列长度等作为符号量而非常量编译 | — |
+| 算子内并行 | intra-operator parallelism | 切开单个算子的计算；通信频繁、要求低时延、不宜跨节点 | — |
+| 算子间并行 | inter-operator parallelism | 把不同算子放到不同设备；通信少但存在依赖等待 | — |
+| 流水线气泡 | pipeline bubble | 流水线首尾无法填满而空转的比例，≈ (P−1)/(P−1+M) | % |
+| 稠密参数 | total parameters | MoE 中全部专家的参数量，决定**显存**占用 | 个 |
+| 激活参数 | active parameters | 每 token 实际参与计算的参数量，决定**算力**占用 | 个 |
+| 容量因子 | capacity factor | 每专家 token 容量相对均分值的倍数；超出即丢弃 | — |
+| 丢 token | token dropping | 超出专家容量的 token 跳过专家计算走残差；**推理中不可补偿且静默** | 个 |
+| 块稀疏 MoE | block-sparse MoE | 把 MoE 前向表述为块稀疏矩阵乘，取消容量上限 | — |
 
 ## 单位书写规范（强制）
 

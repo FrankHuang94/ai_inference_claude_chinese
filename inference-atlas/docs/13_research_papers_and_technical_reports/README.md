@@ -1,8 +1,8 @@
 # 模块 13 — 论文与技术报告地图
 
 > 位置：[InferenceAtlas](../../INDEX.md) > 当前模块
-> 状态：**进行中（5/12 篇）**
-> 模块目标字数：**≥ 12,000 字**（当前正文约 36,000 字，已达标）
+> 状态：**进行中（7/12 篇）**
+> 模块目标字数：**≥ 12,000 字**（当前正文约 50,000 字，已达标）
 > 最后更新：2026-08-10
 
 ## 模块定位
@@ -44,8 +44,8 @@
 | 03 | [03_batching_serving_and_scheduler_papers.md](03_batching_serving_and_scheduler_papers.md) | batching、serving 与调度器论文 | 已完成 |
 | 04 | [04_speculative_decoding_papers.md](04_speculative_decoding_papers.md) | 投机解码论文 | 已完成 |
 | 05 | [05_quantization_and_compression_papers.md](05_quantization_and_compression_papers.md) | 量化与压缩论文 | 已完成 |
-| 06 | `06_compiler_runtime_and_kernel_papers.md` | 编译器、runtime 与 kernel 论文 | 待开始 |
-| 07 | `07_distributed_and_moe_inference_papers.md` | 分布式与 MoE 推理论文 | 待开始 |
+| 06 | [06_compiler_runtime_and_kernel_papers.md](06_compiler_runtime_and_kernel_papers.md) | 编译器、runtime 与 kernel 论文 | 已完成 |
+| 07 | [07_distributed_and_moe_inference_papers.md](07_distributed_and_moe_inference_papers.md) | 分布式与 MoE 推理论文 | 已完成 |
 | 08 | `08_hardware_and_architecture_papers.md` | 硬件与体系结构论文 | 待开始 |
 | 09 | `09_networking_and_datacenter_papers.md` | 网络与数据中心论文 | 待开始 |
 | 10 | `10_edge_inference_papers.md` | 边缘推理论文 | 待开始 |
@@ -66,13 +66,13 @@
 > 的章节骨架——这一豁免由 [`scripts/check_required_sections.py`](../../scripts/check_required_sections.py)
 > 的 `CARD_MODULES` 明确给出。卡片模板见 [第 01 章 §2](01_paper_map.md)。
 
-- [ ] 全部 12 篇规划文档完成（当前 **5/12**）
-- [x] 模块正文合计 ≥ 12,000 字（当前约 36,000 字）
+- [ ] 全部 12 篇规划文档完成（当前 **7/12**）
+- [x] 模块正文合计 ≥ 12,000 字（当前约 50,000 字）
 - [ ] 写作要求第 1 条：12 个卡片字段逐项覆盖——**其中「实验设置」与「关键结果」永久标注 `待核实`**，
-      理由见上方降级说明；其余 10 项已在第 02–05 章逐条落实
-- [x] 写作要求第 3 条：每 session 均在 8–15 张区间内（第 1 批 14 张：P-001~P-004、P-006~P-015；第 2 批 14 张：P-005、P-016~P-028）
+      理由见上方降级说明；其余 10 项已在第 02–07 章逐条落实
+- [x] 写作要求第 3 条：每 session 均在 8–15 张区间内（第 1 批 14 张：P-001~P-004、P-006~P-015；第 2 批 14 张：P-005、P-016~P-028；第 3 批 11 张：P-029~P-039）
 - [x] 写作要求第 4 条：[`data/papers.csv`](../../data/papers.csv) 与
-      [`data/references.bib`](../../data/references.bib) 已双向同步（28 条 ↔ 28 条）
+      [`data/references.bib`](../../data/references.bib) 已双向同步（39 条 ↔ 39 条）
 - [x] 写作要求第 5 条：全文无论文原文摘抄，机制说明均为本库自有表述
 - [x] 所有事实性来源带链接与披露标签（各章「主要来源」表逐条列出）
 - [x] 新术语已补入 [`GLOSSARY.md`](../../GLOSSARY.md) 第 20 节

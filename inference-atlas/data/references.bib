@@ -408,3 +408,158 @@
   url       = {https://arxiv.org/abs/2306.07629},
   note      = {InferenceAtlas paper_id: P-028}
 }
+
+% ---------------------------------------------------------------------------
+% 模块 13 第三批（2026-08-10 追加）：编译器/kernel P-029~P-033、分布式与 MoE P-034~P-039
+% 仅 Megatron-LM（P-034）有作者在仓库 README 中提供的 BibTeX（类别 A）；
+% 其余书目字段均由 WebSearch 逐条核对（类别 B），arXiv 编号与 venue 未凭记忆填写。
+% 部分条目使用会议/期刊官方页面而非 arXiv：
+%   P-031 MAPL 2019 会议页；P-032 CGO 2021 会议页（其 arXiv 预印本标题不同，不可混用）；
+%   P-035 NeurIPS 2019 proceedings 页；P-038 JMLR 卷页。
+% ---------------------------------------------------------------------------
+
+@inproceedings{chen2018tvm,
+  title     = {{TVM}: An Automated End-to-End Optimizing Compiler for Deep Learning},
+  author    = {Chen, Tianqi and Moreau, Thierry and Jiang, Ziheng and Zheng, Lianmin and
+               Yan, Eddie and Cowan, Meghan and Shen, Haichen and Wang, Leyuan and others},
+  booktitle = {13th USENIX Symposium on Operating Systems Design and Implementation
+               (OSDI 18)},
+  year      = {2018},
+  publisher = {USENIX Association},
+  eprint    = {1802.04799},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/1802.04799},
+  note      = {InferenceAtlas paper_id: P-029}
+}
+
+@inproceedings{zheng2020ansor,
+  title     = {{Ansor}: Generating High-Performance Tensor Programs for Deep Learning},
+  author    = {Zheng, Lianmin and Jia, Chengfan and Sun, Minmin and Wu, Zhao and
+               Yu, Cody Hao and Haj-Ali, Ameer and Wang, Yida and Yang, Jun and others},
+  booktitle = {14th USENIX Symposium on Operating Systems Design and Implementation
+               (OSDI 20)},
+  year      = {2020},
+  publisher = {USENIX Association},
+  eprint    = {2006.06762},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/2006.06762},
+  note      = {InferenceAtlas paper_id: P-030}
+}
+
+@inproceedings{tillet2019triton,
+  title     = {{Triton}: An Intermediate Language and Compiler for Tiled Neural Network
+               Computations},
+  author    = {Tillet, Philippe and Kung, H. T. and Cox, David},
+  booktitle = {Proceedings of the 3rd ACM SIGPLAN International Workshop on Machine
+               Learning and Programming Languages (MAPL)},
+  year      = {2019},
+  url       = {https://pldi19.sigplan.org/details/mapl-2019-papers/1/Triton-An-Intermediate-Language-and-Compiler-for-Tiled-Neural-Network-Computations},
+  note      = {InferenceAtlas paper_id: P-031}
+}
+
+@inproceedings{lattner2021mlir,
+  title     = {{MLIR}: Scaling Compiler Infrastructure for Domain Specific Computation},
+  author    = {Lattner, Chris and Amini, Mehdi and Bondhugula, Uday and Cohen, Albert and
+               Davis, Andy and Pienaar, Jacques and Riddle, River and Shpeisman, Tatiana and
+               Vasilache, Nicolas and Zinenko, Oleksandr},
+  booktitle = {IEEE/ACM International Symposium on Code Generation and Optimization (CGO)},
+  year      = {2021},
+  url       = {https://conf.researchr.org/details/cgo-2021/cgo-2021-papers/2/MLIR-Scaling-Compiler-Infrastructure-for-Domain-Specific-Computation},
+  note      = {InferenceAtlas paper_id: P-032; 同名 arXiv 预印本标题不同（arXiv:2002.11054），勿混用}
+}
+
+@inproceedings{ansel2024pytorch2,
+  title     = {{PyTorch} 2: Faster Machine Learning Through Dynamic Python Bytecode
+               Transformation and Graph Compilation},
+  author    = {Ansel, Jason and Yang, Edward and He, Horace and others},
+  booktitle = {Proceedings of the 29th ACM International Conference on Architectural
+               Support for Programming Languages and Operating Systems (ASPLOS)},
+  year      = {2024},
+  doi       = {10.1145/3620665.3640366},
+  url       = {https://dl.acm.org/doi/10.1145/3620665.3640366},
+  note      = {InferenceAtlas paper_id: P-033; 完整作者名单待核实}
+}
+
+@misc{shoeybi2019megatron,
+  title     = {{Megatron-LM}: Training Multi-Billion Parameter Language Models Using
+               Model Parallelism},
+  author    = {Shoeybi, Mohammad and Patwary, Mostofa and Puri, Raul and
+               LeGresley, Patrick and Casper, Jared and Catanzaro, Bryan},
+  year      = {2019},
+  eprint    = {1909.08053},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url       = {https://arxiv.org/abs/1909.08053},
+  note      = {InferenceAtlas paper_id: P-034}
+}
+
+@inproceedings{huang2019gpipe,
+  title     = {{GPipe}: Efficient Training of Giant Neural Networks using Pipeline
+               Parallelism},
+  author    = {Huang, Yanping and Cheng, Youlong and Bapna, Ankur and Firat, Orhan and
+               Chen, Dehao and Chen, Mia Xu and Lee, HyoukJoong and Ngiam, Jiquan and
+               Le, Quoc V. and Wu, Yonghui and Chen, Zhifeng},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2019},
+  url       = {https://proceedings.neurips.cc/paper/2019/hash/093f65e080a295f8076b1c5722a46aa2-Abstract.html},
+  note      = {InferenceAtlas paper_id: P-035}
+}
+
+@inproceedings{zheng2022alpa,
+  title     = {{Alpa}: Automating Inter- and Intra-Operator Parallelism for Distributed
+               Deep Learning},
+  author    = {Zheng, Lianmin and Li, Zhuohan and Zhang, Hao and Zhuang, Yonghao and
+               Chen, Zhifeng and Huang, Yanping and Wang, Yida and Xu, Yuanzhong and
+               Zhuo, Danyang and Xing, Eric P. and Gonzalez, Joseph E. and Stoica, Ion},
+  booktitle = {16th USENIX Symposium on Operating Systems Design and Implementation
+               (OSDI 22)},
+  year      = {2022},
+  publisher = {USENIX Association},
+  eprint    = {2201.12023},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/2201.12023},
+  note      = {InferenceAtlas paper_id: P-036}
+}
+
+@inproceedings{shazeer2017moe,
+  title     = {Outrageously Large Neural Networks: The Sparsely-Gated
+               Mixture-of-Experts Layer},
+  author    = {Shazeer, Noam and Mirhoseini, Azalia and Maziarz, Krzysztof and
+               Davis, Andy and Le, Quoc V. and Hinton, Geoffrey E. and Dean, Jeff},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2017},
+  eprint    = {1701.06538},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/1701.06538},
+  note      = {InferenceAtlas paper_id: P-037}
+}
+
+@article{fedus2022switch,
+  title     = {Switch Transformers: Scaling to Trillion Parameter Models with Simple
+               and Efficient Sparsity},
+  author    = {Fedus, William and Zoph, Barret and Shazeer, Noam},
+  journal   = {Journal of Machine Learning Research},
+  volume    = {23},
+  year      = {2022},
+  eprint    = {2101.03961},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://jmlr.org/papers/v23/21-0998.html},
+  note      = {InferenceAtlas paper_id: P-038}
+}
+
+@inproceedings{gale2023megablocks,
+  title     = {{MegaBlocks}: Efficient Sparse Training with Mixture-of-Experts},
+  author    = {Gale, Trevor and Narayanan, Deepak and Young, Cliff and Zaharia, Matei},
+  booktitle = {Proceedings of Machine Learning and Systems (MLSys)},
+  year      = {2023},
+  eprint    = {2211.15841},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/2211.15841},
+  note      = {InferenceAtlas paper_id: P-039}
+}
