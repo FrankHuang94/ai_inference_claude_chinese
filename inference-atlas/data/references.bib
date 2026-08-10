@@ -701,3 +701,140 @@
   url       = {https://dl.acm.org/doi/10.1145/2934872.2934908},
   note      = {InferenceAtlas paper_id: P-049}
 }
+
+% ---------------------------------------------------------------------------
+% 模块 13 第五批（2026-08-10 追加）：边缘推理 P-050~P-054、可靠性与基准 P-055~P-059
+% 类别 A（作者在官方仓库 README 中提供的 BibTeX）：P-054 PowerInfer、P-057 HELM、P-058 MT-Bench。
+% 其余为 WebSearch 逐条核对（类别 B）；arXiv 编号一律用 arxiv.org 限定域检索确认，未凭记忆填写。
+% ---------------------------------------------------------------------------
+
+@inproceedings{han2016deepcompression,
+  title     = {Deep Compression: Compressing Deep Neural Networks with Pruning,
+               Trained Quantization and Huffman Coding},
+  author    = {Han, Song and Mao, Huizi and Dally, William J.},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2016},
+  eprint    = {1510.00149},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url       = {https://arxiv.org/abs/1510.00149},
+  note      = {InferenceAtlas paper_id: P-050}
+}
+
+@misc{hinton2015distillation,
+  title     = {Distilling the Knowledge in a Neural Network},
+  author    = {Hinton, Geoffrey and Vinyals, Oriol and Dean, Jeff},
+  year      = {2015},
+  eprint    = {1503.02531},
+  archivePrefix = {arXiv},
+  primaryClass  = {stat.ML},
+  url       = {https://arxiv.org/abs/1503.02531},
+  note      = {InferenceAtlas paper_id: P-051}
+}
+
+@inproceedings{liu2023dejavu,
+  title     = {Deja Vu: Contextual Sparsity for Efficient {LLMs} at Inference Time},
+  author    = {Liu, Zichang and Wang, Jue and Dao, Tri and Zhou, Tianyi and
+               Yuan, Binhang and Song, Zhao and Shrivastava, Anshumali and
+               Zhang, Ce and Tian, Yuandong and R{\'e}, Christopher and Chen, Beidi},
+  booktitle = {Proceedings of the 40th International Conference on Machine
+               Learning (ICML)},
+  series    = {PMLR},
+  volume    = {202},
+  year      = {2023},
+  url       = {https://proceedings.mlr.press/v202/liu23am.html},
+  note      = {InferenceAtlas paper_id: P-052}
+}
+
+@misc{alizadeh2023llmflash,
+  title     = {{LLM} in a flash: Efficient Large Language Model Inference with
+               Limited Memory},
+  author    = {Alizadeh, Keivan and Mirzadeh, Iman and Belenko, Dmitry and
+               Khatamifard, S. Karen and Cho, Minsik and Del Mundo, Carlo C and
+               Rastegari, Mohammad and Farajtabar, Mehrdad},
+  year      = {2023},
+  eprint    = {2312.11514},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url       = {https://arxiv.org/abs/2312.11514},
+  note      = {InferenceAtlas paper_id: P-053; 是否有正式会议版本待核实}
+}
+
+@misc{song2023powerinfer,
+  title     = {{PowerInfer}: Fast Large Language Model Serving with a
+               Consumer-grade {GPU}},
+  author    = {Song, Yixin and Mi, Zeyu and Xie, Haotong and Chen, Haibo},
+  year      = {2023},
+  eprint    = {2312.12456},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/2312.12456},
+  note      = {InferenceAtlas paper_id: P-054}
+}
+
+@inproceedings{reddi2020mlperf,
+  title     = {{MLPerf} Inference Benchmark},
+  author    = {Reddi, Vijay Janapa and Cheng, Christine and Kanter, David and
+               Mattson, Peter and Schmuelling, Guenther and Wu, Carole-Jean and
+               Anderson, Brian and Breughe, Maximilien and others},
+  booktitle = {Proceedings of the 47th Annual International Symposium on Computer
+               Architecture (ISCA)},
+  year      = {2020},
+  eprint    = {1911.02549},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/1911.02549},
+  note      = {InferenceAtlas paper_id: P-055}
+}
+
+@inproceedings{pope2023efficiently,
+  title     = {Efficiently Scaling Transformer Inference},
+  author    = {Pope, Reiner and Douglas, Sholto and Chowdhery, Aakanksha and
+               Devlin, Jacob and Bradbury, James and Heek, Jonathan and
+               Xiao, Kefan and Agrawal, Shivani and Dean, Jeff},
+  booktitle = {Proceedings of Machine Learning and Systems (MLSys)},
+  year      = {2023},
+  eprint    = {2211.05102},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/2211.05102},
+  note      = {InferenceAtlas paper_id: P-056}
+}
+
+@article{liang2023holistic,
+  title     = {Holistic Evaluation of Language Models},
+  author    = {Liang, Percy and Bommasani, Rishi and Lee, Tony and
+               Tsipras, Dimitris and Soylu, Dilara and Yasunaga, Michihiro and
+               Zhang, Yian and Narayanan, Deepak and others},
+  journal   = {Transactions on Machine Learning Research},
+  issn      = {2835-8856},
+  year      = {2023},
+  url       = {https://openreview.net/forum?id=iO4LZibEqW},
+  note      = {InferenceAtlas paper_id: P-057}
+}
+
+@misc{zheng2023judging,
+  title     = {Judging {LLM}-as-a-judge with {MT-Bench} and {Chatbot Arena}},
+  author    = {Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and
+               Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Lin, Zi and
+               Li, Zhuohan and others},
+  year      = {2023},
+  eprint    = {2306.05685},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url       = {https://arxiv.org/abs/2306.05685},
+  note      = {InferenceAtlas paper_id: P-058}
+}
+
+@inproceedings{huang2017grayfailure,
+  title     = {Gray Failure: The {Achilles'} Heel of Cloud-Scale Systems},
+  author    = {Huang, Peng and Guo, Chuanxiong and Zhou, Lidong and
+               Lorch, Jacob R. and Dang, Yingnong and Chintalapati, Murali and
+               Yao, Randolph},
+  booktitle = {Proceedings of the 16th Workshop on Hot Topics in Operating
+               Systems (HotOS)},
+  year      = {2017},
+  doi       = {10.1145/3102980.3103005},
+  url       = {https://dl.acm.org/doi/10.1145/3102980.3103005},
+  note      = {InferenceAtlas paper_id: P-059}
+}
